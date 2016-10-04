@@ -7,6 +7,7 @@
 #define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
+
 class Life_Checkbox
 {
 	access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
@@ -928,6 +929,14 @@ class Life_RscMapControl
 		importance = 1;
 		coefMin = 0.85;
 		coefMax = 1;
+	};
+	class LineMarker
+	{
+		lineDistanceMin = 3e-005;
+		lineLengthMin = 5;
+		lineWidthThick = 0.014;
+		lineWidthThin = 0.008;
+		textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
 	};
 	class Quay
 	{
