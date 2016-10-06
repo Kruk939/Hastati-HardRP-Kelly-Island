@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=169;
+		nextID=171;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2635.5938,46.568371,5284.4043};
-		dir[]={-0.16187215,-0.70958179,0.68579167};
-		up[]={-0.16301048,0.70461118,0.69061649};
-		aside[]={0.97326624,1.9121217e-007,0.22972752};
+		pos[]={2654.8616,24.698538,5299.1592};
+		dir[]={-0.15155384,-0.77470428,0.61390978};
+		up[]={-0.18568678,0.63225722,0.75217825};
+		aside[]={0.97086412,2.4680048e-008,0.23967423};
 	};
 };
 binarizationWanted=0;
@@ -84,7 +84,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=49;
+		items=50;
 		class Item0
 		{
 			dataType="Group";
@@ -5524,6 +5524,61 @@ class Mission
 			type="mil_box";
 			id=168;
 			atlOffset=1.871862e+024;
+		};
+		class Item49
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2653.6201,15.412943,5308.8066};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Marijuana"",life_fnc_processAction,""marijuana"",0,false,false,"""",' life_inv_cannabis > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""marijuana"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""marijuana"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""marijuana"",0,false,false,"""",' !license_civ_marijuana && playerSide == civilian '];";
+						name="civ_process_marijuana";
+					};
+					id=170;
+					type="C_Man_casual_2_F";
+					atlOffset=0.0050001144;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=169;
+			atlOffset=0.0050001144;
 		};
 	};
 };
