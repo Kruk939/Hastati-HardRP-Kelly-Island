@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=210;
+		nextID=262;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3120.6421,224.97275,5150.1401};
-		dir[]={0.90690881,-0.19771326,-0.37239507};
-		up[]={0.18308678,0.98020095,-0.075179882};
-		aside[]={-0.37988189,1.3492099e-006,-0.92516327};
+		pos[]={3997.9929,44.918468,4919.8647};
+		dir[]={-0.68835139,-0.67274362,-0.2717467};
+		up[]={-0.62585342,0.73964721,-0.24706781};
+		aside[]={-0.36718684,7.6869037e-007,0.93013704};
 	};
 };
 binarizationWanted=0;
@@ -84,7 +84,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=76;
+		items=84;
 		class Item0
 		{
 			dataType="Group";
@@ -4884,171 +4884,105 @@ class Mission
 		class Item5
 		{
 			dataType="Marker";
-			position[]={2894.3025,6.778922e+019,6274.1479};
+			position[]={2894.302,1.6361307e+015,6274.1479};
 			name="respawn_guerrila";
 			type="Empty";
 			id=120;
-			atlOffset=6.778922e+019;
+			atlOffset=1.6361307e+015;
 		};
 		class Item6
 		{
 			dataType="Marker";
-			position[]={2662.1594,6.778922e+019,5369.9238};
-			name="civ_spawn_1";
-			type="Empty";
-			id=121;
-			atlOffset=6.778922e+019;
-		};
-		class Item7
-		{
-			dataType="Marker";
-			position[]={2665.0813,6.778922e+019,5366.2813};
-			name="civ_spawn_2";
-			type="Empty";
-			id=122;
-			atlOffset=6.778922e+019;
-		};
-		class Item8
-		{
-			dataType="Marker";
-			position[]={2668.7302,6.778922e+019,5361.3784};
-			name="civ_spawn_3";
-			type="Empty";
-			id=123;
-			atlOffset=6.778922e+019;
-		};
-		class Item9
-		{
-			dataType="Marker";
-			position[]={2665.4214,6.778922e+019,5356.9204};
-			name="civ_spawn_4";
-			type="Empty";
-			id=124;
-			atlOffset=6.778922e+019;
-		};
-		class Item10
-		{
-			dataType="Marker";
-			position[]={2649.9407,6.778922e+019,5369.7808};
+			position[]={2644.5444,6.778922e+019,5370.4082};
 			name="cop_spawn_1";
 			type="Empty";
 			id=125;
 			atlOffset=6.778922e+019;
 		};
-		class Item11
+		class Item7
 		{
 			dataType="Marker";
-			position[]={2649.3464,6.778922e+019,5365.5469};
+			position[]={2648.2168,6.778922e+019,5367.6782};
 			name="cop_spawn_2";
 			type="Empty";
 			id=126;
 			atlOffset=6.778922e+019;
 		};
-		class Item12
+		class Item8
 		{
 			dataType="Marker";
-			position[]={2648.6775,6.778922e+019,5359.3989};
+			position[]={2654.325,6.778922e+019,5361.9063};
 			name="cop_spawn_3";
 			type="Empty";
 			id=127;
 			atlOffset=6.778922e+019;
 		};
-		class Item13
+		class Item9
 		{
 			dataType="Marker";
-			position[]={2651.8752,6.778922e+019,5360.9644};
+			position[]={2651.7498,6.778922e+019,5364.4751};
 			name="cop_spawn_4";
 			type="Empty";
 			id=128;
 			atlOffset=6.778922e+019;
 		};
-		class Item14
+		class Item10
 		{
 			dataType="Marker";
-			position[]={2650.157,6.778922e+019,5354.1196};
+			position[]={2657.1848,6.778922e+019,5359.3862};
 			name="cop_spawn_5";
 			type="Empty";
 			id=129;
 			atlOffset=6.778922e+019;
 		};
-		class Item15
+		class Item11
 		{
 			dataType="Marker";
-			position[]={2642.6284,6.778922e+019,5370.5381};
+			position[]={2631.4592,6.778922e+019,5370.9141};
 			name="medic_spawn_1";
 			type="Empty";
 			id=130;
 			atlOffset=6.778922e+019;
 		};
-		class Item16
+		class Item12
 		{
 			dataType="Marker";
-			position[]={2642.6096,6.778922e+019,5366.6479};
+			position[]={2631.4404,6.778922e+019,5367.7764};
 			name="medic_spawn_2";
 			type="Empty";
 			id=131;
 			atlOffset=6.778922e+019;
 		};
-		class Item17
+		class Item13
 		{
 			dataType="Marker";
-			position[]={2642.583,6.778922e+019,5361.7173};
+			position[]={2631.5393,6.778922e+019,5364.2251};
 			name="medic_spawn_3";
 			type="Empty";
 			id=132;
 			atlOffset=6.778922e+019;
 		};
-		class Item18
+		class Item14
 		{
 			dataType="Marker";
-			position[]={2704.8167,9.1605579e+013,5355.9263};
-			name="iron_mine";
-			text="@STR_MAR_Iron_Mine";
-			type="mil_triangle";
-			id=133;
-			atlOffset=9.1605579e+013;
-		};
-		class Item19
-		{
-			dataType="Marker";
-			position[]={2704.8157,9.1605579e+013,5364.1729};
+			position[]={2675.5947,9.1605579e+013,5323.0425};
 			name="salt_mine";
 			text="@STR_MAR_Salt_Mine";
 			type="mil_triangle";
 			id=134;
 			atlOffset=9.1605579e+013;
 		};
-		class Item20
+		class Item15
 		{
 			dataType="Marker";
-			position[]={2704.4727,9.1605579e+013,5346.9912};
-			name="sand_mine";
-			text="@STR_MAR_Sand_Mine";
-			type="mil_triangle";
-			id=135;
-			atlOffset=9.1605579e+013;
-		};
-		class Item21
-		{
-			dataType="Marker";
-			position[]={2704.3005,9.1605579e+013,5341.4932};
+			position[]={2669.376,9.1605579e+013,5323.2866};
 			name="copper_mine";
 			text="@STR_MAR_Copper_Mine";
 			type="mil_triangle";
 			id=136;
 			atlOffset=9.1605579e+013;
 		};
-		class Item22
-		{
-			dataType="Marker";
-			position[]={2704.3,9.1605579e+013,5335.4795};
-			name="diamond_mine";
-			text="@STR_MAR_Diamond_Mine";
-			type="mil_triangle";
-			id=137;
-			atlOffset=9.1605579e+013;
-		};
-		class Item23
+		class Item16
 		{
 			dataType="Marker";
 			position[]={2721.8074,9.1605579e+013,5358.9116};
@@ -5059,7 +4993,7 @@ class Mission
 			id=138;
 			atlOffset=9.1605579e+013;
 		};
-		class Item24
+		class Item17
 		{
 			dataType="Marker";
 			position[]={2722.3091,9.1605579e+013,5354.2285};
@@ -5070,7 +5004,7 @@ class Mission
 			id=139;
 			atlOffset=9.1605579e+013;
 		};
-		class Item25
+		class Item18
 		{
 			dataType="Marker";
 			position[]={2722.8108,9.1605579e+013,5349.127};
@@ -5081,7 +5015,7 @@ class Mission
 			id=140;
 			atlOffset=9.1605579e+013;
 		};
-		class Item26
+		class Item19
 		{
 			dataType="Marker";
 			position[]={2723.2288,9.1605579e+013,5343.3564};
@@ -5092,7 +5026,7 @@ class Mission
 			id=141;
 			atlOffset=9.1605579e+013;
 		};
-		class Item27
+		class Item20
 		{
 			dataType="Marker";
 			position[]={2732.1772,9.1605579e+013,5354.8975};
@@ -5103,7 +5037,7 @@ class Mission
 			id=142;
 			atlOffset=9.1605579e+013;
 		};
-		class Item28
+		class Item21
 		{
 			dataType="Marker";
 			position[]={2731.3413,9.1605579e+013,5350.7993};
@@ -5114,7 +5048,7 @@ class Mission
 			id=143;
 			atlOffset=9.1605579e+013;
 		};
-		class Item29
+		class Item22
 		{
 			dataType="Marker";
 			position[]={2732.5955,9.1605579e+013,5344.6104};
@@ -5125,7 +5059,7 @@ class Mission
 			id=144;
 			atlOffset=9.1605579e+013;
 		};
-		class Item30
+		class Item23
 		{
 			dataType="Marker";
 			position[]={2732.7627,9.1605579e+013,5339.4258};
@@ -5136,7 +5070,7 @@ class Mission
 			id=145;
 			atlOffset=9.1605579e+013;
 		};
-		class Item31
+		class Item24
 		{
 			dataType="Marker";
 			position[]={2638.3315,9.1605579e+013,5344.3379};
@@ -5145,66 +5079,36 @@ class Mission
 			id=146;
 			atlOffset=9.1605579e+013;
 		};
-		class Item32
+		class Item25
 		{
 			dataType="Marker";
-			position[]={2637.6626,2.0401656e+012,5340.4912};
+			position[]={2640.6133,2.0401656e+012,5343.4395};
 			name="jail_release";
 			type="Empty";
 			id=147;
 			atlOffset=2.0401656e+012;
 		};
-		class Item33
+		class Item26
 		{
 			dataType="Marker";
-			position[]={2703.9885,6.778922e+019,5329.1182};
-			name="oil_field_1";
-			text="@STR_MAR_Oil_Field";
-			type="mil_triangle";
-			id=148;
-			atlOffset=6.778922e+019;
-		};
-		class Item34
-		{
-			dataType="Marker";
-			position[]={2703.9885,6.778922e+019,5325.521};
-			name="oil_field_2";
-			text="@STR_MAR_Oil_Field";
-			type="mil_triangle";
-			id=149;
-			atlOffset=6.778922e+019;
-		};
-		class Item35
-		{
-			dataType="Marker";
-			position[]={2704.155,4.8466795e+011,5321.5078};
-			name="weed_1";
+			position[]={2675.8223,0,5309.376};
+			name="weed_field";
 			text="@STR_MAR_Weed_Field";
 			type="mil_triangle";
 			id=150;
-			atlOffset=4.8466795e+011;
+			atlOffset=-15.173182;
 		};
-		class Item36
+		class Item27
 		{
 			dataType="Marker";
-			position[]={2704.6975,16.636732,5316.0562};
-			name="heroin_1";
+			position[]={2681.9929,0,5309.5464};
+			name="heroin_field";
 			text="@STR_MAR_Heroin_Field";
 			type="mil_triangle";
 			id=151;
-			atlOffset=1.5693779;
+			atlOffset=-15.122115;
 		};
-		class Item37
-		{
-			dataType="Marker";
-			position[]={2705.2136,1.001949e+038,5310.0435};
-			name="rock_quarry";
-			text="@STR_MAR_Rock_Quarry";
-			type="mil_triangle";
-			id=152;
-			atlOffset=1.001949e+038;
-		};
-		class Item38
+		class Item28
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5216,7 +5120,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2646.5195,15.379813,5306.3848};
+						position[]={2646.4741,15.375809,5306.2246};
 					};
 					side="Civilian";
 					flags=7;
@@ -5256,17 +5160,17 @@ class Mission
 			};
 			id=153;
 		};
-		class Item39
+		class Item29
 		{
 			dataType="Marker";
-			position[]={2644.4099,29841.729,5308.6216};
+			position[]={2616.3716,29841.729,5307.584};
 			name="market_1";
 			text="Market";
 			type="loc_Tourism";
 			id=155;
-			atlOffset=29826.297;
+			atlOffset=29827.338;
 		};
-		class Item40
+		class Item30
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5278,7 +5182,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2650.6746,15.721633,5318.5137};
+						position[]={2640.7988,15.113562,5328.0444};
 					};
 					side="Civilian";
 					flags=7;
@@ -5318,10 +5222,10 @@ class Mission
 			};
 			id=156;
 		};
-		class Item41
+		class Item31
 		{
 			dataType="Marker";
-			position[]={2648.4055,1.1656895e+017,5320.6602};
+			position[]={2638.5298,1.1656895e+017,5330.1909};
 			name="car_shop_1";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5329,16 +5233,16 @@ class Mission
 			id=158;
 			atlOffset=1.1656895e+017;
 		};
-		class Item42
+		class Item32
 		{
 			dataType="Marker";
-			position[]={2648.9868,29849.787,5322.8755};
+			position[]={2678.2129,29849.787,5363.2432};
 			name="civ_car_1";
 			type="Empty";
 			id=159;
-			atlOffset=29834.027;
+			atlOffset=29833.34;
 		};
-		class Item43
+		class Item33
 		{
 			dataType="Group";
 			side="East";
@@ -5390,7 +5294,7 @@ class Mission
 			};
 			id=160;
 		};
-		class Item44
+		class Item34
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5443,27 +5347,27 @@ class Mission
 			};
 			id=162;
 		};
-		class Item45
+		class Item35
 		{
 			dataType="Marker";
-			position[]={2618.4143,4.7878464e+029,5308.8574};
+			position[]={2615.7876,4.7878464e+029,5318.6836};
 			name="rebel_1";
 			text="Sklep rebelianta";
 			type="o_unknown";
 			id=164;
 			atlOffset=4.7878464e+029;
 		};
-		class Item46
+		class Item36
 		{
 			dataType="Marker";
-			position[]={2632.4629,1.1656895e+017,5316.105};
+			position[]={2615.8477,1.1656895e+017,5312.5659};
 			name="city_hall";
 			text="Urząd Miasta";
 			type="loc_Fountain";
 			id=165;
 			atlOffset=1.1656895e+017;
 		};
-		class Item47
+		class Item37
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5516,17 +5420,17 @@ class Mission
 			};
 			id=166;
 		};
-		class Item48
+		class Item38
 		{
 			dataType="Marker";
-			position[]={2632.345,1.871862e+024,5309.5381};
+			position[]={2615.7905,1.871862e+024,5315.2754};
 			name="civ_clothing_shop_1";
 			text="Sklep z ubraniami";
 			type="mil_box";
 			id=168;
 			atlOffset=1.871862e+024;
 		};
-		class Item49
+		class Item39
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5538,18 +5442,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2653.6201,15.412943,5308.8066};
+						position[]={2656.874,15.387325,5309.1152};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
-						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Marijuana"",life_fnc_processAction,""marijuana"",0,false,false,"""",' life_inv_cannabis > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""marijuana"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""marijuana"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""marijuana"",0,false,false,"""",' !license_civ_marijuana && playerSide == civilian '];";
-						name="civ_process_marijuana";
+						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Diamond"",life_fnc_processAction,""diamond"",0,false,false,"""",' life_inv_diamond_uncut > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian '];";
+						name="civ_process_diamond";
 					};
 					id=170;
 					type="C_Man_casual_2_F";
-					atlOffset=0.0050001144;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5579,9 +5482,8 @@ class Mission
 			{
 			};
 			id=169;
-			atlOffset=0.0050001144;
 		};
-		class Item50
+		class Item40
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5593,7 +5495,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2656.2415,15.752348,5318.481};
+						position[]={2640.6768,15.102575,5328.0444};
 					};
 					side="Civilian";
 					flags=7;
@@ -5633,10 +5535,10 @@ class Mission
 			};
 			id=173;
 		};
-		class Item51
+		class Item41
 		{
 			dataType="Marker";
-			position[]={2653.9722,1.1656895e+017,5320.627};
+			position[]={2638.4075,1.1656895e+017,5330.1904};
 			name="car_shop_2";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5644,19 +5546,19 @@ class Mission
 			id=175;
 			atlOffset=1.1656895e+017;
 		};
-		class Item52
+		class Item42
 		{
 			dataType="Marker";
-			position[]={2654.5535,29849.932,5322.8423};
+			position[]={2646.7341,29849.844,5332.3633};
 			name="civ_car_2";
 			type="Empty";
 			id=176;
-			atlOffset=29834.029;
+			atlOffset=29834.457;
 		};
-		class Item53
+		class Item43
 		{
 			dataType="Marker";
-			position[]={2642.9763,1.1656895e+017,5320.6133};
+			position[]={2638.4688,1.1656895e+017,5330.1909};
 			name="car_shop_3";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5664,16 +5566,7 @@ class Mission
 			id=177;
 			atlOffset=1.1656895e+017;
 		};
-		class Item54
-		{
-			dataType="Marker";
-			position[]={2643.5576,29849.564,5322.8286};
-			name="civ_car_3";
-			type="Empty";
-			id=178;
-			atlOffset=29834.027;
-		};
-		class Item55
+		class Item44
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5685,7 +5578,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2645.2454,15.596162,5318.4668};
+						position[]={2640.7378,15.108068,5328.0444};
 					};
 					side="Civilian";
 					flags=7;
@@ -5725,7 +5618,7 @@ class Mission
 			};
 			id=179;
 		};
-		class Item56
+		class Item45
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5737,7 +5630,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2640.8076,15.442996,5318.2778};
+						position[]={2616.3645,10.670173,5329.5703};
 					};
 					side="Civilian";
 					flags=7;
@@ -5777,10 +5670,10 @@ class Mission
 			};
 			id=181;
 		};
-		class Item57
+		class Item46
 		{
 			dataType="Marker";
-			position[]={2638.5388,1.1656895e+017,5320.4243};
+			position[]={2614.0957,1.1656895e+017,5331.7168};
 			name="car_shop_4";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5788,16 +5681,16 @@ class Mission
 			id=183;
 			atlOffset=1.1656895e+017;
 		};
-		class Item58
+		class Item47
 		{
 			dataType="Marker";
-			position[]={2639.1201,29849.227,5322.6396};
+			position[]={2643.0906,29849.227,5332.1006};
 			name="civ_car_4";
 			type="Empty";
 			id=184;
-			atlOffset=29834;
+			atlOffset=29834.197;
 		};
-		class Item59
+		class Item48
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5809,7 +5702,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2618.667,11.793462,5326.8159};
+						position[]={2616.3645,10.65549,5329.6309};
 					};
 					side="Civilian";
 					flags=7;
@@ -5819,7 +5712,6 @@ class Mission
 					};
 					id=186;
 					type="C_Man_casual_2_F";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5849,12 +5741,11 @@ class Mission
 			{
 			};
 			id=185;
-			atlOffset=9.5367432e-007;
 		};
-		class Item60
+		class Item49
 		{
 			dataType="Marker";
-			position[]={2616.3979,1.4580692e+023,5328.9619};
+			position[]={2614.0955,1.4580692e+023,5331.7769};
 			name="car_shop_5";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -5862,17 +5753,17 @@ class Mission
 			id=187;
 			atlOffset=1.4580692e+023;
 		};
-		class Item61
+		class Item50
 		{
 			dataType="Marker";
-			position[]={2616.979,8.0475318e+017,5331.1777};
+			position[]={2619.4639,8.0475318e+017,5334.8237};
 			name="civ_truck_1";
 			type="Empty";
 			colorName="ColorBrown";
 			id=188;
 			atlOffset=8.0475318e+017;
 		};
-		class Item62
+		class Item51
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5884,7 +5775,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2631.3159,14.127883,5326.1216};
+						position[]={2616.4258,10.653593,5329.6924};
 					};
 					side="Civilian";
 					flags=7;
@@ -5894,7 +5785,6 @@ class Mission
 					};
 					id=190;
 					type="C_Man_casual_2_F";
-					atlOffset=0.0070009232;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5924,12 +5814,11 @@ class Mission
 			{
 			};
 			id=189;
-			atlOffset=0.0070009232;
 		};
-		class Item63
+		class Item52
 		{
 			dataType="Marker";
-			position[]={2629.0466,1.4580692e+023,5328.2681};
+			position[]={2614.1565,1.4580692e+023,5331.8389};
 			name="car_shop_6";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -5937,17 +5826,17 @@ class Mission
 			id=191;
 			atlOffset=1.4580692e+023;
 		};
-		class Item64
+		class Item53
 		{
 			dataType="Marker";
-			position[]={2629.6277,8.0475318e+017,5330.4839};
+			position[]={2622.7861,8.0475318e+017,5334.8174};
 			name="civ_truck_2";
 			type="Empty";
 			colorName="ColorBrown";
 			id=192;
 			atlOffset=8.0475318e+017;
 		};
-		class Item65
+		class Item54
 		{
 			dataType="Group";
 			side="Civilian";
@@ -5959,7 +5848,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2645.1479,15.522982,5326.7349};
+						position[]={2616.4868,10.681482,5329.6309};
 					};
 					side="Civilian";
 					flags=7;
@@ -5969,7 +5858,6 @@ class Mission
 					};
 					id=194;
 					type="C_Man_casual_2_F";
-					atlOffset=0.013999939;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5999,12 +5887,11 @@ class Mission
 			{
 			};
 			id=193;
-			atlOffset=0.013999939;
 		};
-		class Item66
+		class Item55
 		{
 			dataType="Marker";
-			position[]={2642.8792,1.4580692e+023,5328.8809};
+			position[]={2614.218,1.4580692e+023,5331.7769};
 			name="car_shop_7";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -6012,17 +5899,17 @@ class Mission
 			id=195;
 			atlOffset=1.4580692e+023;
 		};
-		class Item67
+		class Item56
 		{
 			dataType="Marker";
-			position[]={2643.4602,8.0475318e+017,5331.0967};
+			position[]={2625.6843,8.0475318e+017,5334.6978};
 			name="civ_truck_3";
 			type="Empty";
 			colorName="ColorBrown";
 			id=196;
 			atlOffset=8.0475318e+017;
 		};
-		class Item68
+		class Item57
 		{
 			dataType="Group";
 			side="Civilian";
@@ -6034,7 +5921,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2657.895,16.044294,5325.6968};
+						position[]={2616.4258,10.668511,5329.6309};
 					};
 					side="Civilian";
 					flags=7;
@@ -6044,7 +5931,6 @@ class Mission
 					};
 					id=198;
 					type="C_Man_casual_2_F";
-					atlOffset=0.01099968;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6074,12 +5960,11 @@ class Mission
 			{
 			};
 			id=197;
-			atlOffset=0.01099968;
 		};
-		class Item69
+		class Item58
 		{
 			dataType="Marker";
-			position[]={2655.6255,1.4580692e+023,5327.8438};
+			position[]={2614.1563,1.4580692e+023,5331.7173};
 			name="car_shop_8";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -6087,17 +5972,17 @@ class Mission
 			id=199;
 			atlOffset=1.4580692e+023;
 		};
-		class Item70
+		class Item59
 		{
 			dataType="Marker";
-			position[]={2656.2065,8.0475318e+017,5330.0596};
+			position[]={2628.2039,8.0475318e+017,5334.9492};
 			name="civ_truck_4";
 			type="Empty";
 			colorName="ColorBrown";
 			id=200;
 			atlOffset=8.0475318e+017;
 		};
-		class Item71
+		class Item60
 		{
 			dataType="Group";
 			side="East";
@@ -6109,8 +5994,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2632.1687,15.265073,5302.5234};
-						angles[]={6.278194,0,0.0075011365};
+						position[]={2637.314,15.349756,5306.2246};
+						angles[]={6.2731848,0,0.0049914722};
 					};
 					side="East";
 					flags=6;
@@ -6150,7 +6035,7 @@ class Mission
 			};
 			id=201;
 		};
-		class Item72
+		class Item61
 		{
 			dataType="Marker";
 			position[]={2632.2629,1.1656895e+017,5305.8701};
@@ -6159,62 +6044,7 @@ class Mission
 			id=204;
 			atlOffset=1.1656895e+017;
 		};
-		class Item73
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2656.4109,15.397846,5308.958};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Marijuana"",life_fnc_processAction,""marijuana"",0,false,false,"""",' life_inv_cannabis > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""marijuana"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""marijuana"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""marijuana"",0,false,false,"""",' !license_civ_marijuana && playerSide == civilian '];";
-						name="civ_process_oil";
-					};
-					id=206;
-					type="C_Man_casual_2_F";
-					atlOffset=0.01099968;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.05;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=205;
-			atlOffset=0.01099968;
-		};
-		class Item74
+		class Item62
 		{
 			dataType="Group";
 			side="Civilian";
@@ -6267,15 +6097,587 @@ class Mission
 			};
 			id=207;
 		};
-		class Item75
+		class Item63
 		{
 			dataType="Marker";
-			position[]={2651.063,2.9344008e+014,5312.6934};
+			position[]={2615.7554,2.9344008e+014,5310.1304};
 			name="civ_clothing_shop_2";
 			text="Sklep z ubraniami";
 			type="mil_box";
 			id=209;
 			atlOffset=2.9344008e+014;
+		};
+		class Item64
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5688.4863,15.001439,2716.1262};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=211;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=210;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={5287.4141,6.778922e+019,3390.187};
+			name="civ_spawn_1";
+			type="Empty";
+			id=212;
+			atlOffset=6.778922e+019;
+		};
+		class Item66
+		{
+			dataType="Marker";
+			position[]={5928.709,9.3667163e+013,3198.979};
+			name="oil_field";
+			text="@STR_MAR_Oil_Field";
+			type="mil_triangle";
+			id=213;
+			atlOffset=9.3667163e+013;
+		};
+		class Item67
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2645.7744,15.001439,4366.6655};
+						angles[]={0,5.4946303,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Oil"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oil_unprocessed > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian '];";
+						name="civ_process_oil";
+					};
+					id=215;
+					type="C_Man_casual_2_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=214;
+		};
+		class Item68
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4201.1772,4.9721498,2252.1899};
+						angles[]={0,0.095633417,0};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Oil"",life_fnc_virt_menu,""oil""];";
+						name="Str_Shops_Oil";
+					};
+					id=219;
+					type="C_Man_casual_2_F";
+					atlOffset=0.29620743;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=218;
+			atlOffset=0.29620743;
+		};
+		class Item69
+		{
+			dataType="Marker";
+			position[]={6284.3481,8.8810751e-036,2981.7319};
+			name="diamond_mine";
+			text="@STR_MAR_Diamond_Mine";
+			type="mil_triangle";
+			id=221;
+			atlOffset=-3.7308824;
+		};
+		class Item70
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2911.9219,15.001439,3930.4111};
+						angles[]={0,6.2688518,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Diamond"",life_fnc_processAction,""diamond"",0,false,false,"""",' life_inv_diamond_uncut > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""diamond"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian '];";
+						name="civ_process_diamond_1";
+					};
+					id=225;
+					type="C_Man_casual_2_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=224;
+		};
+		class Item71
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5490.7656,15.001439,4179.3076};
+						angles[]={0,5.8932056,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Diamond"",life_fnc_virt_menu,""diamond""];";
+						name="Str_Shops_diamond";
+					};
+					id=229;
+					type="C_Man_casual_2_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=228;
+		};
+		class Item72
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3842.6619,15.001439,5031.9473};
+						angles[]={0,1.6919289,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Iron"",life_fnc_processAction,""iron"",0,false,false,"""",' life_inv_iron_unrefined > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""iron"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""iron"",0,false,false,"""",' !license_civ_iron && playerSide == civilian '];";
+						name="civ_process_iron";
+					};
+					id=233;
+					type="C_Man_casual_2_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=232;
+		};
+		class Item73
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2493.1086,14.692084,4489.5435};
+						angles[]={0,6.2787371,0};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Iron"",life_fnc_virt_menu,""iron""];";
+						name="Str_Shops_Iron";
+					};
+					id=243;
+					type="C_Man_casual_2_F";
+					atlOffset=0.2978735;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=242;
+			atlOffset=0.2978735;
+		};
+		class Item74
+		{
+			dataType="Marker";
+			position[]={2896.0564,-3.3911743,5461.5854};
+			name="iron_mine";
+			text="@STR_MAR_Iron_Mine";
+			type="mil_triangle";
+			id=246;
+			atlOffset=-19.732231;
+		};
+		class Item75
+		{
+			dataType="Marker";
+			position[]={4621.8018,9.1605579e+013,4666.4946};
+			name="sand_mine";
+			text="@STR_MAR_Sand_Mine";
+			type="mil_triangle";
+			id=247;
+			atlOffset=9.1605579e+013;
+		};
+		class Item76
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3841.7031,15.007439,4636.9507};
+						angles[]={0,0.27866122,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this enableSimulation false;  this allowDamage false;  this addAction[localize""STR_Process_Sand"",life_fnc_processAction,""sand"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""sand"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""sand"",0,false,false,"""",' !license_civ_sand && playerSide == civilian '];";
+						name="civ_process_sand";
+					};
+					id=252;
+					type="C_Man_casual_2_F";
+					atlOffset=0.0059995651;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=251;
+			atlOffset=0.0059995651;
+		};
+		class Item77
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4372.4019,15.407534,2529.4021};
+						angles[]={0,6.0923162,0};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_Shops_Glass"",life_fnc_virt_menu,""glass""];";
+						name="Str_Shops_Glass";
+					};
+					id=254;
+					type="C_Man_casual_2_F";
+					atlOffset=0.29399967;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=253;
+			atlOffset=0.29399967;
+		};
+		class Item78
+		{
+			dataType="Marker";
+			position[]={4698.1392,1.001949e+038,3410.3811};
+			name="rock_quarry";
+			text="@STR_MAR_Rock_Quarry";
+			type="mil_triangle";
+			id=257;
+			atlOffset=1.001949e+038;
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={2644.4741,29849.348,5333.2041};
+			name="civ_car_3";
+			type="Empty";
+			id=178;
+			atlOffset=29834.273;
+		};
+		class Item80
+		{
+			dataType="Marker";
+			position[]={3763.4387,6.778922e+019,3216.4353};
+			name="civ_spawn_2";
+			type="Empty";
+			id=258;
+			atlOffset=6.778922e+019;
+		};
+		class Item81
+		{
+			dataType="Marker";
+			position[]={3415.9353,6.778922e+019,3204.053};
+			name="civ_spawn_3";
+			type="Empty";
+			id=259;
+			atlOffset=6.778922e+019;
+		};
+		class Item82
+		{
+			dataType="Marker";
+			position[]={2664.5991,6.778922e+019,4158.479};
+			name="civ_spawn_5";
+			type="Empty";
+			id=260;
+			atlOffset=6.778922e+019;
+		};
+		class Item83
+		{
+			dataType="Marker";
+			position[]={3980.5737,6.778922e+019,4909.6934};
+			name="civ_spawn_4";
+			type="Empty";
+			id=261;
+			atlOffset=6.778922e+019;
 		};
 	};
 };
