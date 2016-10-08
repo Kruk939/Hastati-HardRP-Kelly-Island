@@ -12,9 +12,16 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-
-params [
-	["_value",5,[0]],
-	["_unit",objNull,[objNull]],
-	["_cop",objNull,[objNull]]
-];
+if(!isDedicated) exitWith {}; //Let only server send data
+if(isNil "life_marketSync") then {
+	life_marketSync = false;
+}
+if(!life_marketSync) then {
+	life_marketSync = true;
+	uiSleep 300;
+	{
+		_x set [5, (SUB(_x select 5, _x select 6)];
+	} forEach life_marketItems;
+	publicVariable "life_marketItems";
+	life_marketSync = false;
+};
