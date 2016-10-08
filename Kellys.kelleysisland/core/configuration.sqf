@@ -68,6 +68,17 @@ CASH = 0;
 life_istazed = false;
 life_isknocked = false;
 life_vehicles = [];
+if(isNil "life_marketItems") then {
+	life_marketItems = [];
+	{
+		_varName = ITEM_VARNAME(configName _x);
+		_maxPrice = getNumber(_x >> "maxPrice");
+		_minPrice = getNumber(_x >> "minPrice");
+		_consumption = getNumber(_x >> "consumption");
+		_maxQuantity = getNumber(_x >> "maxQuantity");
+		life_marketItems pushBack [_varname, _maxPrice, _consumption, _maxQuantity];
+	} foreach ("true" configClasses (missionConfigFile >> "MarketItems"));
+}
 
 /*
 	Master Array of items?
@@ -76,6 +87,10 @@ life_vehicles = [];
 {
 	SVAR_MNS [ITEM_VARNAME(configName _x),0];
 } foreach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+
+
+
+
 
 /* Setup the BLAH! */
 {
