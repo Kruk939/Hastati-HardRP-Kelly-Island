@@ -344,7 +344,10 @@ class Life_Client_Core
 		class placestorageSmall {};
 		class placedefinestorage {};
 	};
-
+	class Market
+	{
+		file = "core\market";
+	};
 	class Dialog_Controls
 	{
 		file = "dialog\function";
