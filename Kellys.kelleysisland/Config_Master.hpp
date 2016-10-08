@@ -134,3 +134,4 @@ class Life_Settings {
 #include "Config_Vehicles.hpp"
 #include "Config_vItems.hpp"
 #include "Config_Weapons.hpp"
+#include "Config_MarketItems.hpp"
