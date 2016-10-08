@@ -71,12 +71,15 @@ life_vehicles = [];
 if(isNil "life_marketItems") then {
 	life_marketItems = [];
 	{
-		_varName = ITEM_VARNAME(configName _x);
-		_maxPrice = getNumber(_x >> "maxPrice");
-		_minPrice = getNumber(_x >> "minPrice");
-		_consumption = getNumber(_x >> "consumption");
-		_maxQuantity = getNumber(_x >> "maxQuantity");
-		life_marketItems pushBack [_varname, _maxPrice, _consumption, _maxQuantity];
+		_varName = configName _x; //0
+		//_startPrice = getNumber(_x >> "startPrice");
+		_startPrice = ADD(((SUB(_maxPrice,_minPrice)) / 2), _minPrice); //1
+		_maxPrice = getNumber(_x >> "maxPrice"); //2
+		_minPrice = getNumber(_x >> "minPrice"); //3
+		_consumption = getNumber(_x >> "consumption"); //4
+		_maxQuantity = getNumber(_x >> "maxQuantity"); //6
+		_mnoznik = floor((_maxPrice - _minPrice) / _maxQuantity); //7 no futher calculation in script
+		life_marketItems pushBack [_varname, _startPrice, _maxPrice, _minPrice, _consumption, (_maxQuantity / 2), _maxQuantity, _mnoznik];
 	} foreach ("true" configClasses (missionConfigFile >> "MarketItems"));
 }
 
