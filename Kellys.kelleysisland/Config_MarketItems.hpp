@@ -10,6 +10,7 @@ class MarketItems {
     //Virtual Items
 	
     class oil_processed {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -17,6 +18,7 @@ class MarketItems {
     };
 
     class copper_refined {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -24,6 +26,7 @@ class MarketItems {
     };
 
     class iron_refined {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -31,6 +34,7 @@ class MarketItems {
     };
 
     class salt_refined {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -38,6 +42,7 @@ class MarketItems {
     };
 
     class diamond_cut {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -45,6 +50,7 @@ class MarketItems {
     };
 
     class cement {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -52,6 +58,7 @@ class MarketItems {
     };
 
     class heroin_processed {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -59,6 +66,7 @@ class MarketItems {
     };
 	
     class marijuana {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -66,6 +74,7 @@ class MarketItems {
     };
 
     class cocaine_processed {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -73,6 +82,7 @@ class MarketItems {
     };
 
     class glass {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -88,6 +98,7 @@ class MarketItems {
 	
     //Mined Items
     class oil_unprocessed {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -95,6 +106,7 @@ class MarketItems {
     };
 
     class copper_unrefined {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -102,6 +114,7 @@ class MarketItems {
     };
 
     class iron_unrefined {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -109,6 +122,7 @@ class MarketItems {
     };
 
     class salt_unrefined {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -116,6 +130,7 @@ class MarketItems {
     };
 
     class sand {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -123,6 +138,7 @@ class MarketItems {
     };
 
     class diamond_uncut {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -130,6 +146,7 @@ class MarketItems {
     };
 
     class rock {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -139,6 +156,7 @@ class MarketItems {
 
     //Drugs
     class heroin_unprocessed {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -146,6 +164,7 @@ class MarketItems {
     };
 
     class cannabis {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
@@ -154,6 +173,7 @@ class MarketItems {
 
 	
     class cocaine_unprocessed {
+		startPrice = 200;
 		maxPrice = 400;
 		minPrice = 0;
 		consumption = 50;
