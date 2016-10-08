@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=262;
+		nextID=269;
 	};
 	class MarkerIDProvider
 	{
-		nextID=6;
+		nextID=7;
 	};
 	class Camera
 	{
-		pos[]={3997.9929,44.918468,4919.8647};
-		dir[]={-0.68835139,-0.67274362,-0.2717467};
-		up[]={-0.62585342,0.73964721,-0.24706781};
-		aside[]={-0.36718684,7.6869037e-007,0.93013704};
+		pos[]={2614.0957,1.1656895e+017,5306.7168};
+		dir[]={0,0,1};
+		up[]={0,1,0};
+		aside[]={1,0,0};
 	};
 };
 binarizationWanted=0;
@@ -84,7 +84,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=84;
+		items=91;
 		class Item0
 		{
 			dataType="Group";
@@ -5120,7 +5120,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2646.4741,15.375809,5306.2246};
+						position[]={2652.7947,15.85113,5321.8408};
 					};
 					side="Civilian";
 					flags=7;
@@ -5163,12 +5163,12 @@ class Mission
 		class Item29
 		{
 			dataType="Marker";
-			position[]={2616.3716,29841.729,5307.584};
+			position[]={2652.7512,29842.283,5322.8501};
 			name="market_1";
 			text="Market";
 			type="loc_Tourism";
 			id=155;
-			atlOffset=29827.338;
+			atlOffset=29826.402;
 		};
 		class Item30
 		{
@@ -5182,7 +5182,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2640.7988,15.113562,5328.0444};
+						position[]={2635.3931,14.417386,5328.2046};
 					};
 					side="Civilian";
 					flags=7;
@@ -5225,7 +5225,7 @@ class Mission
 		class Item31
 		{
 			dataType="Marker";
-			position[]={2638.5298,1.1656895e+017,5330.1909};
+			position[]={2635.3386,1.1656895e+017,5329.9404};
 			name="car_shop_1";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5236,11 +5236,11 @@ class Mission
 		class Item32
 		{
 			dataType="Marker";
-			position[]={2678.2129,29849.787,5363.2432};
+			position[]={2635.3513,29847.549,5331.3984};
 			name="civ_car_1";
 			type="Empty";
 			id=159;
-			atlOffset=29833.34;
+			atlOffset=29833.541;
 		};
 		class Item33
 		{
@@ -5306,7 +5306,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2644.5435,15.381476,5306.1875};
+						position[]={2644.5151,15.595761,5322.0479};
 					};
 					side="Civilian";
 					flags=7;
@@ -5350,7 +5350,7 @@ class Mission
 		class Item35
 		{
 			dataType="Marker";
-			position[]={2615.7876,4.7878464e+029,5318.6836};
+			position[]={2638.1001,4.7878464e+029,5307.6353};
 			name="rebel_1";
 			text="Sklep rebelianta";
 			type="o_unknown";
@@ -5360,7 +5360,7 @@ class Mission
 		class Item36
 		{
 			dataType="Marker";
-			position[]={2615.8477,1.1656895e+017,5312.5659};
+			position[]={2644.3618,1.1656895e+017,5322.9165};
 			name="city_hall";
 			text="Urząd Miasta";
 			type="loc_Fountain";
@@ -5379,7 +5379,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2642.7632,15.375171,5306.2002};
+						position[]={2629.7148,14.459251,5321.4268};
 					};
 					side="Civilian";
 					flags=7;
@@ -5423,7 +5423,7 @@ class Mission
 		class Item38
 		{
 			dataType="Marker";
-			position[]={2615.7905,1.871862e+024,5315.2754};
+			position[]={2629.7026,1.871862e+024,5322.519};
 			name="civ_clothing_shop_1";
 			text="Sklep z ubraniami";
 			type="mil_box";
@@ -5495,7 +5495,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2640.6768,15.102575,5328.0444};
+						position[]={2637.0798,14.641967,5328.2188};
 					};
 					side="Civilian";
 					flags=7;
@@ -5538,7 +5538,7 @@ class Mission
 		class Item41
 		{
 			dataType="Marker";
-			position[]={2638.4075,1.1656895e+017,5330.1904};
+			position[]={2637.1079,1.1656895e+017,5330.0674};
 			name="car_shop_2";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5549,16 +5549,16 @@ class Mission
 		class Item42
 		{
 			dataType="Marker";
-			position[]={2646.7341,29849.844,5332.3633};
+			position[]={2637.0811,29848.811,5331.4131};
 			name="civ_car_2";
 			type="Empty";
 			id=176;
-			atlOffset=29834.457;
+			atlOffset=29834.547;
 		};
 		class Item43
 		{
 			dataType="Marker";
-			position[]={2638.4688,1.1656895e+017,5330.1909};
+			position[]={2638.8091,1.1656895e+017,5330.1772};
 			name="car_shop_3";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5578,7 +5578,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2640.7378,15.108068,5328.0444};
+						position[]={2638.7664,14.861215,5328.2188};
 					};
 					side="Civilian";
 					flags=7;
@@ -5630,7 +5630,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2616.3645,10.670173,5329.5703};
+						position[]={2640.4666,15.062327,5328.2461};
 					};
 					side="Civilian";
 					flags=7;
@@ -5673,7 +5673,7 @@ class Mission
 		class Item46
 		{
 			dataType="Marker";
-			position[]={2614.0957,1.1656895e+017,5331.7168};
+			position[]={2640.4895,1.1656895e+017,5330.3555};
 			name="car_shop_4";
 			text="Sklep z pojazdami";
 			type="c_car";
@@ -5684,11 +5684,11 @@ class Mission
 		class Item47
 		{
 			dataType="Marker";
-			position[]={2643.0906,29849.227,5332.1006};
+			position[]={2640.4668,29849.348,5331.8188};
 			name="civ_car_4";
 			type="Empty";
 			id=184;
-			atlOffset=29834.197;
+			atlOffset=29834.662;
 		};
 		class Item48
 		{
@@ -5702,7 +5702,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2616.3645,10.65549,5329.6309};
+						position[]={2625.4873,12.97885,5327.9707};
 					};
 					side="Civilian";
 					flags=7;
@@ -5745,7 +5745,7 @@ class Mission
 		class Item49
 		{
 			dataType="Marker";
-			position[]={2614.0955,1.4580692e+023,5331.7769};
+			position[]={2625.4167,1.4580692e+023,5329.707};
 			name="car_shop_5";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -5756,7 +5756,7 @@ class Mission
 		class Item50
 		{
 			dataType="Marker";
-			position[]={2619.4639,8.0475318e+017,5334.8237};
+			position[]={2625.4033,8.0475318e+017,5330.6406};
 			name="civ_truck_1";
 			type="Empty";
 			colorName="ColorBrown";
@@ -5775,7 +5775,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2616.4258,10.653593,5329.6924};
+						position[]={2627.1743,13.288223,5327.9883};
 					};
 					side="Civilian";
 					flags=7;
@@ -5818,7 +5818,7 @@ class Mission
 		class Item52
 		{
 			dataType="Marker";
-			position[]={2614.1565,1.4580692e+023,5331.8389};
+			position[]={2627.136,1.4580692e+023,5330.3462};
 			name="car_shop_6";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -5829,7 +5829,7 @@ class Mission
 		class Item53
 		{
 			dataType="Marker";
-			position[]={2622.7861,8.0475318e+017,5334.8174};
+			position[]={2627.0566,8.0475318e+017,5331.1621};
 			name="civ_truck_2";
 			type="Empty";
 			colorName="ColorBrown";
@@ -5848,7 +5848,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2616.4868,10.681482,5329.6309};
+						position[]={2628.8965,13.564132,5328.0059};
 					};
 					side="Civilian";
 					flags=7;
@@ -5891,7 +5891,7 @@ class Mission
 		class Item55
 		{
 			dataType="Marker";
-			position[]={2614.218,1.4580692e+023,5331.7769};
+			position[]={2628.9045,1.4580692e+023,5331.0049};
 			name="car_shop_7";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -5902,7 +5902,7 @@ class Mission
 		class Item56
 		{
 			dataType="Marker";
-			position[]={2625.6843,8.0475318e+017,5334.6978};
+			position[]={2628.8652,8.0475318e+017,5331.5693};
 			name="civ_truck_3";
 			type="Empty";
 			colorName="ColorBrown";
@@ -5921,7 +5921,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2616.4258,10.668511,5329.6309};
+						position[]={2630.6011,13.807036,5328.0059};
 					};
 					side="Civilian";
 					flags=7;
@@ -5964,7 +5964,7 @@ class Mission
 		class Item58
 		{
 			dataType="Marker";
-			position[]={2614.1563,1.4580692e+023,5331.7173};
+			position[]={2630.6062,1.4580692e+023,5331.6528};
 			name="car_shop_8";
 			text="Sklep z Ciężarówkami";
 			type="c_car";
@@ -5975,7 +5975,7 @@ class Mission
 		class Item59
 		{
 			dataType="Marker";
-			position[]={2628.2039,8.0475318e+017,5334.9492};
+			position[]={2630.6814,8.0475318e+017,5332.3311};
 			name="civ_truck_4";
 			type="Empty";
 			colorName="ColorBrown";
@@ -6038,7 +6038,7 @@ class Mission
 		class Item61
 		{
 			dataType="Marker";
-			position[]={2632.2629,1.1656895e+017,5305.8701};
+			position[]={2637.1011,1.1656895e+017,5307.5308};
 			name="reb_car_1";
 			type="Empty";
 			id=204;
@@ -6100,7 +6100,7 @@ class Mission
 		class Item63
 		{
 			dataType="Marker";
-			position[]={2615.7554,2.9344008e+014,5310.1304};
+			position[]={2630.4524,2.9344008e+014,5314.7358};
 			name="civ_clothing_shop_2";
 			text="Sklep z ubraniami";
 			type="mil_box";
@@ -6637,11 +6637,11 @@ class Mission
 		class Item79
 		{
 			dataType="Marker";
-			position[]={2644.4741,29849.348,5333.2041};
+			position[]={2638.8521,29848.744,5331.7412};
 			name="civ_car_3";
 			type="Empty";
 			id=178;
-			atlOffset=29834.273;
+			atlOffset=29834.268;
 		};
 		class Item80
 		{
@@ -6678,6 +6678,83 @@ class Mission
 			type="Empty";
 			id=261;
 			atlOffset=6.778922e+019;
+		};
+		class Item84
+		{
+			dataType="Marker";
+			position[]={4201.2788,3.562652e+025,2245.5078};
+			name="civ_shop_oil";
+			text="Sprzedarz oleju";
+			type="mil_box";
+			colorName="ColorBlue";
+			id=262;
+			atlOffset=3.562652e+025;
+		};
+		class Item85
+		{
+			dataType="Marker";
+			position[]={5490.1689,2.2571088e+027,4177.146};
+			name="civ_shop_diamond";
+			text="Sprzedarz diamentów";
+			type="mil_box";
+			colorName="ColorBlue";
+			id=263;
+			atlOffset=2.2571088e+027;
+		};
+		class Item86
+		{
+			dataType="Marker";
+			position[]={3842.3918,3.5654411e+025,4636.6401};
+			name="civ_process_sand";
+			text="Przetwarzanie piasku";
+			type="mil_box";
+			colorName="ColorOrange";
+			id=264;
+			atlOffset=3.5654411e+025;
+		};
+		class Item87
+		{
+			dataType="Marker";
+			position[]={2912.0586,1.9077245e+014,3934.0974};
+			name="civ_process_diamond";
+			text="Przetwarzanie diamentow";
+			type="mil_box";
+			colorName="ColorOrange";
+			id=265;
+			atlOffset=1.9077245e+014;
+		};
+		class Item88
+		{
+			dataType="Marker";
+			position[]={2645.561,3.1699554e+015,4363.8379};
+			name="civ_process_oil";
+			text="Przetwarzanie oleju";
+			type="mil_box";
+			colorName="ColorOrange";
+			id=266;
+			atlOffset=3.1699554e+015;
+		};
+		class Item89
+		{
+			dataType="Marker";
+			position[]={4372.293,2.4251684e+027,2526.197};
+			name="civ_shop_glass";
+			text="Sprzedarz szkła";
+			type="mil_box";
+			colorName="ColorBlue";
+			id=267;
+			atlOffset=2.4251684e+027;
+		};
+		class Item90
+		{
+			dataType="Marker";
+			position[]={2493.0239,9.3952842e+024,4487.1709};
+			name="civ_shop_iron";
+			text="Sprzedarz żelaza";
+			type="mil_box";
+			colorName="ColorBlue";
+			id=268;
+			atlOffset=9.3952842e+024;
 		};
 	};
 };
