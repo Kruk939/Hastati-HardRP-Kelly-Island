@@ -6,11 +6,12 @@
 */
 class Life_Settings {
     /* Persistent Settings */
-    save_civ_weapons = false; //Allow civilians to save weapons on them?
+    save_civ_weapons = true; //Allow civilians to save weapons on them?
     save_virtualItems = true; //Save Virtual items (all sides)?
-    save_playerStats = false; //Save food & water (all sides)?
-    save_veh_virtualItems = false; //Save Virtual items for vehicles (all sides)?
-    save_veh_gear = false; //Save Gear for vehicles (all sides)?
+    save_playerStats = true; //Save food & water (all sides)?
+    save_veh_virtualItems = true; //Save Virtual items for vehicles (all sides)?
+    save_veh_gear = true; //Save Gear for vehicles (all sides)?
+	
 
     /* Clothing related settings */
     clothing_box = true; //true = preview inside a black box.  false = preview on map.
@@ -75,6 +76,9 @@ class Life_Settings {
     /* Job-related stuff */
     delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
 
+	/* Enable dynamic market*/
+	dynamic_market = true;
+	
     /* Wanted System related settings */
     /* crimes[] = {String, Bounty, Code} */
     crimes[] = {
