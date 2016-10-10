@@ -347,6 +347,11 @@ class Life_Client_Core
 	class Market
 	{
 		file = "core\market";
+		class getMarketPrice {};
+		class reciveMarketData {};
+		class sendMarketData {};
+		class syncMarketData {};
+		class marketStart {};
 	};
 	class Dialog_Controls
 	{

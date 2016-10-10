@@ -13,38 +13,47 @@
 	BOOL - true if function was executed successfully
 */
 
-params [
+/*params [
 	["_type"],
 	["_buy",false],
 	["_object",objNull,[objNull],
 	["_quantity", 1]
-];
+]; */
+_type = _this select 0;
+_buy = _this select 1;
+_object = _this select 2;
+_quantity = _this select 3;
+
+diag_log "------------------------------------------------------------------------------------------------------";
+diag_log "--------------------------------- Odebrano dane ----------------------------------";
+diag_log "------------------------------------------------------------------------------------------------------";
+
 if(_quantity < 1) exitWith {}; //Dafuq?
 if(!isDedicated) exitWith {}; //Don't let players execute this script
 if(typename _type != "STRING") exitWith {}; //Checking if _type is string
-if(isNull _object) exitWith {}; // anonymous sender?
+//if(isNull _object) exitWith {}; // anonymous sender?
 
 {
-	if( (_x select 0) == _name) then {
+	if((_x select 0) == _type) then {
 		if(_buy) then {
-			if((SEL(_x,5)) > 0) then {
-				_x set [5, SEL(_x,5) - _quantity];
-				_x set [1, (SEL(_x,1) + SEL(_x,7) * _quantity)];
+			if((_x select 5) > 0) then {
+				_x set [5, ((_x select 5) - _quantity)];
+				_x set [1, ((_x select 1) + ((_x select 7) * _quantity))];
 			} else {
 				//if not enough to buy set quantity to 0 and set maximum price
 				_x set [5, 0];
-				_x set [1, SEL(_x,2)];
-			}
+				_x set [1, (_x select 2)];
+			};
 		} else {
-			if(SEL(_x,5) < SEL(_x,6)) then {
-				_x set [5, SEL(_x,5) + _quantity];
-				_x set [1, (SEL(_x,1) - SEL(_x,7) * _quantity)];
+			if((_x select 5) < (_x select 6)) then {
+				_x set [5, (_x select 5) + _quantity];
+				_x set [1, ((_x select 1) - ((_x select 7) * _quantity))];
 			} else {
 				//if there is too much on market set maximum and minimal price
-				_x set [5, SEL(_x,6)];
-				_x set [1, SEL(_x,3)];
-			}		
+				_x set [5, (_x select 6)];
+				_x set [1, (_x select 3)];
+			};	
 		};
-	}
+	};
 } foreach life_marketItems;
 [] spawn life_fnc_syncMarketData;

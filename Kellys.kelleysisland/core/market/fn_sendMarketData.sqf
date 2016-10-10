@@ -13,14 +13,22 @@
 	BOOL - true if function was executed successfully
 */
 
-params [
+/*params [
 	["_type"],
 	["_buy",false],
-	["quantity", 1]
-];
+	["_quantity", 1]
+];*/
+
+diag_log "------------------------------------------------------------------------------------------------------";
+diag_log "--------------------------------- Wysylanie danych ----------------------------------";
+diag_log "------------------------------------------------------------------------------------------------------";
+
+_type = _this select 0;
+_buy = _this select 1;
+_quantity = _this select 2;
 
 if(typename _type != "STRING") exitWith {}; //Checking if _type is string
+if(typename _buy != "BOOL") exitWith {};
 
 
-
-[_type, _buy, player] remoteExec ["life_fnc_reciveMarketData", 2];
+[_type, _buy, player, _quantity] remoteExec ["life_fnc_reciveMarketData",2];

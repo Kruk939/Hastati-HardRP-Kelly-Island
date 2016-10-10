@@ -13,15 +13,20 @@
 	BOOL - true if function was executed successfully
 */
 if(!isDedicated) exitWith {}; //Let only server send data
-if(isNil "life_marketSync") then {
-	life_marketSync = false;
-}
+diag_log "------------------------------------------------------------------------------------------------------";
+diag_log "--------------------------------- Synchronizacja marketu ----------------------------------";
+diag_log "------------------------------------------------------------------------------------------------------";
 if(!life_marketSync) then {
+
 	life_marketSync = true;
 	uiSleep 300;
 	{
-		_x set [5, (SUB(_x select 5, _x select 6)];
+		_x set [5, (_x select 5) - (_x select 6)];
 	} forEach life_marketItems;
 	publicVariable "life_marketItems";
 	life_marketSync = false;
+
+	diag_log "------------------------------------------------------------------------------------------------------";
+	diag_log "--------------------------------- Zsynchronizowano market ----------------------------------";
+	diag_log "------------------------------------------------------------------------------------------------------";
 };
