@@ -24,11 +24,14 @@ if(isNil "life_marketItems") then {
 		_minPrice = getNumber(_x >> "minPrice");
 		_consumption = getNumber(_x >> "consumption");
 		_maxQuantity = getNumber(_x >> "maxQuantity");
-		_startPrice = (_maxPrice - _minPrice) / 2 + _minPrice;
+		//_startPrice = (_maxPrice - _minPrice) / 2 + _minPrice;
+		//_quantity = (_maxQuantity / 2);
 		//_startPrice = ADD(((SUB(_maxPrice,_minPrice)) / 2),_minPrice);
+		_quantity = random [0, (_maxQuantity / 2), _maxQuantity];
 		_mnoznik = (floor(((_maxPrice - _minPrice) / _maxQuantity) * 100)) / 100;
+		_startPrice = (_quantity * _mnoznik) + _minPrice;
 		diag_log format["------------------------------- %1 - %2 -------------------------------",_varName, _mnoznik];
-		life_marketItems pushBack [_varname, _startPrice, _maxPrice, _minPrice, _consumption, (_maxQuantity / 2), _maxQuantity, _mnoznik];
+		life_marketItems pushBack [_varname, _startPrice, _maxPrice, _minPrice, _consumption, _quantity, _maxQuantity, _mnoznik];
 	} foreach ("true" configClasses (missionConfigFile >> "MarketItems"));
 	publicVariable "life_marketItems";
 	life_marketSync = false;
