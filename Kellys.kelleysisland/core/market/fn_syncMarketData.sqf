@@ -13,11 +13,9 @@
 	BOOL - true if function was executed successfully
 */
 if(!isDedicated) exitWith {}; //Let only server send data
-diag_log "------------------------------------------------------------------------------------------------------";
-diag_log "--------------------------------- Synchronizacja marketu ----------------------------------";
-diag_log "------------------------------------------------------------------------------------------------------";
-if(!life_marketSync) then {
 
+if(!life_marketSync) then {
+	diag_log "--------------------------------- Synchronizacja marketu ----------------------------------";
 	life_marketSync = true;
 	uiSleep 300;
 	{
@@ -25,8 +23,5 @@ if(!life_marketSync) then {
 	} forEach life_marketItems;
 	publicVariable "life_marketItems";
 	life_marketSync = false;
-
-	diag_log "------------------------------------------------------------------------------------------------------";
 	diag_log "--------------------------------- Zsynchronizowano market ----------------------------------";
-	diag_log "------------------------------------------------------------------------------------------------------";
 };

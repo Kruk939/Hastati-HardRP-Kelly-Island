@@ -27,7 +27,7 @@ if(isNil "life_marketItems") then {
 		//_startPrice = (_maxPrice - _minPrice) / 2 + _minPrice;
 		//_quantity = (_maxQuantity / 2);
 		//_startPrice = ADD(((SUB(_maxPrice,_minPrice)) / 2),_minPrice);
-		_quantity = random [0, (_maxQuantity / 2), _maxQuantity];
+		_quantity = floor(random [(_maxQuantity / 3), (_maxQuantity / 2), (_maxQuantity / 3) * 2]);
 		_mnoznik = (floor(((_maxPrice - _minPrice) / _maxQuantity) * 100)) / 100;
 		_startPrice = (_quantity * _mnoznik) + _minPrice;
 		diag_log format["------------------------------- %1 - %2 ($%3) -------------------------------",_varName, _mnoznik, _startPrice];

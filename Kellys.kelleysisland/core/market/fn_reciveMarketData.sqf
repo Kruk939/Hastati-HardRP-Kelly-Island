@@ -8,30 +8,22 @@
 	Parameter(s):
 	_this select 0: STRING - Virtual item name
 	_this select 1: Buy or Sell - true for buy, false for sell
+	_this select 2: object which send execution
+	_this select 3: quantity of items sold or bought
 	
 	Returns:
-	BOOL - true if function was executed successfully
+	Nothing
 */
-
-/*params [
-	["_type"],
-	["_buy",false],
-	["_object",objNull,[objNull],
-	["_quantity", 1]
-]; */
 _type = _this select 0;
 _buy = _this select 1;
 _object = _this select 2;
 _quantity = _this select 3;
 
-diag_log "------------------------------------------------------------------------------------------------------";
-diag_log "--------------------------------- Odebrano dane ----------------------------------";
-diag_log "------------------------------------------------------------------------------------------------------";
 
 if(_quantity < 1) exitWith {}; //Dafuq?
 if(!isDedicated) exitWith {}; //Don't let players execute this script
 if(typename _type != "STRING") exitWith {}; //Checking if _type is string
-//if(isNull _object) exitWith {}; // anonymous sender?
+if(isNull _object) exitWith {}; // anonymous sender?
 
 {
 	if((_x select 0) == _type) then {
