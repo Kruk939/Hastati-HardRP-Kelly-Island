@@ -54,6 +54,7 @@ class CfgFunctions {
 			class updatePartial {};
 		};
 	};
+	
 
 	class Life_System {
 		tag = "life";

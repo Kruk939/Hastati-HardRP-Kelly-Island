@@ -9,13 +9,15 @@
 private["_type","_price","_amount","_diff","_name","_hideout"];
 if((lbCurSel 2401) == -1) exitWith {hint localize "STR_Shop_Virt_Nothing"};
 _type = lbData[2401,(lbCurSel 2401)];
-_price = lbValue[2401,(lbCurSel 2401)];
+//_price = lbValue[2401,(lbCurSel 2401)];
+_price = ([_type] call life_fnc_getMarketPrice);
 _amount = ctrlText 2404;
 if(!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _diff = [_type,parseNumber(_amount),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 _amount = parseNumber(_amount);
 if(_diff <= 0) exitWith {hint localize "STR_NOTF_NoSpace"};
 _amount = _diff;
+
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 if((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 if((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
@@ -52,6 +54,7 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 		SUB(CASH,(_price * _amount));
 	};
 	[] call life_fnc_virt_update;
+	[_type, true, _amount] call life_fnc_sendMarketData;
 };
 
 [0] call SOCK_fnc_updatePartial;

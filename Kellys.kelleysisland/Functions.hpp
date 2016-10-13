@@ -344,7 +344,16 @@ class Life_Client_Core
 		class placestorageSmall {};
 		class placedefinestorage {};
 	};
-
+	class Market
+	{
+		file = "core\market";
+		class getMarketPrice {};
+		class reciveMarketData {};
+		class sendMarketData {};
+		class syncMarketData {};
+		class marketStart {};
+		class marketView {};
+	};
 	class Dialog_Controls
 	{
 		file = "dialog\function";

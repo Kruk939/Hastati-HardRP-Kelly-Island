@@ -19,10 +19,12 @@ if(_amount > (ITEM_VALUE(_type))) exitWith {hint localize "STR_Shop_Virt_NotEnou
 if((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
 life_action_delay = time;
 
-_price = (_price * _amount);
+//_price = (_price * _amount);
+_price = ([_type] call life_fnc_getMarketPrice) * _amount;
 _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
 if(([false,_type,_amount] call life_fnc_handleInv)) then {
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
+	[_type, false, _amount] call life_fnc_sendMarketData;
 	ADD(CASH,_price);
 	[] call life_fnc_virt_update;
 };

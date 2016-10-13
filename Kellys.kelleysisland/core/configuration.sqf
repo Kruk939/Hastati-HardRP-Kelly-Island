@@ -69,6 +69,7 @@ life_istazed = false;
 life_isknocked = false;
 life_vehicles = [];
 
+
 /*
 	Master Array of items?
 */
@@ -76,6 +77,10 @@ life_vehicles = [];
 {
 	SVAR_MNS [ITEM_VARNAME(configName _x),0];
 } foreach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+
+
+
+
 
 /* Setup the BLAH! */
 {

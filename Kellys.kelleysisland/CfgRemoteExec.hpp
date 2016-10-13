@@ -116,6 +116,7 @@ class CfgRemoteExec {
         F(life_fnc_pulloutVeh,ANYONE)
         F(life_fnc_pushFunction,ANYONE)
         F(life_fnc_simDisable,ANYONE)
+        F(life_fnc_recivemarketdata,ANYONE)
 
     };
 
