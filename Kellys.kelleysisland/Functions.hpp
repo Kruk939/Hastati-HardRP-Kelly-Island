@@ -352,6 +352,7 @@ class Life_Client_Core
 		class sendMarketData {};
 		class syncMarketData {};
 		class marketStart {};
+		class marketView {};
 	};
 	class Dialog_Controls
 	{
