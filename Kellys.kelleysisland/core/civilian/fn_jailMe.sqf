@@ -13,11 +13,15 @@ params [
 ];
 
 
-if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); };
+//if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); };
+_time = life_arrestedTime;
 
-if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 1500; _time = time + (10 * 60); };
+//if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 1500; _time = time + (10 * 60); };
 _esc = false;
+_tick = 0;
 _bail = false;
+_bailMultiplayer = 3000;
+life_bail_amount = life_arrestedTime * _bailMultiplayer;
 
 [_bad] spawn {
 	life_canpay_bail = false;
@@ -28,7 +32,6 @@ _bail = false;
 	};
 	life_canpay_bail = nil;
 };
-
 while {true} do {
 	if((round(_time - time)) > 0) then {
 		_countDown = [(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString;
@@ -42,17 +45,23 @@ while {true} do {
 	if(life_bail_paid) exitWith {
 		_bail = true;
 	};
-	
+	_tick = _tick + 0.1;
 	if((round(_time - time)) < 1) exitWith {hint ""};
 	if(!alive player && ((round(_time - time)) > 0)) exitWith {};
+	if(_tick == 60) {
+		_tick = 0;
+		life_arrestedTime = life_arrestedTime - 1;
+		life_bail_amount = life_bail_amount - 3000;
+		[5] call SOCK_fnc_updatePartial;
+	};
 	sleep 0.1;
 };
-
 
 switch (true) do {
 	case (_bail): {
 		life_is_arrested = false;
 		life_bail_paid = false;
+		life_arrestedTime = 0;
 		hint localize "STR_Jail_Paid";
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
@@ -70,6 +79,7 @@ switch (true) do {
 	
 	case (alive player && !_esc && !_bail): {
 		life_is_arrested = false;
+		life_arrestedTime = 0;
 		hint localize "STR_Jail_Released";
 		[getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
 		player setPos (getMarkerPos "jail_release");
