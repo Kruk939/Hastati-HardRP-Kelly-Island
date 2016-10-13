@@ -161,7 +161,14 @@ class Licenses {
         illegal = true;
         side = "civ";
     };
-
+	
+    class citizenship {
+        variable = "citizenship";
+        displayName = "Obywatelstwo";
+        price = 500;
+        illegal = false;
+        side = "civ";
+    };
     //Cop Licenses
     class cAir {
         variable = "cAir";
