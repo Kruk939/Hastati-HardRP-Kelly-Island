@@ -27,4 +27,10 @@
 #include "compensate.hpp"
 #include "FuelStat.hpp"
 #include "market.hpp"
-
+#include "phone_addContact.hpp"
+#include "phone_calls"
+#include "phone_change"
+#include "phone_contacts"
+#include "phone_main"
+#include "phone_messages"
+#include "phone_smsSend"

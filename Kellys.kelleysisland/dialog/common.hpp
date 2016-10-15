@@ -7,6 +7,22 @@
 #define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
+#define PHONE_CALL "call.paa"
+#define PHONE_CONTACTS "contacts.paa"
+#define PHONE_MESSAGE "message.paa"
+#define PHONE_EXIT "exit.paa"
+#define PHONE_REJECT "reject.paa"
+#define PHONE_SEND "send.paa"
+#define PHONE_RETURN "return.paa"
+#define PHONE_ADD "add.paa"
+#define PHONE_APPLY "apply.paa"
+
+#define GUI_GRID_X	(0)
+#define GUI_GRID_Y	(0)
+#define GUI_GRID_W	(0.025)
+#define GUI_GRID_H	(0.04)
+#define GUI_GRID_WAbs	(1)
+#define GUI_GRID_HAbs	(1)
 
 class Life_Checkbox
 {
