@@ -79,7 +79,7 @@ class life_phone_messages {
 			w = 0.35;
 			h = 0.24;
 		};
-		class messageInput: RscEdit
+		class messageInput: Life_RscEdit
 		{
 			idc = 3007;
 			x = PHONE_GRID_X + 0.025;
