@@ -33,13 +33,13 @@ _query = switch(_side) do {
 _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
-if(EXTDB_SETTING(getNumber,"DebugMode") == 1) then {
+//if(EXTDB_SETTING(getNumber,"DebugMode") == 1) then {
 	diag_log "------------- Client Query Request -------------";
 	diag_log format["QUERY: %1",_query];
 	diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
 	diag_log format["Result: %1",_queryResult];
 	diag_log "------------------------------------------------";
-};
+//};
 
 if(typeName _queryResult == "STRING") exitWith {
 	[] remoteExecCall ["SOCK_fnc_insertPlayerInfo",_ownerID];
@@ -87,19 +87,17 @@ switch (_side) do {
 
 	case civilian: {
 		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
-
+		_tmp = _queryResult select 10;
 		//Parse Stats
 		_new = [(_queryResult select 9)] call DB_fnc_mresToArray;
 		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 		_queryResult set[9,_new];
-
 		_houseData = [_uid] spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
 		_queryResult pushBack (missionNamespace getVariable[format["houses_%1",_uid],[]]);
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
-		_tmp = _queryResult select 10;
 		_queryResult set[12, [_tmp] call DB_fnc_numberSafe];
 	};
 

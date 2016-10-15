@@ -14,7 +14,7 @@ params [
 
 
 //if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); };
-_time = life_arrestedTime;
+_time = life_arrestedTime * 60;
 
 //if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 1500; _time = time + (10 * 60); };
 _esc = false;
@@ -48,10 +48,10 @@ while {true} do {
 	_tick = _tick + 0.1;
 	if((round(_time - time)) < 1) exitWith {hint ""};
 	if(!alive player && ((round(_time - time)) > 0)) exitWith {};
-	if(_tick == 60) {
+	if(_tick == 60) then {
 		_tick = 0;
 		life_arrestedTime = life_arrestedTime - 1;
-		life_bail_amount = life_bail_amount - 3000;
+		life_bail_amount = life_bail_amount - _bailMultiplayer;
 		[5] call SOCK_fnc_updatePartial;
 	};
 	sleep 0.1;
