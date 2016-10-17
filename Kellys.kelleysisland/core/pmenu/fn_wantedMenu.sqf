@@ -2,12 +2,28 @@
 /*
 	File: fn_wantedMenu.sqf
 	Author: Bryan "Tonic" Boardwine
+	Edited: Kajetan Kruk Mruk
 
 	Description:
 	Opens the Wanted menu and connects to the APD.
 */
 private["_display","_list","_name","_crimes","_bounty","_units"];
 disableSerialization;
+
+
+//Allowed zones in which database can be opened
+_allowed = false;
+_allowedZones = ["cop_spawn_1", "cop_spawn_2", "cop_spawn_3", "cop_spawn_4", "cop_spawn_5"];
+_allowedCars = [];
+{
+	if((player distance (getMarkerPos _x)) < 50) exitWith {_allowed = true;}
+} forEach _allowedZones;
+{
+	if(vehicle player == _x) exitWith {_allowed = true;}
+} forEach _allowedCars;
+if(!_allowed) exitWith {};
+
+
 
 createDialog "life_wanted_menu";
 
