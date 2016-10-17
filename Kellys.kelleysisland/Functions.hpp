@@ -354,6 +354,13 @@ class Life_Client_Core
 		class marketStart {};
 		class marketView {};
 	};
+	class Phone
+	{
+		file = "core\phone";
+		class phoneOpen {};
+		class phoneGetData {};
+		class phoneInit {};
+	};
 	class Dialog_Controls
 	{
 		file = "dialog\function";

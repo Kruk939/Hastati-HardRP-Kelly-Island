@@ -143,6 +143,7 @@ class CfgFunctions {
 			class smsInsert {};
 			class callGet {};
 			class callInsert {};
+			class phoneQuery {};
 		};
 	};
 };

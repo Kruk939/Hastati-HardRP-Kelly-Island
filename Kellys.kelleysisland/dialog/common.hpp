@@ -7,15 +7,15 @@
 #define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
-#define PHONE_CALL "call.paa"
-#define PHONE_CONTACTS "contacts.paa"
-#define PHONE_MESSAGE "message.paa"
-#define PHONE_EXIT "exit.paa"
-#define PHONE_REJECT "reject.paa"
-#define PHONE_SEND "send.paa"
-#define PHONE_RETURN "return.paa"
-#define PHONE_ADD "add.paa"
-#define PHONE_APPLY "apply.paa"
+#define PHONE_CALL "icons\noimage.paa"
+#define PHONE_CONTACTS "icons\noimage.paa"
+#define PHONE_MESSAGE "icons\noimage.paa"
+#define PHONE_EXIT "icons\noimage.paa"
+#define PHONE_REJECT "icons\noimage.paa"
+#define PHONE_SEND "icons\noimage.paa"
+#define PHONE_RETURN "icons\noimage.paa"
+#define PHONE_ADD "icons\noimage.paa"
+#define PHONE_APPLY "icons\noimage.paa"
 
 #define GUI_GRID_X	(0)
 #define GUI_GRID_Y	(0)
