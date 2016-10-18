@@ -88,6 +88,7 @@ switch (_code) do {
 	};
 
 	//Holster / recall weapon. (Shift + H)
+	/*
 	case 35: {
 		if(_shift && !_ctrlKey && !(EQUAL(currentWeapon player,""))) then {
 			life_curWep_h = currentWeapon player;
@@ -101,8 +102,10 @@ switch (_code) do {
 			};
 		};
 	};
+	*/
 
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
+	/*
 	case _interactionKey: {
 		if(!life_action_inUse) then {
 			[] spawn  {
@@ -113,14 +116,17 @@ switch (_code) do {
 			};
 		};
 	};
+	*/
 
 	//Restraining (Shift + R)
+	/*
 	case 19: {
 		if(_shift) then {_handled = true;};
 		if(_shift && playerSide == west && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {(isPlayer cursorTarget)} && {(side cursorTarget in [civilian,independent])} && {alive cursorTarget} && {cursorTarget distance player < 3.5} && {!(cursorTarget GVAR "Escorting")} && {!(cursorTarget GVAR "restrained")} && {speed cursorTarget < 1}) then {
 			[] call life_fnc_restrainAction;
 		};
 	};
+	*/
 
 	//Knock out, this is experimental and yeah... (Shift + G)
 	case 34: {
