@@ -28,7 +28,7 @@ class life_phone_change {
 	};
 	
 	class controls {
-		class phoneApply : Life_RscPicture {
+		class phoneApply : Life_RscButton {
 			idc = 3001;
 			text = PHONE_APPLY;
 			x = PHONE_GRID_X;
@@ -36,7 +36,7 @@ class life_phone_change {
 			w = 0.1;
 			h = 0.12;
 		};
-		class phoneReturn : Life_RscPicture {
+		class phoneReturn : Life_RscButton {
 			idc = 3002;
 			text = PHONE_RETURN;
 			x = PHONE_GRID_X + 0.1;

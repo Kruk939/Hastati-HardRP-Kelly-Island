@@ -28,7 +28,7 @@ class life_phone_sms_send {
 	};
 	
 	class controls {
-		class phoneCall : Life_RscPicture {
+		class phoneCall : Life_RscButton {
 			idc = 3001;
 			text = PHONE_CALL;
 			x = PHONE_GRID_X;
@@ -36,7 +36,7 @@ class life_phone_sms_send {
 			w = 0.1;
 			h = 0.12;
 		};
-		class phoneReturn : Life_RscPicture {
+		class phoneReturn : Life_RscButton {
 			idc = 3002;
 			text = PHONE_RETURN;
 			x = PHONE_GRID_X + 0.3;

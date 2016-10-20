@@ -28,17 +28,20 @@ class life_phone_messages {
 	};
 	
 	class controls {
-		class phoneCall : Life_RscPicture {
+		class phoneCall : Life_RscButton {
 			idc = 3001;
+			type = 1;
 			text = PHONE_CALL;
 			x = PHONE_GRID_X;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[61204] call life_fnc_phoneButtonCall";
 		};
 		
-		class phoneSend : Life_RscPicture {
+		class phoneSend : Life_RscButton {
 			idc = 3002;
+			type = 1;
 			text = PHONE_SEND;
 			x = PHONE_GRID_X + 0.15;
 			y = 0.88;
@@ -46,8 +49,9 @@ class life_phone_messages {
 			h = 0.12;
 		};
 		
-		class phoneReturn : Life_RscPicture {
+		class phoneReturn : Life_RscButton {
 			idc = 3003;
+			type = 1;
 			text = PHONE_RETURN;
 			x = PHONE_GRID_X + 0.3;
 			y = 0.88;
@@ -57,7 +61,7 @@ class life_phone_messages {
 		
 		class phoneMessages : Life_RscListBox
 		{
-			idc = 3004;
+			idc = 3005;
 			x = PHONE_GRID_X + 0.025;
 			y = 0.12;
 			w = 0.35;
@@ -65,7 +69,7 @@ class life_phone_messages {
 		};
 		class phoneFrom : Life_RscText
 		{
-			idc = 3005;
+			idc = 3006;
 			x = PHONE_GRID_X + 0.025;
 			y = 0.1;
 			w = 0.35;
@@ -73,7 +77,7 @@ class life_phone_messages {
 		};
 		class messageFull : Life_RscText
 		{
-			idc = 3006;
+			idc = 3007;
 			x = PHONE_GRID_X + 0.025;
 			y = 0.42;
 			w = 0.35;
@@ -81,7 +85,7 @@ class life_phone_messages {
 		};
 		class messageInput: Life_RscEdit
 		{
-			idc = 3007;
+			idc = 3008;
 			x = PHONE_GRID_X + 0.025;
 			y = 0.68;
 			w = 0.35;

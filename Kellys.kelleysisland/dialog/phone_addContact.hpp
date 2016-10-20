@@ -26,7 +26,7 @@ class life_phone_addContact {
 	};
 	
 	class controls {
-		class phoneAdd : Life_RscPicture {
+		class phoneAdd : Life_RscButton {
 			idc = 3001;
 			text = PHONE_ADD;
 			x = 0.6;
@@ -35,7 +35,7 @@ class life_phone_addContact {
 			h = 0.12;
 		};
 		
-		class phoneReturn : Life_RscPicture {
+		class phoneReturn : Life_RscButton {
 			idc = 3002;
 			text = PHONE_RETURN;
 			x = 0.9;

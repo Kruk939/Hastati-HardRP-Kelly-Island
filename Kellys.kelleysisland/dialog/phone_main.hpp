@@ -27,11 +27,10 @@ class life_phone_main {
 	};
 	
 	class controls {
-		class phoneCall : Life_RscPicture {
+		class phoneCall : Life_RscButton {
 			idc = 3001;
 			type = 1;
-			sizeEx = 0.01
-			action = "hint 'Call';";
+			action = "[61201] call life_fnc_phoneButtonCall";
 			text = PHONE_CALL;
 			x = PHONE_GRID_X;
 			y = 0.88;
@@ -39,11 +38,10 @@ class life_phone_main {
 			h = 0.12;
 		};
 		
-		class phoneContacts : Life_RscPicture {
+		class phoneContacts : Life_RscButton {
 			idc = 3002;
 			type = 1;
-			sizeEx = 0.10
-			action = "hint 'Contacts';";
+			action = "closeDialog 0; [] call life_fnc_phoneDialogContacts;";
 			text = PHONE_CONTACTS;
 			x = PHONE_GRID_X + 0.1;
 			y = 0.88;
@@ -51,11 +49,10 @@ class life_phone_main {
 			h = 0.12;
 		};
 		
-		class phoneMessages : Life_RscPicture {
+		class phoneMessages : Life_RscButton {
 			idc = 3003;
 			type = 1;
-			sizeEx = 0.20
-			action = "hint 'Message';";
+			action = "closeDialog 0; ['main'] call life_fnc_phoneDialogMessages";
 			text = PHONE_MESSAGE;
 			x = PHONE_GRID_X + 0.2;
 			y = 0.88;
@@ -63,11 +60,10 @@ class life_phone_main {
 			h = 0.12;
 		};
 		
-		class phoneReject : Life_RscPicture {
+		class phoneReject : Life_RscButton {
 			idc = 3004;
 			type = 1;
-			sizeEx = 0.40
-			action = "hint 'Reject';";
+			action = "[61201] call life_fnc_phoneButtonReject";
 			text = PHONE_REJECT;
 			x = PHONE_GRID_X + 0.3;
 			y = 0.88;

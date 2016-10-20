@@ -2,7 +2,7 @@
 
 class life_phone_contacts {
 	idd = 61203;
-	name= "life_phone_main";
+	name= "life_phone_contacts";
 	movingEnable = 0;
 	enableSimulation = 1;
 	onLoad = "";
@@ -28,37 +28,42 @@ class life_phone_contacts {
 	};
 	
 	class controls {
-		class phoneCall : Life_RscPicture {
+		class phoneCall : Life_RscButton {
 			idc = 3001;
 			text = PHONE_CALL;
 			x = PHONE_GRID_X;
+			type = 1;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[] call life_fnc_phoneButtonCall";
 		};
 		
-		class phoneAdd : Life_RscPicture {
+		class phoneAdd : Life_RscButton {
 			idc = 3002;
 			text = PHONE_ADD;
 			x = PHONE_GRID_X + 0.1;
+			type = 1;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
 		};
 		
-		class phoneMessages : Life_RscPicture {
+		class phoneMessages : Life_RscButton {
 			idc = 3003;
 			text = PHONE_MESSAGE;
 			x = PHONE_GRID_X + 0.2;
+			type = 1;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
 		};
 		
-		class phoneReturn : Life_RscPicture {
+		class phoneReturn : Life_RscButton {
 			idc = 3004;
 			text = PHONE_RETURN;
 			x = PHONE_GRID_X + 0.3;
+			type = 1;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
