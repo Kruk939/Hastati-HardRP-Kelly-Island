@@ -18,5 +18,5 @@ _number = _this select 0;
 _ret = [];
 {
 	if((_x select 0) == _number) exitWith {_ret = _x;};
-} forEach life_phone_numbers;
+} forEach life_phone_contacts;
 _ret;

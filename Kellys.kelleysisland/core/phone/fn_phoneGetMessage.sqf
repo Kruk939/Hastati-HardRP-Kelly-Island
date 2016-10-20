@@ -19,7 +19,11 @@ _message = _this select 1;
 
 _contact = [_from] spawn life_fnc_phoneGetContact;
 
-if(count _contact != 0) then {_fromName = _contact select 1;} else {_fromName = _from;}
-msg(format["Nowa wiadomosc od: %1\n%2",_fromName,_message]);
+if((count _contact) != 0) then {
+	_fromName = _contact select 1;
+} else {
+	_fromName = _from;
+};
+hint format["Nowa wiadomosc od: %1\n%2",_fromName,_message];
 
 life_phone_sms = [life_phone_activeNumber, _from, _message] + life_phone_sms;

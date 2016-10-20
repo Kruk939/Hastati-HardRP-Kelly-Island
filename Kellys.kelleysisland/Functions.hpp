@@ -357,9 +357,27 @@ class Life_Client_Core
 	class Phone
 	{
 		file = "core\phone";
-		class phoneOpen {};
+		//functions:
 		class phoneGetData {};
 		class phoneInit {};
+		class phoneCallAnswered {};
+		class phoneCheckNumber {};
+		class phoneGetActiveNumber {};
+		class phoneGetCall {};
+		class phoneGetContact {};
+		class phoneGetMessage {};
+		class phoneSendCall {};
+		class phoneSendMessage {};
+		
+		//buttons:
+		class phoneButtonCall {};
+		class phoneButtonReject {};
+		
+		//dialogs:
+		class phoneOpen {};
+		class phoneDialogCalls {};
+		class phoneDialogContacts {};
+		class phoneDialogMessages {};
 	};
 	class Dialog_Controls
 	{

@@ -16,7 +16,6 @@
 #define msg(var) hint var;
 
 _targetNumber = _this select 0;
-_message = _this select 1;
 if(life_phone_beingCalled || life_phone_calling) exitWith {}; //check if calling or being called
 
 life_phone_answered = 0;
@@ -25,7 +24,6 @@ life_phone_calling = true;
 
 
 if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
-if(_message == "") exitWith {msg("Nie podano wiadomosci.")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};

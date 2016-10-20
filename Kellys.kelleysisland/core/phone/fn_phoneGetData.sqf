@@ -28,6 +28,7 @@ life_phone_answered = 0;
 life_phone_beingCalled = false;
 life_phone_calling = false;
 life_phone_inCall = false;
+life_phone_activeCard = 0;
 
 if(isNil "_data") exitWith {};
 //if(typeName _data != "ARRAY") exitWith {};
@@ -37,7 +38,10 @@ if((count _data) != 0) then {
 	life_phone_sms = _data select 2;
 	life_phone_call = _data select 3;
 	{
-		if(_x select 6 != 0) exitWith {life_phone_activeNumber = _x select 1;};
+		if(_x select 6 != 0) exitWith {
+			life_phone_activeNumber = _x select 1;
+			life_phone_activeCard = _x select 0;
+		};
 	} forEach life_phone_cards;
 	if(!isNil "life_phone_activeNumber") then {
 		if(isNil "life_phone_numbers") then {

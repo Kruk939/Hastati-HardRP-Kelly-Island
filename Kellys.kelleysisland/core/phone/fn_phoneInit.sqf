@@ -19,3 +19,9 @@ _playerUID = getPlayerUID player;
 _return = [_playerUID, player] remoteExec ["TON_fnc_phoneQuery", 2];
 
 if(isNil "_return") then {diag_log "----------- Fetching phone information failed -----------";};
+
+life_phone_emergencyNumbers = [
+	["911","POLICE"],
+	["912", "EMS"],
+	["666", "SWAT"]
+];
