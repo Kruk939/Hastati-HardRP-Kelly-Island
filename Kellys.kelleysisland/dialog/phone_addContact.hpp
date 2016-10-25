@@ -29,6 +29,8 @@ class life_phone_addContact {
 		class phoneAdd : Life_RscButton {
 			idc = 3001;
 			text = PHONE_ADD;
+			type = 1;
+			action = "[61202] call life_fnc_phoneButtonAdd";
 			x = 0.6;
 			y = 0.88;
 			w = 0.1;
@@ -38,10 +40,12 @@ class life_phone_addContact {
 		class phoneReturn : Life_RscButton {
 			idc = 3002;
 			text = PHONE_RETURN;
+			type = 1;
 			x = 0.9;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[61202] call life_fnc_phoneButtonReturn";
 		};
 		
 		class phoneContactNumber : Life_RscEdit {

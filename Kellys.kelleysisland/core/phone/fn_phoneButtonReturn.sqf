@@ -33,33 +33,40 @@ _display = _this select 0;
 _dialog = findDisplay _display;
 
 if(life_phone_beingCalled) exitWith {
-	life_phone_answered = 1;
+	life_phone_answered = 2;
 	closeDialog 0;
+	hint "Answering";
 };
 
 switch(_display) do {
-	case PHONE_MAIN: {
-		_number = ctrlText 3006;
-		[_number] call life_fnc_phoneSendCall;
-		closeDialog 0;
-	};
+	/*
 	case PHONE_CONTACTS: {
-		_list = _dialog displayCtrl 3005;
-		_index = lbCurSel _list;
-		_number = _list lbData _index;
-		[_number] call life_fnc_phoneSendCall;
+		closeDialog 0;
+		[] spawn life_fnc_phoneOpen;
 	};
 	case PHONE_CALLS: {
-		_list = _dialog displayCtrl 3005;
-		_index = lbCurSel _list;
-		_number = _list lbData _index;
-		[_number] call life_fnc_phoneSendCall;
+		closeDialog 0;
+		[] spawn life_fnc_phoneOpen;
 	};
 	case PHONE_MESSAGES: {
-		_list = _dialog displayCtrl 3005;
-		_index = lbCurSel _list;
-		_number = _list lbData _index;
-		[_number] call life_fnc_phoneSendCall;
 		closeDialog 0;
+		[] spawn life_fnc_phoneOpen;
+	};
+	case PHONE_CHANGE: {
+		closeDialog 0;
+		[] spawn life_fnc_phoneOpen;
+	};
+	case PHONE_SMSSEND: {
+		closeDialog 0;
+		[] spawn life_fnc_phoneOpen;
+	};
+	*/
+	case PHONE_ADDCONTACT: {
+		closeDialog 0;
+		[] spawn life_fnc_phoneDialogContacts;
+	};
+	case default {
+		closeDialog 0;
+		[] spawn life_fnc_phoneOpen;
 	};
 };

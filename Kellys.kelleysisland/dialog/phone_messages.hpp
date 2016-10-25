@@ -43,10 +43,21 @@ class life_phone_messages {
 			idc = 3002;
 			type = 1;
 			text = PHONE_SEND;
-			x = PHONE_GRID_X + 0.15;
+			x = PHONE_GRID_X + 0.10;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[61204] call life_fnc_phoneButtonSend";
+		};
+		class phoneAdd : Life_RscButton {
+			idc = 3002;
+			text = PHONE_ADD;
+			x = PHONE_GRID_X + 0.2;
+			type = 1;
+			y = 0.88;
+			w = 0.1;
+			h = 0.12;
+			action = "[61204] call life_fnc_phoneButtonAdd";
 		};
 		
 		class phoneReturn : Life_RscButton {
@@ -57,6 +68,7 @@ class life_phone_messages {
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[61204] call life_fnc_phoneButtonReturn";
 		};
 		
 		class phoneMessages : Life_RscListBox

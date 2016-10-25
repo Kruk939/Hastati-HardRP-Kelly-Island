@@ -31,6 +31,7 @@ class life_phone_change {
 		class phoneApply : Life_RscButton {
 			idc = 3001;
 			text = PHONE_APPLY;
+			type = 1;
 			x = PHONE_GRID_X;
 			y = 0.4;
 			w = 0.1;
@@ -39,10 +40,12 @@ class life_phone_change {
 		class phoneReturn : Life_RscButton {
 			idc = 3002;
 			text = PHONE_RETURN;
+			type = 1;
 			x = PHONE_GRID_X + 0.1;
 			y = 0.4;
 			w = 0.1;
 			h = 0.12;
+			action = "[61207] call life_fnc_phoneButtonReturn";
 		};
 		class phoneSimCards : Life_RscListBox {
 			idc = 3003;

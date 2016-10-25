@@ -8,22 +8,21 @@ class life_phone_calls {
 	onLoad = "";
 	
 	class controlsBackground {
+		class MainBackground:Life_RscText {
+			colorBackground[] = {0, 0, 0, 0.7};
+			idc = -1;
+			x = PHONE_GRID_X;
+			y = 0;
+			w = 0.4;
+			h = 1;
+		};
 		class Life_RscTitleBackground:Life_RscText {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			type = 1;
+			x = PHONE_GRID_X;
 			y = 0;
 			w = 0.4;
 			h = 0.08;
 			text = "Telefon";
-		};
-		
-		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
-			idc = -1;
-			type = 1;
-			y = 0;
-			w = 0.4;
-			h = 1;
 		};
 	};
 	
@@ -41,7 +40,8 @@ class life_phone_calls {
 		class phoneAdd : Life_RscButton {
 			idc = 3002;
 			text = PHONE_ADD;
-			x = PHONE_GRID_X + 0.1;
+			x = PHONE_GRID_X + 0.2;
+			action = "[61205] call life_fnc_phoneButtonAdd";
 			type = 1;
 			y = 0.88;
 			w = 0.1;
@@ -51,7 +51,7 @@ class life_phone_calls {
 		class phoneSend : Life_RscButton {
 			idc = 3003;
 			text = PHONE_SEND;
-			x = PHONE_GRID_X + 0.2;
+			x = PHONE_GRID_X + 0.1;
 			type = 1;
 			y = 0.88;
 			w = 0.1;
@@ -66,6 +66,7 @@ class life_phone_calls {
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[61205] call life_fnc_phoneButtonReturn";
 		};
 		
 		class phoneCallList : Life_RscListBox

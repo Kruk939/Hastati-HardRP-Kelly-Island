@@ -31,6 +31,7 @@ class life_phone_sms_send {
 		class phoneCall : Life_RscButton {
 			idc = 3001;
 			text = PHONE_CALL;
+			type = 1;
 			x = PHONE_GRID_X;
 			y = 0.88;
 			w = 0.1;
@@ -39,10 +40,12 @@ class life_phone_sms_send {
 		class phoneReturn : Life_RscButton {
 			idc = 3002;
 			text = PHONE_RETURN;
+			type = 1;
 			x = PHONE_GRID_X + 0.3;
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
+			action = "[61206] call life_fnc_phoneButtonReturn";
 		};
 		class phoneTargetNumber : Life_RscEdit {
 			idc = 3003;

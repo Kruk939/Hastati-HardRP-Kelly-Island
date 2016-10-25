@@ -368,16 +368,21 @@ class Life_Client_Core
 		class phoneGetMessage {};
 		class phoneSendCall {};
 		class phoneSendMessage {};
+		class phoneAddContact {};
 		
 		//buttons:
 		class phoneButtonCall {};
 		class phoneButtonReject {};
+		class phoneButtonReturn {};
+		class phoneButtonSend {};
+		class phoneButtonAdd {};
 		
 		//dialogs:
 		class phoneOpen {};
 		class phoneDialogCalls {};
 		class phoneDialogContacts {};
 		class phoneDialogMessages {};
+		class phoneDialogAddContact {};
 	};
 	class Dialog_Controls
 	{
