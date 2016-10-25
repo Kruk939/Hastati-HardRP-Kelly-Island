@@ -189,6 +189,34 @@ class WeaponShops {
             { "30Rnd_65x39_caseless_mag", "", 100, -1 }
         };
     };
+	
+	class cop_usng {
+        name = "USNG shop";
+        side = "cop";
+        license = "";
+        level[] = { "", "", -1, "" };
+        items[] = {
+            { "RH_M4A1_ris", "", 17500, -1 },
+            { "RH_M4A1_ris_M203", "", 22000, -1 },
+            { "Mossberg_590", "", 18000, 5000 },
+            { "RH_Mk11", "", 25000, -1 },
+            { "RH_M16A3", "", 16000, -1 },
+            { "RH_m9", "", 1000, -1 },
+			{ "RH_m1911", "", 10000, -1 },
+			{ "RH_leu_mk4", "", 5000, -1 },
+			{ "RH_compM2", "", 3000, -1 },
+			{ "RH_SFM952V", "", 1500, -1 },
+			{ "RH_HBLM", "", 1500, -1 },
+        };
+        mags[] = {
+            { "RH_20Rnd_762x51_M80A1", "", 400 },
+            { "RH_15Rnd_9x19_M9", "", 200 },
+            { "RH_7Rnd_45cal_m1911", "", 200 },
+			{ "8Rnd_Mossberg_590_Pellets", "", 250 },
+			{ "8Rnd_Mossberg_590_Slug", "", 250 },
+			{ "30Rnd_556x45_Stanag_Tracer_Green", "", 300 },
+        };
+    };
 
     //Medic Shops
     class med_basic {
