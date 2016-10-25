@@ -22,7 +22,6 @@
 disableSerialization;
 
 private [];
-
 //if(!alive player || dialog) exitWith {};
 if(!(createDialog "life_phone_contacts")) exitWith {};
 //if(HANDCUFFED(player) || ISSURRENDERED(player)) exitWith {}; //ace check if player has his hands free
@@ -32,6 +31,7 @@ _btn1 = _dialog displayCtrl BTN1;
 _btn2 = _dialog displayCtrl BTN2;
 _btn3 = _dialog displayCtrl BTN3;
 _btn4 = _dialog displayCtrl BTN4;
+
 _phoneCallList = _dialog displayCtrl PHONE_CONTACTS;
 //[] spawn life_fnc_phoneGetActiveNumber;
 {

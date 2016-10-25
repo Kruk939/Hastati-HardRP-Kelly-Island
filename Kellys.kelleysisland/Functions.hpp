@@ -376,6 +376,7 @@ class Life_Client_Core
 		class phoneButtonReturn {};
 		class phoneButtonSend {};
 		class phoneButtonAdd {};
+		class phoneButtonMessage {};
 		
 		//dialogs:
 		class phoneOpen {};
@@ -383,6 +384,7 @@ class Life_Client_Core
 		class phoneDialogContacts {};
 		class phoneDialogMessages {};
 		class phoneDialogAddContact {};
+		class phoneDialogNewMessage {};
 	};
 	class Dialog_Controls
 	{

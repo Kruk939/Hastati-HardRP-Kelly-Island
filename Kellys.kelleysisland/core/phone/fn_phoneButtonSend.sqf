@@ -63,3 +63,4 @@ switch(_display) do {
 		closeDialog 0;
 	};
 };
+life_phone_lastDiaglog = _display;

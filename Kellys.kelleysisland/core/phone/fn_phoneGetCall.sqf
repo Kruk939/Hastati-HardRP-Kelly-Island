@@ -34,6 +34,9 @@ while {_k < 10} do {
 	if(life_phone_answered != 0) exitWith {
 		if(life_phone_answered == 1) then {
 			msg("Rozmawiasz teraz");
+			_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
+			_channel = _channel + 1;
+			[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
 			//setFreq
 		};
 		if(life_phone_answered == 2) then {msg("Odrzuciles polaczenie");};

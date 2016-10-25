@@ -52,6 +52,7 @@ class life_phone_contacts {
 		class phoneMessages : Life_RscButton {
 			idc = 3003;
 			text = PHONE_MESSAGE;
+			action = "[61203] call life_fnc_phoneButtonMessage";
 			x = PHONE_GRID_X + 0.2;
 			type = 1;
 			y = 0.88;

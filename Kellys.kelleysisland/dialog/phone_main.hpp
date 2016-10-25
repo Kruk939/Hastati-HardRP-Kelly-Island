@@ -52,7 +52,7 @@ class life_phone_main {
 		class phoneMessages : Life_RscButton {
 			idc = 3003;
 			type = 1;
-			action = "closeDialog 0; ['main'] call life_fnc_phoneDialogMessages";
+			action = "closeDialog 0; [61201] call life_fnc_phoneButtonMessage";
 			text = PHONE_MESSAGE;
 			x = PHONE_GRID_X + 0.2;
 			y = 0.88;

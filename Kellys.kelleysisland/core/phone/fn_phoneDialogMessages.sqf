@@ -19,6 +19,13 @@
 #define BTN3 3003
 #define BTN4 3004
 #define PHONE_CALLLIST 3005
+#define PHONE_MAIN 61201
+#define PHONE_ADDCONTACT 61202
+#define PHONE_CONTACTS 61203
+#define PHONE_MESSAGES 61204
+#define PHONE_CALLS 61205
+#define PHONE_SMSSEND 61206
+#define PHONE_CHANGE 61207
 disableSerialization;
 
 private [];
@@ -34,9 +41,34 @@ _btn2 = _dialog displayCtrl BTN2;
 _btn3 = _dialog displayCtrl BTN3;
 _btn4 = _dialog displayCtrl BTN4;
 _phoneCallList = _dialog displayCtrl PHONE_CALLLIST;
-if(_from != 'main') then {
+if(_from != PHONE_MAIN) then {
 	_number = _this select 1;
-	hint "!main";
+	_contact = [_number] call life_fnc_phoneGetContact;
+	_name = "";
+	if((count _contact) == 0) then {
+		_name = _number;
+	} else {
+		_name = (_contact select 1);
+	};
+	{
+		if(life_phone_activeCard == _x select 0) then {
+			_array = _x select 1;
+			{
+				if((_x select 0) == _number || (_x select 1) == _number) then {
+					_prefix = "";
+					if((_x select 1) == life_phone_activeNumber) then {
+						_prefix = "--> : ";
+					} else {
+						_prefix = "<-- : ";
+					};
+					_label = _prefix + _name;
+					_index = _phoneCallList lbAdd _label;
+					_message = _x select 2;
+					_phoneCallList lbSetData [_index, _message];
+				};
+			} forEach _array;
+		};
+	} forEach life_phone_sms;
 } else {
 	{
 		if(life_phone_activeCard == _x select 0) then {
@@ -65,8 +97,14 @@ if(_from != 'main') then {
 			} forEach _array;
 		};
 	} forEach life_phone_sms;
-	hint "main";
+};
+life_phoneDialogMessage_onLBChange = {
+	_dialog = findDisplay 61204;
+	_ctr = _dialog displayCtrl 3007;
+	_ctr2 = _dialog displayCtrl 3005;
+	_index = (lbCurSel _ctr2);
+	_ctr ctrlSetText (_ctr2 lbData _index);
 };
 //[] spawn life_fnc_phoneGetActiveNumber;
-
+_phoneCallList ctrlSetEventHandler ["LBSelChanged", "[] spawn life_phoneDialogMessage_onLBChange"];
 _phoneCallList lbSetCurSel 0;

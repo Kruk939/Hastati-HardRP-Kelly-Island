@@ -29,6 +29,7 @@ life_phone_beingCalled = false;
 life_phone_calling = false;
 life_phone_inCall = false;
 life_phone_activeCard = 0;
+life_phone_lastDialog = 0;
 
 if(isNil "_data") exitWith {};
 //if(typeName _data != "ARRAY") exitWith {};

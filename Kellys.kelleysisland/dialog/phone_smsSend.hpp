@@ -28,9 +28,9 @@ class life_phone_sms_send {
 	};
 	
 	class controls {
-		class phoneCall : Life_RscButton {
+		class phoneSend : Life_RscButton {
 			idc = 3001;
-			text = PHONE_CALL;
+			text = PHONE_SEND;
 			type = 1;
 			x = PHONE_GRID_X;
 			y = 0.88;

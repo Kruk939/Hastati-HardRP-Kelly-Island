@@ -31,7 +31,9 @@ _freq = life_phone_activeNumber;
 life_phone_activeFrequency = _freq;
 
 [life_phone_activeNumber, _freq, player] remoteExec ["life_fnc_phoneGetCall", (_targetArray select 2)];
-//setFreq to listen
+_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
+_channel = _channel + 1;
+[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
 _k = 0;
 while {_k < 10} do {
 	uiSleep 0.1;

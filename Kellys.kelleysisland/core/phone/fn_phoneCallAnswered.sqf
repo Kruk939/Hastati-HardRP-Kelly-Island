@@ -20,3 +20,6 @@ _freq = _this select 1;
 
 life_phone_answered = _answered;
 life_phone_activeFrequency = _freq;
+_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
+_channel = _channel + 1;
+[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;

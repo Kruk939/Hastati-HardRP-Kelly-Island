@@ -48,9 +48,10 @@ class life_phone_calls {
 			h = 0.12;
 		};
 		
-		class phoneSend : Life_RscButton {
+		class phoneMessages : Life_RscButton {
 			idc = 3003;
-			text = PHONE_SEND;
+			text = PHONE_MESSAGE;
+			action = "[61205] call life_fnc_phoneButtonMessage";
 			x = PHONE_GRID_X + 0.1;
 			type = 1;
 			y = 0.88;

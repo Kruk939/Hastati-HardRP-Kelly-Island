@@ -32,41 +32,30 @@ _display = _this select 0;
 
 _dialog = findDisplay _display;
 
-if(life_phone_beingCalled) exitWith {
-	life_phone_answered = 2;
-	closeDialog 0;
-	hint "Answering";
-};
-
 switch(_display) do {
-	/*
-	case PHONE_CONTACTS: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneOpen;
-	};
-	case PHONE_CALLS: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneOpen;
-	};
-	case PHONE_MESSAGES: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneOpen;
-	};
-	case PHONE_CHANGE: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneOpen;
-	};
-	case PHONE_SMSSEND: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneOpen;
-	};
-	*/
 	case PHONE_ADDCONTACT: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneDialogContacts;
+		switch(life_phone_lastDialog) do {
+			case PHONE_CONTACTS: {
+				closeDialog 0;
+				[] spawn life_fnc_phoneDialogContacts;
+			};
+			case PHONE_MESSAGES: {
+				closeDialog 0;
+				[] spawn life_fnc_phoneDialogMessages;
+			};
+			case PHONE_CALLS: {
+				closeDialog 0;
+				[] spawn life_fnc_phoneDialogCalls;
+			};
+			case default {
+				closeDialog 0;
+				[] spawn life_fnc_phoneOpen;
+			};
+		};
 	};
 	case default {
 		closeDialog 0;
 		[] spawn life_fnc_phoneOpen;
 	};
 };
+life_phone_lastDiaglog = _display;

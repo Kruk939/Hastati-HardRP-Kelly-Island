@@ -18,7 +18,7 @@
 #define PHONE_CONTACTS 3002
 #define PHONE_MESSAGES 3003
 #define PHONE_REJECT 3004
-
+disableSerialization;
 private [];
 
 if(!alive player || dialog) exitWith {};
@@ -30,7 +30,7 @@ _phoneNumber = _dialog displayCtrl NUMBER;
 _phoneEvent = _dialog displayCtrl 3007;
 _phoneInput = _dialog displayCtrl 3005;
 _phoneCall = _dialog displayCtrl PHONE_CALL;
-_phoneReturn = _dialog displayCtrl PHONE_RETURN;
+_phoneReject = _dialog displayCtrl PHONE_REJECT;
 _phoneMessages = _dialog displayCtrl PHONE_MESSAGES;
 _phoneContacts = _dialog displayCtrl PHONE_CONTACTS;
 [] spawn life_fnc_phoneGetActiveNumber;
