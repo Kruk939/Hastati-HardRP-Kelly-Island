@@ -20,6 +20,7 @@
 #define PHONE_CALLS 61205
 #define PHONE_SMSSEND 61206
 #define PHONE_CHANGE 61207
+disableSerialization;
 
 private [];
 
