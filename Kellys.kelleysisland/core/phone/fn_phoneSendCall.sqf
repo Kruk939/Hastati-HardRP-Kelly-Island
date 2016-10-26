@@ -13,7 +13,7 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-#define msg(var) hint var;
+#define msg(var) hint var
 
 _targetNumber = _this select 0;
 if(life_phone_beingCalled || life_phone_calling) exitWith {}; //check if calling or being called
@@ -21,6 +21,7 @@ if(life_phone_beingCalled || life_phone_calling) exitWith {}; //check if calling
 life_phone_answered = 0;
 life_phone_beingCalled = false;
 life_phone_calling = true;
+life_phone_inCall = false;
 
 
 if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
@@ -40,8 +41,10 @@ while {_k < 10} do {
 	_k = _k + 0.1;
 //playsound
 	if(life_phone_answered != 0) exitWith {
-		if(life_phone_answered == 1) then {msg("Rozmawiasz teraz")};
-		if(life_phone_answered == 2) then {msg("Kontakt odrzucil polaczenie")};
-		if(life_phone_answered == 3) then {msg("Kontakt jest zajety")};
+		if(life_phone_answered == 1) then {
+			msg("Rozmawiasz teraz"); 
+		};
+		if(life_phone_answered == 2) then {msg("Kontakt odrzucil polaczenie");};
+		if(life_phone_answered == 3) then {msg("Kontakt jest zajety");};
 	};
 };

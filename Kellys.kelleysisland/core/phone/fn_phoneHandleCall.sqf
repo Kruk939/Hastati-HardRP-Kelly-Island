@@ -13,15 +13,16 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-#define msg(var) hint var;
+#define msg(var) hint var
 
-_answered = _this select 0;
-_freq = _this select 1;
-
-life_phone_answered = _answered;
-life_phone_activeFrequency = _freq;
+while {life_phone_inCall} do {
+	uiSleep 0.1;
+};
+hint "Rozmowa zostala przerwana";
+life_phone_answered = 0;
+life_phone_beingCalled = false;
+life_phone_calling = false;
+life_phone_inCall = false;
 _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
 _channel = _channel + 1;
-[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
-life_phone_inCall = true;
-[] spawn life_fnc_phoneHandleCall;
+[(call TFAR_fnc_activeSwRadio), _channel, life_phone_activeNumber] call TFAR_fnc_SetChannelFrequency;

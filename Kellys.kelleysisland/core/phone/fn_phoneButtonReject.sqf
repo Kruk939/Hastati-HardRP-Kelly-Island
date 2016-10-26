@@ -41,7 +41,11 @@ if(life_phone_beingCalled) exitWith {
 switch(_display) do {
 	case PHONE_MAIN: {
 		closeDialog 0;
-		[_display] spawn life_fnc_phoneDialogCalls;
+		if(life_phone_inCall) then {
+			life_phone_inCall = false;
+		} else {
+			[_display] spawn life_fnc_phoneDialogCalls;
+		};
 		hint "Cals";
 	};
 };

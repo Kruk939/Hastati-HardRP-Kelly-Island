@@ -37,7 +37,7 @@ _phoneContacts = _dialog displayCtrl PHONE_CONTACTS;
 [] spawn life_fnc_phoneGetActiveNumber;
 if(isNil "life_phone_selectedNumber") then {};
 if(life_phone_activeNumber != "") then {
-	if(life_phoneBeingCalled) then {
+	if(life_phone_beingCalled) then {
 	_phoneMessages ctrlEnable false;
 	_phoneContacts ctrlEnable false;
 	_phoneEvent ctrlSetText life_phone_caller;

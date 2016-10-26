@@ -369,6 +369,7 @@ class Life_Client_Core
 		class phoneSendCall {};
 		class phoneSendMessage {};
 		class phoneAddContact {};
+		class phoneHandleCall {};
 		
 		//buttons:
 		class phoneButtonCall {};

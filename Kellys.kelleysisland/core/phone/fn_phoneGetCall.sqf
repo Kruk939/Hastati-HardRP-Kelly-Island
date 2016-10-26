@@ -21,6 +21,7 @@ if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {
 life_phone_answered = 0;
 life_phone_beingCalled = true;
 life_phone_calling = false;
+life_phone_inCall = false;
 
 _contact = [_from] spawn life_fnc_phoneGetContact;
 
@@ -37,6 +38,8 @@ while {_k < 10} do {
 			_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
 			_channel = _channel + 1;
 			[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
+			life_phone_inCall = true;
+			[] spawn life_fnc_phoneHandleCall;
 			//setFreq
 		};
 		if(life_phone_answered == 2) then {msg("Odrzuciles polaczenie");};
