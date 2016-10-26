@@ -33,6 +33,7 @@ class life_phone_sms_send {
 			text = PHONE_SEND;
 			type = 1;
 			x = PHONE_GRID_X;
+			action = "[61206] call life_fnc_phoneButtonSend";
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
@@ -57,6 +58,7 @@ class life_phone_sms_send {
 		class phoneSmsMessage : Life_RscEdit {
 			idc = 3004;
 			x = PHONE_GRID_X + 0.025;
+			style = 16;
 			y = 0.54;
 			w = 0.35;
 			h = 0.3;

@@ -91,6 +91,7 @@ class life_phone_messages {
 		{
 			idc = 3007;
 			x = PHONE_GRID_X + 0.025;
+			style = 16;
 			y = 0.42;
 			w = 0.35;
 			h = 0.24;
@@ -99,6 +100,7 @@ class life_phone_messages {
 		{
 			idc = 3008;
 			x = PHONE_GRID_X + 0.025;
+			style = 16;
 			y = 0.68;
 			w = 0.35;
 			h = 0.18;

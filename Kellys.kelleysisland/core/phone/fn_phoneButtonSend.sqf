@@ -28,8 +28,6 @@ if(!alive player || !dialog) exitWith {};
 //if(ISUNCONSCIOUS(player)) exitWith {}; //ace check if player is unconscious
 
 _display = _this select 0;
-
-
 _dialog = findDisplay _display;
 
 if(life_phone_beingCalled) exitWith {
@@ -38,28 +36,28 @@ if(life_phone_beingCalled) exitWith {
 };
 
 switch(_display) do {
-	case PHONE_MAIN: {
-		_number = ctrlText 3006;
-		[_number] call life_fnc_phoneSendCall;
-		closeDialog 0;
-	};
-	case PHONE_CONTACTS: {
-		_list = _dialog displayCtrl 3005;
-		_index = lbCurSel _list;
-		_number = _list lbData _index;
-		[_number] call life_fnc_phoneSendCall;
-	};
-	case PHONE_CALLS: {
-		_list = _dialog displayCtrl 3005;
-		_index = lbCurSel _list;
-		_number = _list lbData _index;
-		[_number] call life_fnc_phoneSendCall;
-	};
 	case PHONE_MESSAGES: {
 		_list = _dialog displayCtrl 3005;
 		_index = lbCurSel _list;
-		_number = _list lbData _index;
-		[_number] call life_fnc_phoneSendCall;
+		_number = "";
+		{
+			if(life_phone_activeCard == _x select 0) then {
+				_array = _x select 1;
+				if (((_array select _index) select 0) != life_phone_activeNumber) then {
+					_number = ((_array select _index) select 0);
+				} else {
+					_number = ((_array select _index) select 1);
+				};
+			};
+		} forEach life_phone_sms;
+		_message = ctrlText 3008;
+		[_number,_message] spawn life_fnc_phoneSendMessage;
+		closeDialog 0;
+	};
+	case PHONE_SMSSEND: {
+		_target = ctrlText 3003;
+		_message = ctrlText 3004;
+		[_target,_message] spawn life_fnc_phoneSendMessage;
 		closeDialog 0;
 	};
 };
