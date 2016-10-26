@@ -17,7 +17,7 @@
 _from = _this select 0;
 _freq = _this select 1;
 _fromObj = _this select 2;
-if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {[3, _freq] remoteExec ["life_fnc_phoneCallAnswered", _fromObj]};
+if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, 3] remoteExec ["TON_fnc_callInsert", 2];};
 life_phone_answered = 0;
 life_phone_beingCalled = true;
 life_phone_calling = false;
@@ -44,7 +44,7 @@ while {_k < 10} do {
 		};
 		if(life_phone_answered == 2) then {msg("Odrzuciles polaczenie");};
 		if(life_phone_answered == 3) then {msg("Wyslano sygnal - zajety");};
-		[life_phone_answered, _freq] remoteExec ["life_fnc_phoneCallAnswered", _fromObj];
+		[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, life_phone_answered] remoteExec ["TON_fnc_callInsert", 2];
 	};
 };
 life_phone_caller = "";

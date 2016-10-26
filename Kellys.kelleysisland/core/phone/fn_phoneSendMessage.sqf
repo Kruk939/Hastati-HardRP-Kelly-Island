@@ -21,8 +21,9 @@ if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
 if(_message == "") exitWith {msg("Nie podano wiadomosci.")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
+_obj = (_targetArray select 2);
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
 
-[life_phone_activeNumber, _message] remoteExec ["life_fnc_phoneGetMessage", (_targetArray select 2)];
+
 [life_phone_activeNumber, _targetNumber, (getPos player), _message] remoteExec ["TON_fnc_smsInsert", RSERV];
-life_phone_sms = [_targetNumber, life_phone_activeNumber, _message] + life_phone_sms;
+life_phone_sms = [_obj, _targetNumber, life_phone_activeNumber, _message] + life_phone_sms;

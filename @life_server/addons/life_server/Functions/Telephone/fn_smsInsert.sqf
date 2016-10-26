@@ -12,13 +12,14 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-
-_callerNumber = _this select 0;
-_targetNumber = _this select 1;
-_message = _this select 3;
+_obj = _this select 0;
+_callerNumber = _this select 1;
+_targetNumber = _this select 2;
+_message = _this select 4;
 //_caller = _this select 2;
-_callerPos = _this select 2;
+_callerPos = _this select 3;
 _callerMres = [_callerPos] call DB_fnc_mresArray;
+[_callerNumber, _message] remoteExec ["life_fnc_phoneGetMessage", _obj];
 if(isNil "_callerNumber" || isNil "_targetNumber" || isNil "_message") exitWith {};
 if(_message == "") exitWith {};
 _query = format["INSERT INTO TelSMS (senderNumber, recipientNumber, message, pos) VALUES ('%1', '%2', '%3', '%4')", _callerNumber, _targetNumber, _message, _callerMres];

@@ -27,11 +27,12 @@ life_phone_inCall = false;
 if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
+_obj = _targetArray select 2;
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
 _freq = life_phone_activeNumber;
 life_phone_activeFrequency = _freq;
 
-[life_phone_activeNumber, _freq, player] remoteExec ["life_fnc_phoneGetCall", (_targetArray select 2)];
+[life_phone_activeNumber, _freq, player, _obj] remoteExec ["TON_fnc_sendCall", 2];
 _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
 _channel = _channel + 1;
 [(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;

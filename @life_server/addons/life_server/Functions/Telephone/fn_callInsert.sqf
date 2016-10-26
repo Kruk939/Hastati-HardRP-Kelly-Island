@@ -17,7 +17,13 @@ _callerNumber = _this select 0;
 _targetNumber = _this select 1;
 //_caller = _this select 2;
 _callerPos = _this select 2;
+_target = _this select 3;
+_status = _this select 4;
+if(_status == 1) then {
 _callerMres = [_callerPos] call DB_fnc_mresArray;
 if(isNil "_callerNumber" || isNil "_targetNumber") exitWith {};
 _query = format["INSERT INTO TelCalls (senderNumber, recipientNumber, pos) VALUES ('%1', '%2', '%3')", _callerNumber, _targetNumber, _callerMres];
 [_query, 1] call DB_fnc_asyncCall;
+};
+
+[_status, _freq] remoteExec ["life_fnc_phoneCallAnswered", _target];
