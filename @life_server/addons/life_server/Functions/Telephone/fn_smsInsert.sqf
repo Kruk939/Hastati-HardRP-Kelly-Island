@@ -16,8 +16,8 @@
 _callerNumber = _this select 0;
 _targetNumber = _this select 1;
 _message = _this select 3;
-_caller = _this select 2;
-_callerPos = getPos _caller;
+//_caller = _this select 2;
+_callerPos = _this select 2;
 _callerMres = [_callerPos] call DB_fnc_mresArray;
 if(isNil "_callerNumber" || isNil "_targetNumber" || isNil "_message") exitWith {};
 if(_message == "") exitWith {};

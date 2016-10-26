@@ -15,15 +15,15 @@
 
 _player = _this select 0;
 _ret = [];
-if(isNil "_player" || isNull _player) exitWith {_ret;};
-_playerUID = getPlayerUID _player;
+if(isNil "_player") exitWith {_ret;};
+//_playerUID = getPlayerUID _player;
 
-_query = format["SELECT id, number, idCompany, saldo, SMSPrice, minutePrice, active FROM TelSimCards WHERE alive='1' AND ownerUID='%1'",_playerUID];
-_queryResult = [_query,2,false] call DB_fnc_asyncCall;
+_query = format["SELECT id, number, idCompany, saldo, SMSPrice, minutePrice, active FROM TelSimCards WHERE alive='1' AND ownerUID='%1'",_player];
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
-diag_log "------------------------- fn_cardGet.sqf -------------------------";
-diag_log format["%1", _queryResult];
-diag_log "------------------------------------------------------------------";
+//diag_log "------------------------- fn_cardGet.sqf -------------------------";
+//diag_log format["%1", _queryResult];
+//diag_log "------------------------------------------------------------------";
 
 
 if(count _queryResult != 0) then {_ret = _queryResult;} else {_ret = [];};

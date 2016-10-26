@@ -19,10 +19,11 @@ _number = _this select 1;
 _name = _this select 2;
 _ret = false;
 if(isNil "_player" || isNil "_number" || isNil "_name") exitWith {_ret;};
-if(isNull _player) exitWith {_ret;};
+//if(isNull _player) exitWith {_ret;};
 if(_number == "" || _name == "") exitWith {_ret;};
 
-_playerUID = getPlayerUID _player;
-_query = format["INSERT INTO TelContact (playerUID, number, name) VALUES ('%1', '%2', '%3')", _playerUID, _name, _number];
+//_playerUID = getPlayerUID _player;
+_query = format["INSERT INTO TelContact (playerUID, number, name) VALUES ('%1', '%2', '%3')", _player, _number, _name];
+[_query, 1] call DB_fnc_asyncCall;
 _ret = true;
 _ret;

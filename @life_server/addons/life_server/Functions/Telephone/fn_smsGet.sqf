@@ -18,8 +18,8 @@ _ret = [];
 if(isNil "_phoneNumber") exitWith {_ret;};
 
 _query = format ["SELECT senderNumber, recipientNumber, message FROM TelSMS WHERE recipientNumber='%1' OR senderNumber='%1' ORDER BY id DESC",_phoneNumber];
-_queryResult = [_query,2,false] call DB_fnc_asyncCall;
-diag_log "------------------------- fn_callGet.sqf -------------------------";
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
+diag_log "------------------------- fn_smsGet.sqf -------------------------";
 diag_log format["%1", _queryResult];
 diag_log "------------------------------------------------------------------";
 if(count _queryResult == 0) exitWith {_ret;};

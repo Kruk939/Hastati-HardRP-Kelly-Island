@@ -27,11 +27,11 @@ diag_log "------------------------- fn_cardInsert.sqf -------------------------"
 diag_log format["%1", _this];
 diag_log "---------------------------------------------------------------------";
 
-if(isNil "_unit" || isNull _unit) exitWith {};
-_player = getPlayerUID _unit;
+if(isNil "_unit") exitWith {};
 
 _query = format["SELECT id, number FROM TelSimCards WHERE number='%1'",_number];
-_queryResult = [_query,2] call DB_fnc_asyncCall;
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 if(count _queryResult == 0) exitWith {false};
 
-_query = format ["INSERT INTO TelSimCards (ownerUID, idCompany, saldo, SMSPrice, minutePrice, active, alive) VALUES('%1', '%2', '%3', '%4' ,%5', '%6', '%7')", _player, _companyID, _saldo, _SMSPrice, _minutePrice, _active, _alive];
+_query = format ["INSERT INTO TelSimCards (ownerUID, idCompany, saldo, SMSPrice, minutePrice, active, alive) VALUES('%1', '%2', '%3', '%4' ,%5', '%6', '%7')", _unit, _companyID, _saldo, _SMSPrice, _minutePrice, _active, _alive];
+[_query, 1] call DB_fnc_asyncCall;

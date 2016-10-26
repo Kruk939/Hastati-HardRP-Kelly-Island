@@ -17,16 +17,16 @@ _mode = _this select 0;
 _cardID = _this select 1;
 _player = _this select 2;
 _saldo = _this select 3;
-_playerUID = getPlayerUID _player;
+//_playerUID = getPlayerUID _player;
 if(isNil "_cardID") exitWith {};
-if(isNil "_playerUID") exitWith {};
+if(isNil "_player") exitWith {};
 
 switch(_mode) do {
 	case 0: {
 		_query = format ["UPDATE TelSimCards SET saldo='%1' WHERE id='%2'", _saldo, _cardID];
 	};
 	case 1: {
-		_query = format ["UPDATE TelSimCards SET active='0' WHERE ownerUID='%1'", _playerUID];
+		_query = format ["UPDATE TelSimCards SET active='0' WHERE ownerUID='%1'", _player];
 		_query2 = format ["UPDATE TelSimCards SET active='1' WHERE id='%1'", _cardID];
 	};
 	case 2: {

@@ -130,7 +130,6 @@ class CfgFunctions {
 			class pickupAction {};
 		};
 		class Telephone {
-			tag = "TEL";
 			file = "\life_server\Functions\Telephone";
 			class cardUpdate {};
 			class cardInsert {};

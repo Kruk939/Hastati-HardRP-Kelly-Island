@@ -15,12 +15,12 @@
 
 _player = _this select 0;
 _ret = [];
-if(isNil "_phoneNumber") exitWith {_ret;};
-if(isNull _player) exitWith {_ret;};
-_playerUID = getPlayerUID _player;
-_query = format ["SELECT number, name FROM TelContact WHERE playerUID='%1' ORDER BY name", _playerUID];
-_queryResult = [_query,2,false] call DB_fnc_asyncCall;
-diag_log "------------------------- fn_callGet.sqf -------------------------";
+if(isNil "_player") exitWith {_ret;};
+//if(isNull _player) exitWith {_ret;};
+//_playerUID = getPlayerUID _player;
+_query = format ["SELECT number, name FROM TelContact WHERE playerUID='%1' ORDER BY name", _player];
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
+diag_log "------------------------- fn_contactGet.sqf -------------------------";
 diag_log format["%1", _queryResult];
 diag_log "------------------------------------------------------------------";
 if(count _queryResult == 0) exitWith {_ret;};

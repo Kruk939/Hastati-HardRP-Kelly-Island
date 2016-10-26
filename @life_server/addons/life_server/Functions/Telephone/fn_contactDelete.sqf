@@ -18,10 +18,11 @@ _number = _this select 1;
 _name = _this select 2;
 _ret = false;
 if(isNil "_player" || isNil "_number") exitWith {_ret;};
-if(isNull _player) exitWith {_ret;};
+//if(isNull _player) exitWith {_ret;};
 if(_number == "") exitWith {_ret;};
 
-_playerUID = getPlayerUID _player;
-_query = format["DELETE FROM TelContact WHERE number='%1' AND playerUID='%2'", _number, _playerUID];
+//_playerUID = getPlayerUID _player;
+_query = format["DELETE FROM TelContact WHERE number='%1' AND playerUID='%2'", _number, _player];
+[_query, 1] call DB_fnc_asyncCall;
 _ret = true;
 _ret;
