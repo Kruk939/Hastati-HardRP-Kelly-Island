@@ -22,7 +22,7 @@ if(_radio == "") exitWith {hint "Nie masz telefonu";};
 
 
 _targetNumber = _this select 0;
-//if(life_phone_beingCalled || life_phone_calling) exitWith {}; //check if calling or being called
+if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {}; //check if calling or being called
 
 life_phone_answered = 0;
 life_phone_beingCalled = false;
@@ -56,5 +56,5 @@ _channel = _channel + 1;
 			if(life_phone_answered == 3) then {msg("Kontakt jest zajety");};
 		};
 	};
-	if(life_phone_answered == 0) then {hint "Kontakt nie odebral polaczenia."};
+	if(life_phone_answered == 0) then {hint "Kontakt nie odebral polaczenia."; life_phone_calling = false;};
 };

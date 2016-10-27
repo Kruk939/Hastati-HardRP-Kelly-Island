@@ -22,9 +22,14 @@ diag_log "----------------------- life_fnc_phoneCallAnswered";
 if(_target != player) exitWith {};
 
 life_phone_answered = _answered;
-life_phone_activeFrequency = _freq;
-_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
-_channel = _channel + 1;
-[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
-life_phone_inCall = true;
-[] spawn life_fnc_phoneHandleCall;
+if(_answered == 1) then {
+	life_phone_activeFrequency = _freq;
+	_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
+	_channel = _channel + 1;
+	[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
+	life_phone_inCall = true;
+	[] spawn life_fnc_phoneHandleCall;
+};
+life_phone_answered = 0;
+life_phone_beingCalled = false;
+life_phone_calling = false;

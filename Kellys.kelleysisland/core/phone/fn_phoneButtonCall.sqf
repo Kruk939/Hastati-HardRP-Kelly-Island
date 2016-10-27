@@ -40,7 +40,7 @@ if(life_phone_beingCalled) exitWith {
 
 switch(_display) do {
 	case PHONE_MAIN: {
-		_number = ctrlText 3006;
+		_number = ctrlText 3005;
 		[_number] call life_fnc_phoneSendCall;
 		closeDialog 0;
 	};
