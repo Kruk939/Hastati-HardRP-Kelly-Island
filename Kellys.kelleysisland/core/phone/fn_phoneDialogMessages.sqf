@@ -99,6 +99,7 @@ if(_from != PHONE_MAIN) then {
 	} forEach life_phone_sms;
 };
 life_phoneDialogMessage_onLBChange = {
+	disableSerialization;
 	_dialog = findDisplay 61204;
 	_ctr = _dialog displayCtrl 3007;
 	_ctr2 = _dialog displayCtrl 3005;

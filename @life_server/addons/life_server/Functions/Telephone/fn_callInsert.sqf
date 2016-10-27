@@ -19,6 +19,7 @@ _targetNumber = _this select 1;
 _callerPos = _this select 2;
 _target = _this select 3;
 _status = _this select 4;
+_freq = _this select 5;
 if(_status == 1) then {
 _callerMres = [_callerPos] call DB_fnc_mresArray;
 if(isNil "_callerNumber" || isNil "_targetNumber") exitWith {};

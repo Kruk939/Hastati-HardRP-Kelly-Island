@@ -31,6 +31,7 @@ class life_phone_calls {
 			idc = 3001;
 			text = PHONE_CALL;
 			x = PHONE_GRID_X;
+			action = "[61205] call life_fnc_phoneButtonCall";
 			type = 1;
 			y = 0.88;
 			w = 0.1;

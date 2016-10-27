@@ -59,7 +59,17 @@ switch(_display) do {
 	case PHONE_MESSAGES: {
 		_list = _dialog displayCtrl 3005;
 		_index = lbCurSel _list;
-		_number = _list lbData _index;
+		_number = "";
+		{
+			if(life_phone_activeCard == _x select 0) then {
+				_array = _x select 1;
+				if (((_array select _index) select 0) != life_phone_activeNumber) then {
+					_number = ((_array select _index) select 0);
+				} else {
+					_number = ((_array select _index) select 1);
+				};
+			};
+		} forEach life_phone_sms;
 		[_number] call life_fnc_phoneSendCall;
 		closeDialog 0;
 	};

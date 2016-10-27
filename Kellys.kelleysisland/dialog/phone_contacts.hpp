@@ -35,7 +35,7 @@ class life_phone_contacts {
 			y = 0.88;
 			w = 0.1;
 			h = 0.12;
-			action = "[] call life_fnc_phoneButtonCall";
+			action = "[61203] call life_fnc_phoneButtonCall";
 		};
 		
 		class phoneAdd : Life_RscButton {

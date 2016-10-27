@@ -37,6 +37,7 @@ while {_k < 10} do {
 			msg("Rozmawiasz teraz");
 			_channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
 			_channel = _channel + 1;
+			life_phone_activeFrequency = _freq;
 			[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
 			life_phone_inCall = true;
 			[] spawn life_fnc_phoneHandleCall;
@@ -44,7 +45,7 @@ while {_k < 10} do {
 		};
 		if(life_phone_answered == 2) then {msg("Odrzuciles polaczenie");};
 		if(life_phone_answered == 3) then {msg("Wyslano sygnal - zajety");};
-		[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, life_phone_answered] remoteExec ["TON_fnc_callInsert", 2];
+		[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, life_phone_answered, _freq] remoteExec ["TON_fnc_callInsert", 2];
 	};
 };
 life_phone_caller = "";
