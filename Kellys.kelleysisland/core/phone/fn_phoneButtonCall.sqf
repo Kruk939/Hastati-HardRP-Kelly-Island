@@ -49,12 +49,14 @@ switch(_display) do {
 		_index = lbCurSel _list;
 		_number = _list lbData _index;
 		[_number] call life_fnc_phoneSendCall;
+		closeDialog 0;
 	};
 	case PHONE_CALLS: {
 		_list = _dialog displayCtrl 3005;
 		_index = lbCurSel _list;
 		_number = _list lbData _index;
 		[_number] call life_fnc_phoneSendCall;
+		closeDialog 0;
 	};
 	case PHONE_MESSAGES: {
 		_list = _dialog displayCtrl 3005;

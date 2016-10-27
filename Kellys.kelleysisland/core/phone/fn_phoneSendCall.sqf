@@ -22,7 +22,7 @@ if(_radio == "") exitWith {hint "Nie masz telefonu";};
 
 
 _targetNumber = _this select 0;
-if(life_phone_beingCalled || life_phone_calling) exitWith {}; //check if calling or being called
+//if(life_phone_beingCalled || life_phone_calling) exitWith {}; //check if calling or being called
 
 life_phone_answered = 0;
 life_phone_beingCalled = false;
@@ -42,16 +42,18 @@ life_phone_activeFrequency = _freq;
 _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
 _channel = _channel + 1;
 [(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
-_k = 0;
-while {_k < 10} do {
-	uiSleep 0.1;
-	_k = _k + 0.1;
-//playsound
-	if(life_phone_answered != 0) exitWith {
-		if(life_phone_answered == 1) then {
-			msg("Rozmawiasz teraz"); 
+[] spawn {
+	_k = 0;
+	while {_k < 10} do {
+		uiSleep 0.1;
+		_k = _k + 0.1;
+	//playsound
+		if(life_phone_answered != 0) exitWith {
+			if(life_phone_answered == 1) then {
+				msg("Rozmawiasz teraz"); 
+			};
+			if(life_phone_answered == 2) then {msg("Kontakt odrzucil polaczenie");};
+			if(life_phone_answered == 3) then {msg("Kontakt jest zajety");};
 		};
-		if(life_phone_answered == 2) then {msg("Kontakt odrzucil polaczenie");};
-		if(life_phone_answered == 3) then {msg("Kontakt jest zajety");};
 	};
 };

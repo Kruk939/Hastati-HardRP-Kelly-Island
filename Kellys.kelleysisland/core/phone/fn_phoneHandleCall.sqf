@@ -15,9 +15,10 @@
 */
 #define msg(var) hint var
 diag_log "----------------------- life_fnc_phoneHandleCall";
-
-while {life_phone_inCall} do {
-	uiSleep 0.1;
+_radio = (call TFAR_fnc_ActiveSwRadio);
+while {life_phone_inCall && _radio != ""} do {
+	uiSleep 0.5;
+	_radio = (call TFAR_fnc_ActiveSwRadio);
 };
 hint "Rozmowa zostala przerwana";
 life_phone_answered = 0;
