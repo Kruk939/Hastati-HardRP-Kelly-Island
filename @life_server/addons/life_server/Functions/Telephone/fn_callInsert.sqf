@@ -27,4 +27,5 @@ _query = format["INSERT INTO TelCalls (senderNumber, recipientNumber, pos) VALUE
 [_query, 1] call DB_fnc_asyncCall;
 };
 
+diag_log "----------------------- TON_fnc_callInsert";
 [_status, _freq, _target] remoteExec ["life_fnc_phoneCallAnswered", -2];

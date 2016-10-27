@@ -19,4 +19,5 @@ _player = _this select 2;
 _obj = _this select 3;
 
 
+diag_log "----------------------- TON_fnc_sendCall";
 [_number, _freq, _player, _obj] remoteExec ["life_fnc_phoneGetCall", -2];
