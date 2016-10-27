@@ -56,4 +56,5 @@ _channel = _channel + 1;
 			if(life_phone_answered == 3) then {msg("Kontakt jest zajety");};
 		};
 	};
+	if(life_phone_answered == 0) then {hint "Kontakt nie odebral polaczenia."};
 };

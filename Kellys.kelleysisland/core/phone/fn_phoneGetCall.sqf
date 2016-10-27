@@ -27,7 +27,7 @@ life_phone_calling = false;
 life_phone_inCall = false;
 _contact = [_from] call life_fnc_phoneGetContact;
 _fromName = "";
-if(count _contact != 0) then {_fromName = _contact select 1;} else {_fromName = _from;}
+if(count _contact != 0) then {_fromName = _contact select 1;} else {_fromName = _from;};
 hint format["Dzwoni do Ciebie: %1\n",_fromName];
 life_phone_caller = _from;
 [_freq] spawn {
@@ -54,6 +54,7 @@ life_phone_caller = _from;
 			[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, life_phone_answered, _freq] remoteExec ["TON_fnc_callInsert", 2];
 		};
 	};
+	if(life_phone_answered == 0) then {hint "Nie odebrales polaczenia."};
 };
 life_phone_caller = "";
 //life_phone_sms = [life_phone_activeNumber, _from, _message] + life_phone_sms;
