@@ -25,7 +25,7 @@ life_phone_beingCalled = true;
 life_phone_calling = false;
 life_phone_inCall = false;
 
-_contact = [_from] spawn life_fnc_phoneGetContact;
+_contact = [_from] call life_fnc_phoneGetContact;
 
 if(count _contact != 0) then {_fromName = _contact select 1;} else {_fromName = _from;}
 msg(format["Dzwoni do Ciebie: %1\n",_fromName]);

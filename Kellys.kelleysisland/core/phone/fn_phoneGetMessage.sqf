@@ -19,13 +19,13 @@ _message = _this select 1;
 _target = _this select 2;
 if(_target != player) exitWith {};
 
-_contact = [_from] spawn life_fnc_phoneGetContact;
-
+_contact = [_from] call life_fnc_phoneGetContact;
+_fromName = "";
 if((count _contact) != 0) then {
 	_fromName = _contact select 1;
 } else {
 	_fromName = _from;
 };
 hint format["Nowa wiadomosc od: %1\n%2",_fromName,_message];
-
-life_phone_sms = [life_phone_activeNumber, _from, _message] + life_phone_sms;
+life_phone_sms pushback [life_phone_activeNumber, _from, _message];
+//life_phone_sms = [life_phone_activeNumber, _from, _message] + life_phone_sms;
