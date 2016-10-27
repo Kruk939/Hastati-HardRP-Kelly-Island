@@ -25,5 +25,5 @@ _obj = (_targetArray select 2);
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
 
 
-[life_phone_activeNumber, _targetNumber, (getPos player), _message] remoteExec ["TON_fnc_smsInsert", RSERV];
-life_phone_sms = [_obj, _targetNumber, life_phone_activeNumber, _message] + life_phone_sms;
+[_obj, life_phone_activeNumber, _targetNumber, (getPos player), _message] remoteExec ["TON_fnc_smsInsert", RSERV];
+life_phone_sms  pushBack [_targetNumber, life_phone_activeNumber, _message];
