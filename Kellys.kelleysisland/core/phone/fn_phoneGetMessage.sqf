@@ -27,5 +27,9 @@ if((count _contact) != 0) then {
 	_fromName = _from;
 };
 hint format["Nowa wiadomosc od: %1\n%2",_fromName,_message];
-life_phone_sms pushback [life_phone_activeNumber, _from, _message];
+{
+	if(life_phone_activeCard == _x select 0) exitWith {
+		(_x select 1) pushBack pushback [life_phone_activeNumber, _from, _message];
+	};
+} forEach life_phone_sms;
 //life_phone_sms = [life_phone_activeNumber, _from, _message] + life_phone_sms;
