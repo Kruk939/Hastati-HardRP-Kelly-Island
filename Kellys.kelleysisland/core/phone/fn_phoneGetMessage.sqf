@@ -16,6 +16,8 @@
 #define msg(var) hint var
 _from = _this select 0;
 _message = _this select 1;
+_target = _this select 2;
+if(_target != player) exitWith {};
 
 _contact = [_from] spawn life_fnc_phoneGetContact;
 

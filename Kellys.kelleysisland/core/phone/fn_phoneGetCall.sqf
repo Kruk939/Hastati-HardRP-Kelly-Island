@@ -17,6 +17,8 @@
 _from = _this select 0;
 _freq = _this select 1;
 _fromObj = _this select 2;
+_target = _this select 3;
+if(_target != player) exitWith {};
 if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, 3] remoteExec ["TON_fnc_callInsert", 2];};
 life_phone_answered = 0;
 life_phone_beingCalled = true;

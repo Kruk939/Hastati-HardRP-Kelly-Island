@@ -19,7 +19,7 @@ _message = _this select 4;
 //_caller = _this select 2;
 _callerPos = _this select 3;
 _callerMres = [_callerPos] call DB_fnc_mresArray;
-[_callerNumber, _message] remoteExec ["life_fnc_phoneGetMessage", _obj];
+[_callerNumber, _message, _obj] remoteExec ["life_fnc_phoneGetMessage", -2];
 if(isNil "_callerNumber" || isNil "_targetNumber" || isNil "_message") exitWith {};
 if(_message == "") exitWith {};
 _query = format["INSERT INTO TelSMS (senderNumber, recipientNumber, message, pos) VALUES ('%1', '%2', '%3', '%4')", _callerNumber, _targetNumber, _message, _callerMres];

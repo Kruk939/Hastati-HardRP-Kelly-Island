@@ -17,6 +17,8 @@
 
 _answered = _this select 0;
 _freq = _this select 1;
+_target = _this select 2;
+if(_target != player) exitWith {};
 
 life_phone_answered = _answered;
 life_phone_activeFrequency = _freq;

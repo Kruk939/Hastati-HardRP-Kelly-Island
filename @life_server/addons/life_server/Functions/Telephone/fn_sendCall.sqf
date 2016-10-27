@@ -19,4 +19,4 @@ _player = _this select 2;
 _obj = _this select 3;
 
 
-[_number, _freq, _player] remoteExec ["life_fnc_phoneGetCall", _obj];
+[_number, _freq, _player, _obj] remoteExec ["life_fnc_phoneGetCall", -2];
