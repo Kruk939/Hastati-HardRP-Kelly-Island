@@ -14,6 +14,7 @@
 	BOOL - true if function was executed successfully
 */
 #define msg(var) hint var
+diag_log "----------------------- life_fnc_phoneHandleCall";
 
 while {life_phone_inCall} do {
 	uiSleep 0.1;

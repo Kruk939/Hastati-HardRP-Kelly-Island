@@ -14,10 +14,11 @@
 	BOOL - true if function was executed successfully
 */
 #define msg(var) hint var
+diag_log "----------------------- life_fnc_phoneSendCall";
 
 _radio = (call TFAR_fnc_ActiveSwRadio);
 if(isNil "_radio") exitWith {hint "Nie masz telefonu";};
-if(_radio = "") exitWith {hint "Nie masz telefonu";};
+if(_radio == "") exitWith {hint "Nie masz telefonu";};
 
 
 _targetNumber = _this select 0;

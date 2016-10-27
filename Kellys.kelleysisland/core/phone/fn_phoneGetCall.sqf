@@ -18,18 +18,19 @@ _from = _this select 0;
 _freq = _this select 1;
 _fromObj = _this select 2;
 _target = _this select 3;
+diag_log "----------------------- life_fnc_phoneGetCall";
 if(_target != player) exitWith {};
 if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, 3] remoteExec ["TON_fnc_callInsert", 2];};
 life_phone_answered = 0;
 life_phone_beingCalled = true;
 life_phone_calling = false;
 life_phone_inCall = false;
-
 _contact = [_from] call life_fnc_phoneGetContact;
 
 if(count _contact != 0) then {_fromName = _contact select 1;} else {_fromName = _from;}
 msg(format["Dzwoni do Ciebie: %1\n",_fromName]);
 life_phone_caller = _from;
+_k = 0;
 while {_k < 10} do {
 	uiSleep 0.1;
 	_k = _k + 0.1;

@@ -18,6 +18,7 @@
 _answered = _this select 0;
 _freq = _this select 1;
 _target = _this select 2;
+diag_log "----------------------- life_fnc_phoneCallAnswered";
 if(_target != player) exitWith {};
 
 life_phone_answered = _answered;
