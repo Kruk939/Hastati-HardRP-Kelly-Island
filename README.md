@@ -1,6 +1,5 @@
 # Hastati-HardRP-Kelly-Island
 ## License
-======
 1. Każdy plik podpisany moim imieniem i nazwiskiem dalej zwany **plikiem** jest moją własnością intelektualną.
 2. **Plik** można wykorzystać w celach edukacyjnych.
 3. **Plik** nie może być udostępniany bez mojej zgody.
