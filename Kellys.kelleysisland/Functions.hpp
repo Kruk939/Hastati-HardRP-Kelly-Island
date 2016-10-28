@@ -354,6 +354,39 @@ class Life_Client_Core
 		class marketStart {};
 		class marketView {};
 	};
+	class Phone
+	{
+		file = "core\phone";
+		//functions:
+		class phoneGetData {};
+		class phoneInit {};
+		class phoneCallAnswered {};
+		class phoneCheckNumber {};
+		class phoneGetActiveNumber {};
+		class phoneGetCall {};
+		class phoneGetContact {};
+		class phoneGetMessage {};
+		class phoneSendCall {};
+		class phoneSendMessage {};
+		class phoneAddContact {};
+		class phoneHandleCall {};
+		
+		//buttons:
+		class phoneButtonCall {};
+		class phoneButtonReject {};
+		class phoneButtonReturn {};
+		class phoneButtonSend {};
+		class phoneButtonAdd {};
+		class phoneButtonMessage {};
+		
+		//dialogs:
+		class phoneOpen {};
+		class phoneDialogCalls {};
+		class phoneDialogContacts {};
+		class phoneDialogMessages {};
+		class phoneDialogAddContact {};
+		class phoneDialogNewMessage {};
+	};
 	class Dialog_Controls
 	{
 		file = "dialog\function";

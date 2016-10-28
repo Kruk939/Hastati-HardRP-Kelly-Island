@@ -73,3 +73,9 @@
 //UI Macros
 #define LIFEdisplay (GVAR_UINS ["playerHUD",displayNull])
 #define LIFEctrl(ctrl) ((GVAR_UINS ["playerHUD",displayNull]) displayCtrl ctrl)
+
+
+//Mods Macros
+#define HANDCUFFED(var) var getVariable ["ace_captives_isHandcuffed",false];
+#define ISSURRENDERED(var) var getVariable ["ace_captives_isSurrendering",false];
+#define ISUNCONSCIOUS(var) var getVariable ["ACE_isUnconscious", false];

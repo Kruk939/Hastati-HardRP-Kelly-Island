@@ -133,6 +133,8 @@ life_fnc_moveIn = compileFinal
 	};
 };
 
+[] spawn life_fnc_phoneInit;
+
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
 

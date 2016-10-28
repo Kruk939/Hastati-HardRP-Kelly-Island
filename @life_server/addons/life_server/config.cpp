@@ -129,6 +129,22 @@ class CfgFunctions {
 			file = "\life_server\Functions\Actions";
 			class pickupAction {};
 		};
+		class Telephone {
+			file = "\life_server\Functions\Telephone";
+			class cardUpdate {};
+			class cardInsert {};
+			class cardGet {};
+			class contactGet {};
+			class contactInsert {};
+			class contactDelete {};
+			class contactUpdate {};
+			class smsGet {};
+			class smsInsert {};
+			class callGet {};
+			class callInsert {};
+			class phoneQuery {};
+			class sendCall {};
+		};
 	};
 };
 

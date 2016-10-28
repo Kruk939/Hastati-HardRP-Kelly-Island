@@ -24,7 +24,7 @@ corpseRemovalMinTime = 999;
 corpseRemovalMaxTime = 9999;
 
 #include "Config_Spyglass.hpp"
-#include "CfgRemoteExec.hpp"
+//#include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
 #include "Config_Master.hpp"
 
