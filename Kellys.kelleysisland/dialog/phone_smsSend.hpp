@@ -6,22 +6,23 @@ class life_phone_sms_send {
 	onLoad = "";
 	
 	class controlsBackground {
-		
-		class MainBackground:Life_RscText {
+		class MainBackground : Life_RscPicture {
 			colorBackground[] = {0, 0, 0, 0.7};
+			text = "icons\phoneImage.paa";
 			idc = -1;
-			x = PHONE_GRID_X;
-			y = 0;
-			w = 0.4;
-			h = 1;
+			style = "2096";
+			x = 0.59;
+			y = -0.91;
+			w = 1;
+			h = 3;
 		};
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			x = PHONE_GRID_X;
+		class Life_RscTitleBackground: Life_RscText {
+			colorBackground[] = {0,0,0,0.3};
+			x = PHONE_GRID_X - 0.005;
 			idc = -1;
-			y = 0;
-			w = 0.4;
-			h = 0.08;
+			y = PHONE_GRID_Y - 0.005;
+			w = PHONE_MAX_WIDTH + 0.035;
+			h = 0.04;
 			text = "Telefon";
 		};
 	};
@@ -50,7 +51,7 @@ class life_phone_sms_send {
 			w = PHONE_MAX_WIDTH;
 			h = 0.1;
 		};
-		class phoneSend : Life_RscButton {
+		class phoneSend : Life_RscButtonInv {
 			idc = 3001;
 			action = "[61206] call life_fnc_phoneButtonSend";
 			text = "";
