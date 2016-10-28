@@ -28,6 +28,6 @@ if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
 [_obj, life_phone_activeNumber, _targetNumber, (getPos player), _message] remoteExec ["TON_fnc_smsInsert", RSERV];
 {
 	if(life_phone_activeCard == _x select 0) exitWith {
-		(_x select 1) pushBack pushback [life_phone_activeNumber, _from, _message];
+		(_x select 1) pushBack [life_phone_activeNumber, _from, _message];
 	};
 } forEach life_phone_sms;

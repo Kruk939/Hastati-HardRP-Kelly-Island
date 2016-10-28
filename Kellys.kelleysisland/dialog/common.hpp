@@ -7,15 +7,18 @@
 #define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
-#define PHONE_CALL "CALL"
-#define PHONE_CONTACTS "Contacts"
-#define PHONE_MESSAGE "MSG"
-#define PHONE_EXIT "Exit"
-#define PHONE_REJECT "REJECT"
-#define PHONE_SEND "SEND"
-#define PHONE_RETURN "RETURN"
-#define PHONE_ADD "ADD"
-#define PHONE_APPLY "APPLY"
+#define PHONE_CALL "icons\phoneCall.paa"
+#define PHONE_CONTACTS "icons\phoneContacts.paa"
+#define PHONE_MESSAGE "icons\phoneMessages.paa"
+#define PHONE_REJECT "icons\phoneReject.paa"
+#define PHONE_SEND "icons\phoneSend.paa"
+#define PHONE_RETURN "icons\phoneReturn.paa"
+#define PHONE_ADD "icons\phoneAdd.paa"
+#define PHONE_APPLY "icons\phoneApply.paa"
+#define PHONE_GRID_X (0.63)
+#define PHONE_GRID_Y (0.07)
+#define PHONE_MAX_WIDTH (0.34)
+#define PHONE_MAX_HEIGHT (0.83)
 
 #define GUI_GRID_X	(0)
 #define GUI_GRID_Y	(0)
@@ -1178,3 +1181,19 @@ class Life_RscToolbox {
 	font = "PuristaMedium";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 };
+class Life_RscButtonInv : Life_RscButton {
+	shadow = 0;
+	colorText[] = {0,0,0,0};
+	colorDisabled[] = {0,0,0,0};
+	colorBackground[] = {0,0,0,0};
+	colorBackgroundActive[] = {0,0,0,0};
+	colorBackgroundDisabled[] = {0,0,0,0};
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	colorFocused[] = {0,0,0,0};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,0};
+	borderSize = 0.0;
+}

@@ -29,7 +29,6 @@
 disableSerialization;
 
 private [];
-hint "Messages";
 //if(!alive player || dialog) exitWith {};
 if(!(createDialog "life_phone_messages")) exitWith {};
 //if(HANDCUFFED(player) || ISSURRENDERED(player)) exitWith {}; //ace check if player has his hands free

@@ -47,6 +47,5 @@ switch(_display) do {
 		} else {
 			[_display] spawn life_fnc_phoneDialogCalls;
 		};
-		hint "Cals";
 	};
 };

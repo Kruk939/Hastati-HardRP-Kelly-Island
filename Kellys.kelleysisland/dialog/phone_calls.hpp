@@ -1,5 +1,3 @@
-#define PHONE_GRID_X (0.6)
-
 class life_phone_calls {
 	idd = 61205;
 	name= "life_phone_calls";
@@ -8,76 +6,114 @@ class life_phone_calls {
 	onLoad = "";
 	
 	class controlsBackground {
-		class MainBackground:Life_RscText {
+		class MainBackground : Life_RscPicture {
 			colorBackground[] = {0, 0, 0, 0.7};
+			text = "icons\phoneImage.paa";
 			idc = -1;
-			x = PHONE_GRID_X;
-			y = 0;
-			w = 0.4;
-			h = 1;
+			style = "2096";
+			x = 0.59;
+			y = -0.91;
+			w = 1;
+			h = 3;
 		};
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			x = PHONE_GRID_X;
-			y = 0;
-			w = 0.4;
-			h = 0.08;
+		class Life_RscTitleBackground: Life_RscText {
+			colorBackground[] = {0,0,0,0.3};
+			x = PHONE_GRID_X - 0.005;
+			idc = -1;
+			y = PHONE_GRID_Y - 0.005;
+			w = PHONE_MAX_WIDTH + 0.035;
+			h = 0.04;
 			text = "Telefon";
 		};
 	};
 	
 	class controls {
-		class phoneCall : Life_RscButton {
-			idc = 3001;
-			text = PHONE_CALL;
-			x = PHONE_GRID_X;
-			action = "[61205] call life_fnc_phoneButtonCall";
-			type = 1;
-			y = 0.88;
-			w = 0.1;
-			h = 0.12;
-		};
-		
-		class phoneAdd : Life_RscButton {
-			idc = 3002;
-			text = PHONE_ADD;
-			x = PHONE_GRID_X + 0.2;
-			action = "[61205] call life_fnc_phoneButtonAdd";
-			type = 1;
-			y = 0.88;
-			w = 0.1;
-			h = 0.12;
-		};
-		
-		class phoneMessages : Life_RscButton {
-			idc = 3003;
-			text = PHONE_MESSAGE;
-			action = "[61205] call life_fnc_phoneButtonMessage";
-			x = PHONE_GRID_X + 0.1;
-			type = 1;
-			y = 0.88;
-			w = 0.1;
-			h = 0.12;
-		};
-		
-		class phoneReturn : Life_RscButton {
-			idc = 3004;
-			text = PHONE_RETURN;
-			x = PHONE_GRID_X + 0.3;
-			type = 1;
-			y = 0.88;
-			w = 0.1;
-			h = 0.12;
-			action = "[61205] call life_fnc_phoneButtonReturn";
-		};
-		
 		class phoneCallList : Life_RscListBox
 		{
 			idc = 3005;
-			x = PHONE_GRID_X + 0.025;
-			y = 0.12;
-			w = 0.35;
-			h = 0.72;
+			x = PHONE_GRID_X;
+			y = PHONE_GRID_Y + 0.05;
+			w = PHONE_MAX_WIDTH;
+			h = 0.6;
+		};
+		class phoneCall : Life_RscButtonInv {
+			idc = 3001;
+			text = "";
+			type = 1;
+			x = PHONE_GRID_X;
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+			action = "[61205] call life_fnc_phoneButtonCall";
+		};
+		
+		class phoneAdd : Life_RscButtonInv {
+			idc = 3002;
+			text = "";
+			action = "[61205] call life_fnc_phoneButtonAdd";
+			type = 1;
+			x = PHONE_GRID_X + 1 * (PHONE_MAX_WIDTH / 4);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+		};
+		
+		class phoneMessages : Life_RscButtonInv {
+			idc = 3003;
+			text = "";
+			action = "[61205] call life_fnc_phoneButtonMessage";
+			type = 1;
+			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 4);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+		};
+		
+		class phoneReturn : Life_RscButtonInv {
+			idc = 3004;
+			text = "";
+			action = "[61205] call life_fnc_phoneButtonReturn";
+			type = 1;
+			x = PHONE_GRID_X + 3 * (PHONE_MAX_WIDTH / 4);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+		};
+		class phoneButtonBackground1 : Life_RscPicture {
+			idc = -1;
+			style = "2096";
+			text = PHONE_CALL;
+			x = PHONE_GRID_X;
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+		};
+		class phoneButtonBackground2 : Life_RscPicture {
+			idc = -1;
+			style = "2096";
+			text = PHONE_SEND;
+			x = PHONE_GRID_X + 1 * (PHONE_MAX_WIDTH / 4);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+		};
+		class phoneButtonBackground3 : Life_RscPicture {
+			idc = -1;
+			style = "2096";
+			text = PHONE_ADD;
+			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 4);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
+		};
+		class phoneButtonBackground4 : Life_RscPicture {
+			idc = -1;
+			style = "2096";
+			text = PHONE_RETURN;
+			x = PHONE_GRID_X + 3 * (PHONE_MAX_WIDTH / 4);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 4);
 		};
 	};
 };

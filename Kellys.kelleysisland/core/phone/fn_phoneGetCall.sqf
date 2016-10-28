@@ -30,8 +30,9 @@ _fromName = "";
 if(count _contact != 0) then {_fromName = _contact select 1;} else {_fromName = _from;};
 hint format["Dzwoni do Ciebie: %1\n",_fromName];
 life_phone_caller = _from;
-[_freq] spawn {
+[_freq,_fromObj] spawn {
 	_freq = _this select 0;
+	_fromObj = _this select 1;
 	_k = 0;
 	life_phone_answered = 0;
 	while {_k < 10} do {
@@ -55,6 +56,7 @@ life_phone_caller = _from;
 		};
 	};
 	if(life_phone_answered == 0) then {hint "Nie odebrales polaczenia."; life_phone_beingCalled = false;};
+	life_phone_caller = "";
 };
-life_phone_caller = "";
+
 //life_phone_sms = [life_phone_activeNumber, _from, _message] + life_phone_sms;

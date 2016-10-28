@@ -43,11 +43,11 @@ _phoneCallList = _dialog displayCtrl PHONE_CALLLIST;
 			if((_x select 1) == life_phone_activeNumber) then {
 			//przychodzace
 			_number = _x select 0;
-			_name = "Przychodzące: ";
+			_name = "-->  : ";
 			} else {
 			//wychodzace
 			_number = _x select 1;
-			_name = "Wychodzące: ";
+			_name = "<-- : ";
 			};
 			_contact = [_number] call life_fnc_phoneGetContact;
 			if((count _contact) == 0) then {

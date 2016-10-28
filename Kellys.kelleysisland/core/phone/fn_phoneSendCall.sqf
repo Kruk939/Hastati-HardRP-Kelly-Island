@@ -35,7 +35,7 @@ if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
 _obj = _targetArray select 2;
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
-_freq = life_phone_activeNumber;
+_freq = life_phone_activeNumber + ".5";
 life_phone_activeFrequency = _freq;
 
 [life_phone_activeNumber, _freq, player, _obj] remoteExec ["TON_fnc_sendCall", 2];

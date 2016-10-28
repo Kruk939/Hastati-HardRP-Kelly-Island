@@ -38,10 +38,12 @@ _phoneContacts = _dialog displayCtrl PHONE_CONTACTS;
 if(isNil "life_phone_selectedNumber") then {};
 if(life_phone_activeNumber != "") then {
 	if(life_phone_beingCalled) then {
-	_phoneMessages ctrlEnable false;
-	_phoneContacts ctrlEnable false;
-	_phoneEvent ctrlSetText life_phone_caller;
-	_phoneTitle ctrlSetText "Połączenie przychodzące:";
+		_phoneMessages ctrlEnable false;
+		_phoneContacts ctrlEnable false;
+		_phoneEvent ctrlSetText life_phone_caller;
+		_phoneTitle ctrlSetText "Połączenie przychodzące:";
+		_phoneTitle ctrlSetFontHeight 0.04;
+		
 	} else {
 		_phoneNumber ctrlSetText life_phone_activeNumber;
 		_str = "";
