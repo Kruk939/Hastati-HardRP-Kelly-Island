@@ -42,7 +42,7 @@ switch (_side) do
 				} foreach life_houses;
 			};
 		} else {
-			_return = ["civ_spawn_0", "Lotnisko", "\a3\ui_f\data\map\MapControl\watertower_ca.paa"];
+			_return = [["civ_spawn_0", "Lotnisko", "\a3\ui_f\data\map\MapControl\watertower_ca.paa"]];
 		};
 	};
 	
