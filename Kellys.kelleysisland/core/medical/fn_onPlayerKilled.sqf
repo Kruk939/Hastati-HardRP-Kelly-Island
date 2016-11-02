@@ -29,7 +29,7 @@ _unit SVAR ["playerSurrender",false,true];
 _unit SVAR ["steam64id",(getPlayerUID player),true]; //Set the UID.
 
 //Setup our camera view
-life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
+/*life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder TRUE;
 life_deathCamera cameraEffect ["Internal","Back"];
 createDialog "DeathScreen";
@@ -64,7 +64,7 @@ _unit spawn {
 	_unit = _this select 0;
 	waitUntil {if(speed _unit == 0) exitWith {true}; life_deathCamera camSetTarget _unit; life_deathCamera camSetRelPos [0,3.5,4.5]; life_deathCamera camCommit 0;};
 };
-
+*/
 //Make the killer wanted
 if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _killer}) then {
 	if(vehicle _killer isKindOf "LandVehicle") then {
@@ -95,9 +95,11 @@ if(side _killer == west && playerSide != west) then {
 };
 
 if(!isNull _killer && {_killer != _unit}) then {
-	life_removeWanted = true;
+	if(side _killer != west) then {
+		_reason = "187";
+		[_killer,_unit,_reason] spawn life_fnc_createEvidence;
+	};
 };
-
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
