@@ -229,10 +229,16 @@ class Clothing {
         side = "med";
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, { "", "", -1 } },
+            { "kif_emt_clothes_shirt_officialfd_obj", "Fire Department", 25, { "", "", -1 } },
+            { "kif_emt_clothes_shirt_emt_med_obj", "Fire Department EMS", 25, { "", "", -1 } },
+            { "kif_emt_clothes_shirt_officialfd_obj", "Fire Department FD", 25, { "", "", -1 } },
+            { "A3L_EMSProbieUniform", "Fire Department Probie", 25, { "", "", -1 } },
             { "U_Rangemaster", "EMS Uniform", 50, { "", "", -1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
+            { "AM_PatrolHat", "Czapka", 5, { "", "", -1 } },
+            { "TRYK_H_woolhat", "Czapka 2", 5, { "", "", -1 } },
             { "H_Cap_blu", "", 10, { "", "", -1 } }
         };
         goggles[] = {
@@ -240,11 +246,17 @@ class Clothing {
             { "G_Shades_Blue", "", 10, { "", "", -1 } }
         };
         vests[] = {
-            { "NONE", "Remove Vest", 0, { "", "", -1 } }
+            { "NONE", "Remove Vest", 0, { "", "", -1 } },
+            { "TRYK_V_Bulletproof_BL", "Kamizelka 1", 30, { "", "", -1 } },
+            { "TRYK_V_Bulletproof", "Kamizelka 2", 30, { "", "", -1 } },
+            { "TRYK_V_Bulletproof_BLK", "Kamizelka 3", 30, { "", "", -1 } }
         };
         backpacks[] = {
             { "NONE", "Remove Backpack", 0, { "", "", -1 } },
-            { "B_FieldPack_oli", "EMS Backpack", 3000, { "", "", -1 } }
+            { "ACE_TacticalLadder_Pack", "Taktyczna Drabina", 30, { "", "", -1 } },
+            { "AM_PoliceBelt", "Pas", 30, { "", "", -1 } },
+            { "TRYK_B_Medbag", "Plecak Medyczny", 30, { "", "", -1 } },
+            { "B_Bolsa_camp_cruz", "Namiot Medyczny", 30, { "", "", -1 } }
         };
     };
 
