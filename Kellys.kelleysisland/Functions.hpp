@@ -10,6 +10,7 @@ class Socket_Reciever
 		class updateRequest {};
 		class syncData {};
 		class updatePartial {};
+		class settingsRecived {};
 	};
 };
 
@@ -101,6 +102,10 @@ class Life_Client_Core
 		class gather {};
 		class gutAnimal {};
 		class removeContainer {};
+		
+		class createEvidence {};
+		class destroyEvidence {};
+		class gatherEvidence {};
 	};
 
 	class Housing

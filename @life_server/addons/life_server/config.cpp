@@ -52,6 +52,8 @@ class CfgFunctions {
 			class bool{};
 			class mresString {};
 			class updatePartial {};
+			
+			class settingsRequest {};
 		};
 	};
 	
@@ -78,7 +80,6 @@ class CfgFunctions {
 			file = "\life_server\Functions\Client";
 		};
 	};
-
 	class TON_System {
 		tag = "TON";
 		class Systems {
@@ -144,6 +145,10 @@ class CfgFunctions {
 			class callInsert {};
 			class phoneQuery {};
 			class sendCall {};
+		};
+		class Kruk {
+			file = "\life_server\Functions\Kruk";
+			class settingsGet {};
 		};
 	};
 };

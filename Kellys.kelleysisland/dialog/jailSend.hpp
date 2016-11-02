@@ -52,7 +52,7 @@ class life_jail_send {
 			h = 0.04;
 		};
 		
-		class jailReasonInput : Life_RscButtonInv {
+		class jailReasonInput : Life_RscEdit {
 			idc = 3005;
 			x = 0.475;
 			y = 0.52;
@@ -60,7 +60,7 @@ class life_jail_send {
 			h = 0.14;
 			style = 18;
 		};
-		class jailApply: RscButton
+		class jailApply: Life_RscButton
 		{
 			idc = 3006;
 			text = "Zatwierdz"; //--- ToDo: Localize;
@@ -70,7 +70,7 @@ class life_jail_send {
 			h = 0.06;
 			action="life_sendToJail = true;";
 		};
-		class jailExit: RscButton
+		class jailExit: Life_RscButton
 		{
 			idc = 3007;
 			text = "Anuluj"; //--- ToDo: Localize;

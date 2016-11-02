@@ -19,7 +19,14 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"global_ATM"),1)) then{
 		[] call life_fnc_atmMenu;
 	};
 };
-
+if(playerSide != independent && !dialog && typeOf _curTarget == "Land_Suitcase_F") exitWith {
+	if(playerSide == west) then {
+		[] call life_fnc_gatherEvidence;
+	};
+	if(playerSide == civilian || playerSide == east) then {
+		[] call life_fnc_destroyEvidence;
+	};	
+};
 if(isNull _curTarget) exitWith {
 	if(_isWater) then {
 		private "_fish";
