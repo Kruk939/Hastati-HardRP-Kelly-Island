@@ -7,6 +7,10 @@
 */
 private["_unit","_id"];
 _unit = param [0,ObjNull,[ObjNull]];
+_time = _this select 1;
+_reason = _this select 2;
+if(isNil "_time") exitWith {};
+if(typeName _time != "SCALAR") exitWith {};
 if(isNull _unit) exitWith {}; //Not valid
 if(isNil "_unit") exitwith {}; //Not Valid
 if(!(_unit isKindOf "Man")) exitWith {}; //Not a unit

@@ -10,7 +10,13 @@ params [
 	["_unit",objNull,[objNull]],
 	["_bad",false,[false]]
 ];
-
+_time = _this select 2;
+_reason = _this select 3;
+if(isNil "_time") then {
+	life_arrestedTime = 15;
+} else {
+	life_arrestedTime = _time;
+};
 if(isNull _unit) exitWith {}; //Dafuq?
 if(_unit != player) exitWith {}; //Dafuq?
 if(life_is_arrested) exitWith {}; //Dafuq i'm already arrested
@@ -33,7 +39,7 @@ if(player distance (getMarkerPos "jail_marker") > 40) then {
 	player setPos (getMarkerPos "jail_marker");
 };
 
-[1] call life_fnc_removeLicenses;
+//[1] call life_fnc_removeLicenses;
 
 {
 	_amount = ITEM_VALUE(_x);
