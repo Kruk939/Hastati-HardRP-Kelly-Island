@@ -202,7 +202,30 @@ class WeaponShops {
             { "ToolKit", "", 250, 75 },
             { "FirstAidKit", "", 150, 65 },
             { "Medikit", "", 500, 450 },
-            { "NVGoggles", "", 1200, 980 }
+            { "NVGoggles", "", 1200, 980 },
+            { "ACE_fieldDressing", "", 1, -1 },
+            { "ACE_elasticBandage", "", 1, -1 },
+            { "ACE_quikclot", "", 1, -1 },
+            { "ACE_packingBandage", "", 1, -1 },
+            { "ACE_tourniquet", "", 1, -1 },
+            { "ACE_morphine", "", 1, -1 },
+            { "ACE_atropine", "", 1, -1 },
+            { "ACE_epinephrine", "", 1, -1 },
+            { "ACE_adenosine", "", 1, -1 },
+            { "ACE_plasmaIV_500", "", 1, -1 },
+            { "ACE_salineIV_500", "", 1, -1 },
+            { "ACE_bloodIV_500", "", 1, -1 },
+            { "ACE_bodyBag", "", 1, -1 },
+            { "ACE_surgicalKit", "", 1, -1 },
+            { "ACE_personalAidKit", "", 1, -1 },
+            { "ACE_SpraypaintRed", "", 1, -1 },
+            { "ACE_SpraypaintBlack", "", 1, -1 },
+            { "ACE_wirecutter", "", 1, -1 },
+            { "cl_FlashLight", "", 1, -1 },
+            { "tf_anprc152", "", 1, -1 },
+            { "CG_Pro_Item_i", "", 1, -1 },
+            { "CG_Lockpick", "", 1, -1 },
+            { "ToolKit", "", 1200, 980 }
         };
         mags[] = {};
     };
