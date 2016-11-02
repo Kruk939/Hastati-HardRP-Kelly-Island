@@ -17,7 +17,7 @@ _mode = _this select 0;
 _cardID = _this select 1;
 _player = _this select 2;
 _saldo = _this select 3;
-//_playerUID = getPlayerUID _player;
+_playerUID = getPlayerUID _player;
 if(isNil "_cardID") exitWith {};
 if(isNil "_player") exitWith {};
 
@@ -26,8 +26,7 @@ switch(_mode) do {
 		_query = format ["UPDATE TelSimCards SET saldo='%1' WHERE id='%2'", _saldo, _cardID];
 	};
 	case 1: {
-		_query = format ["UPDATE TelSimCards SET permanent='0' WHERE ownerUID='%1'", _player];
-		_query2 = format ["UPDATE TelSimCards SET permanent='1' WHERE id='%1'", _cardID];
+		_query = format ["UPDATE playerSettings SET defaultSimCard='%1' WHERE uid='%2'", _cardID, _playerUID];
 	};
 	case 2: {
 		_query = format ["UPDATE TelSimCards SET alive='0' WHERE id='%1'", _cardID];
@@ -36,7 +35,4 @@ switch(_mode) do {
 
 if(!isNil "_query") then {
 	[_query, 1] call DB_fnc_asyncCall;
-};
-if(!isNil "_query2") then {
-	[_query2, 1] call DB_fnc_asyncCall;
 };

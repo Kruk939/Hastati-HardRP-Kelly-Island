@@ -132,14 +132,11 @@ life_fnc_moveIn = compileFinal
 		(findDisplay 602) closeDisplay 2; // Close Inventory dialog
 	};
 };
-
-[] spawn life_fnc_phoneInit;
-
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
 
 if(EQUAL(LIFE_SETTINGS(getNumber,"Pump_service"),1)) then{
 	[] execVM "core\fn_Setup_Sation_Service.sqf";
 };
-
+[] spawn life_fnc_phoneInit;
 [getPlayerUID player,player getVariable["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];

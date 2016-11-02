@@ -52,6 +52,7 @@ _query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, co
 	_bank,
 	_alias
 ];
-
+[_query,1] call DB_fnc_asyncCall;
+_query = format["INSERT INTO playerSettings (uid, defaultSimCard) VALUES ('%1', '0')", _uid];
 [_query,1] call DB_fnc_asyncCall;
 [] remoteExecCall ["SOCK_fnc_dataQuery",(owner _returnToSender)];
