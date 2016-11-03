@@ -42,19 +42,7 @@ life_deathCamera camCommit 0;
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
 //Create a thread for something?
-_unit spawn {
-	private["_maxTime","_RespawnBtn","_Timer"];
-	disableSerialization;
-	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
-	_Timer = ((findDisplay 7300) displayCtrl 7301);
 
-	_maxTime = time + (life_respawn_timer * 60);
-	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
-	round(_maxTime - time) <= 0 OR isNull _this};
-	_RespawnBtn ctrlEnable true;
-	_Timer ctrlSetText localize "STR_Medic_Respawn_2";
-};
 
 [] spawn life_fnc_deathScreen;
 
