@@ -9,6 +9,8 @@
 private["_unit","_corpse","_containers"];
 _unit = SEL(_this,0);
 _corpse = SEL(_this,1);
+[] call life_fnc_respawned;
+
 life_corpse = _corpse;
 
 //Comment this code out if you want them to keep the weapon on the ground.
@@ -29,3 +31,5 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 [] call life_fnc_setupActions;
 [_unit,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
+
+[] call life_fnc_spawnMenu;
