@@ -37,9 +37,25 @@ switch(_display) do {
 		_list = _dialog displayCtrl 3005;
 		_index = lbCurSel _list;
 		_number = _list lbData _index;
+		_emergencyNumber = false;
+		{
+			if(_x select 0 == _number) exitWith {_emergencyNumber = true;};
+		} forEach life_phone_emergencyNumbers;
+		if(_emergencyNumber) exitWith {};
 		_uid = getPlayerUID player;
-		_list = lbDelete _index;
-		life_phone_contacts = life_phone_contacts - ([_number] spawn life_fnc_phoneGetContact);
+		_list lbDelete _index;
+		_contact = [_number] call life_fnc_phoneGetContact;
+		life_phone_contacts = life_phone_contacts - [_contact];
+		lbClear _list;
+		{
+			_index2 = _list lbAdd (_x select 1);
+			_list lbSetData [_index, (_x select 0)];
+		} forEach life_phone_emergencyNumbers;
+		{
+			_index2 = _list lbAdd (_x select 1);
+			_list lbSetData [_index, (_x select 0)];
+		} forEach life_phone_contacts;
+		_list lbSetCurSel (_index - 1);
 		[_uid, _number] remoteExec ["TON_fnc_contactDelete",RSERV];
 	};
 };

@@ -33,8 +33,8 @@ class life_phone_main {
 			idc = 3005;
 			text = ""; //--- ToDo: Localize;
 			x = PHONE_GRID_X;
-			colorBackground[] = {0,0,0,0.2};
-			colorBackgroundActive[] = {0, 0, 0, 0.1};
+			colorBackground[] = {0,0,0,0.5};
+			colorBackgroundActive[] = {0, 0, 0, 0.3};
 			y = PHONE_GRID_Y + 0.65;
 			w = PHONE_MAX_WIDTH;
 			h = 0.1;

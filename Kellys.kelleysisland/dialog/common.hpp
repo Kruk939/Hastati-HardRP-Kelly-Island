@@ -15,7 +15,7 @@
 #define PHONE_RETURN "icons\phoneReturn.paa"
 #define PHONE_ADD "icons\phoneAdd.paa"
 #define PHONE_APPLY "icons\phoneApply.paa"
-#define PHONE_REMOVE "icons\phoneRemove.paa";
+#define PHONE_REMOVE "icons\phoneRemove.paa"
 #define PHONE_GRID_X (0.63)
 #define PHONE_GRID_Y (0.07)
 #define PHONE_MAX_WIDTH (0.34)

@@ -30,24 +30,49 @@ class life_phone_sms_send {
 	class controls {
 		class phoneTargetNumber : Life_RscEdit {
 			idc = 3003;
+			text = "";
 			x = PHONE_GRID_X;
-			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.52);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.60);
 			w = PHONE_MAX_WIDTH;
+			colorBackground[] = {0,0,0,0.5};
+			colorBackgroundActive[] = {0, 0, 0, 0.3};
 			h = 0.1;
+		};
+		class phoneTargetNumberTitle : Life_RscText {
+			idc = -1;
+			text = "Numer:";
+			x = PHONE_GRID_X;
+			style = 0;
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.68);
+			w = PHONE_MAX_WIDTH;
+			h = 0.08;
 		};
 		class phoneSmsMessage : Life_RscEdit {
 			idc = 3004;
+			text = "";
 			x = PHONE_GRID_X;
 			style = 16;
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.4);
 			w = PHONE_MAX_WIDTH;
+			colorBackground[] = {0,0,0,0.5};
+			colorBackgroundActive[] = {0, 0, 0, 0.3};
 			h = 0.3;
+		};
+		class phoneSmsMessageTitle : Life_RscText {
+			idc = -1;
+			text = "Tresc:";
+			x = PHONE_GRID_X;
+			style = 0;
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.48);
+			w = PHONE_MAX_WIDTH;
+			h = 0.08;
 		};
 		class phoneSmsSendTitle : Life_RscText {
 			idc = 3005;
 			text = "Wyslij sms";
+			style = "2";
 			x = PHONE_GRID_X;
-			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.64);
+			y = PHONE_GRID_Y + 0.05;
 			w = PHONE_MAX_WIDTH;
 			h = 0.1;
 		};

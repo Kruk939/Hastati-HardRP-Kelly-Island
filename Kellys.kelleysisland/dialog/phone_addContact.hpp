@@ -26,7 +26,57 @@ class life_phone_addContact {
 		};
 	};
 	
-	class controls {
+	class controls {		
+		class phoneContactNumber : Life_RscEdit {
+			idc = 3003;
+			text = "";
+			colorBackground[] = {0,0,0,0.5};
+			colorBackgroundActive[] = {0, 0, 0, 0.3};
+			x = PHONE_GRID_X;
+			y = PHONE_GRID_Y + 0.27;
+			w = PHONE_MAX_WIDTH;
+			h = 0.1;
+		};
+		class phoneContactNumberTitle : Life_RscText 
+		{
+			idc = -1;
+			text = "Numer:"; //--- ToDo: Localize;
+			x = PHONE_GRID_X;
+			y = PHONE_GRID_Y + 0.21;
+			w = PHONE_MAX_WIDTH;
+			style = "0";
+			h = 0.08;
+		};
+		class phoneContactNameTitle : Life_RscText 
+		{
+			idc = -1;
+			text = "Nazwa:"; //--- ToDo: Localize;
+			x = PHONE_GRID_X;
+			y = PHONE_GRID_Y + 0.41;
+			w = PHONE_MAX_WIDTH;
+			style = "0";
+			h = 0.08;
+		};
+		class phoneContactName : Life_RscEdit {
+			idc = 3004;
+			text = "";
+			colorBackground[] = {0,0,0,0.5};
+			colorBackgroundActive[] = {0, 0, 0, 0.3};
+			x = PHONE_GRID_X;
+			y = PHONE_GRID_Y + 0.47;
+			w = PHONE_MAX_WIDTH;
+			h = 0.1;
+		};
+		class phoneContactTitle : Life_RscText 
+		{
+			idc = 3005;
+			text = "Dodaj kontakt"; //--- ToDo: Localize;
+			x = PHONE_GRID_X;
+			y = PHONE_GRID_Y + 0.05;
+			w = PHONE_MAX_WIDTH;
+			style = "2";
+			h = 0.1;
+		};
 		class phoneAdd : Life_RscButtonInv {
 			idc = 3001;
 			action = "[61202] call life_fnc_phoneButtonAdd";
@@ -48,38 +98,7 @@ class life_phone_addContact {
 			w = (PHONE_MAX_WIDTH / 4);
 			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 4);
 		};
-		
-		class phoneContactNumber : Life_RscEdit {
-			idc = 3003;
-			text = "";
-			colorBackground[] = {0,0,0,0.2};
-			colorBackgroundActive[] = {0, 0, 0, 0.1};
-			x = PHONE_GRID_X;
-			y = PHONE_GRID_Y + 0.33;
-			w = PHONE_MAX_WIDTH;
-			h = 0.1;
-		};
-		
-		class phoneContactName : Life_RscEdit {
-			idc = 3004;
-			text = "";
-			colorBackground[] = {0,0,0,0.2};
-			colorBackgroundActive[] = {0, 0, 0, 0.1};
-			x = PHONE_GRID_X;
-			y = PHONE_GRID_Y + 0.47;
-			w = PHONE_MAX_WIDTH;
-			h = 0.1;
-		};
-		
-		class phoneContactTitle : Life_RscText 
-		{
-			idc = 3005;
-			text = "Dodaj kontakt"; //--- ToDo: Localize;
-			x = PHONE_GRID_X;
-			y = PHONE_GRID_Y + 0.19;
-			w = PHONE_MAX_WIDTH;
-			h = 0.1;
-		};
+
 		class phoneButtonBackground1 : Life_RscPicture {
 			idc = -1;
 			style = "2096";

@@ -37,8 +37,8 @@ class life_phone_messages {
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.26);
 			w = PHONE_MAX_WIDTH;
 			h = 0.18;
-			colorBackground[] = {0,0,0,0.2};
-			colorBackgroundActive[] = {0, 0, 0, 0.1};
+			colorBackground[] = {0,0,0,0.5};
+			colorBackgroundActive[] = {0, 0, 0, 0.3};
 		};
 		class phoneCall : Life_RscButtonInv {
 			idc = 3001;
