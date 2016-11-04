@@ -21,7 +21,7 @@ _query = format ["SELECT uid FROM players WHERE playerid='%1'",_uid];
 _queryResult = [_query,2,false] call DB_fnc_asyncCall;
 if(count _queryResult == 0) exitWith {_ret;};
 _ret pushBack (_queryResult select 0);
-_query = format ["SELECT defaultSimCard FROM playerSettings WHERE uid='%1'",_uid];
+_query = format ["SELECT uid, defaultSimCard FROM playerSettings WHERE uid='%1'",_uid];
 _queryResult = [_query,2,false] call DB_fnc_asyncCall;
 if(count _queryResult == 0) exitWith {_ret;};
 {

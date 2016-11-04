@@ -69,15 +69,25 @@ class life_phone_contacts {
 			w = (PHONE_MAX_WIDTH / 4);
 		};
 		
-		class phoneReturn : Life_RscButtonInv {
+		class phoneDelete : Life_RscButtonInv {
 			idc = 3004;
+			text = "";
+			action = "[61203] call life_fnc_phoneButtonDelete";
+			type = 1;
+			x = PHONE_GRID_X + 3 * (PHONE_MAX_WIDTH / 5);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 5);
+		};		
+		class phoneReturn : Life_RscButtonInv {
+			idc = 3005;
 			text = "";
 			action = "[61203] call life_fnc_phoneButtonReturn";
 			type = 1;
-			x = PHONE_GRID_X + 3 * (PHONE_MAX_WIDTH / 4);
+			x = PHONE_GRID_X + 4 * (PHONE_MAX_WIDTH / 5);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
-			w = (PHONE_MAX_WIDTH / 4);
+			w = (PHONE_MAX_WIDTH / 5);
 		};
 		
 		class phoneButtonBackground1 : Life_RscPicture {
@@ -87,34 +97,42 @@ class life_phone_contacts {
 			x = PHONE_GRID_X;
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
-			w = (PHONE_MAX_WIDTH / 4);
+			w = (PHONE_MAX_WIDTH / 5);
 		};
 		class phoneButtonBackground2 : Life_RscPicture {
 			idc = -1;
 			style = "2096";
 			text = PHONE_ADD;
-			x = PHONE_GRID_X + 1 * (PHONE_MAX_WIDTH / 4);
+			x = PHONE_GRID_X + 1 * (PHONE_MAX_WIDTH / 5);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
-			w = (PHONE_MAX_WIDTH / 4);
+			w = (PHONE_MAX_WIDTH / 5);
 		};
 		class phoneButtonBackground3 : Life_RscPicture {
 			idc = -1;
 			style = "2096";
 			text = PHONE_MESSAGE;
-			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 4);
+			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 5);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
-			w = (PHONE_MAX_WIDTH / 4);
+			w = (PHONE_MAX_WIDTH / 5);
 		};
 		class phoneButtonBackground4 : Life_RscPicture {
 			idc = -1;
 			style = "2096";
-			text = PHONE_RETURN;
-			x = PHONE_GRID_X + 3 * (PHONE_MAX_WIDTH / 4);
+			text = PHONE_REMOVE;
+			x = PHONE_GRID_X + 3 * (PHONE_MAX_WIDTH / 5);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
-			w = (PHONE_MAX_WIDTH / 4);
+			w = (PHONE_MAX_WIDTH / 5);
+		};
+		class phoneButtonBackground5 : Life_RscPicture {
+			idc = -1;
+			style = "2096";
+			text = PHONE_RETURN;
+			x = PHONE_GRID_X + 4 * (PHONE_MAX_WIDTH / 5);
+			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
+			h = 0.08;
 		};
 	};
 };

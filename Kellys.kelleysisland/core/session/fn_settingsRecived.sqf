@@ -10,6 +10,6 @@
 */
 private["_array"];
 _array = _this select 0;
-_settings = _array select 0;
+_settings = _array;
 player setVariable ["playerDBid", (_settings select 0)];
 life_phone_activeCard = _settings select 1;

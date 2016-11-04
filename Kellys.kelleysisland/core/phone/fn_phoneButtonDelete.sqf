@@ -38,8 +38,9 @@ switch(_display) do {
 		_index = lbCurSel _list;
 		_number = _list lbData _index;
 		_uid = getPlayerUID player;
+		_list = lbDelete _index;
+		life_phone_contacts = life_phone_contacts - ([_number] spawn life_fnc_phoneGetContact);
 		[_uid, _number] remoteExec ["TON_fnc_contactDelete",RSERV];
-		closeDialog 0;
 	};
 };
 life_phone_lastDiaglog = _display;

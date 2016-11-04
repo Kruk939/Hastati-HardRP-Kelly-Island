@@ -384,6 +384,7 @@ class Life_Client_Core
 		class phoneButtonSend {};
 		class phoneButtonAdd {};
 		class phoneButtonMessage {};
+		class phoneButtonDelete {};
 		
 		//dialogs:
 		class phoneOpen {};
