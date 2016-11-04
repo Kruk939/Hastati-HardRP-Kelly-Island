@@ -106,6 +106,7 @@ class Life_Client_Core
 		class createEvidence {};
 		class destroyEvidence {};
 		class gatherEvidence {};
+		class destroyAction {};
 	};
 
 	class Housing
