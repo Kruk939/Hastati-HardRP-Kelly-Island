@@ -31,40 +31,15 @@ if(!alive player || !dialog) exitWith {};
 _display = _this select 0;
 _dialog = findDisplay _display;
 
+
 switch(_display) do {
-	case PHONE_ADDCONTACT: {
-		_name = ctrlText 3004;
-		_number = ctrlText 3003;
-		[_number, _name] call life_fnc_phoneAddContact;
-		[_display] call life_fnc_phoneButtonReturn;
-	};
 	case PHONE_CONTACTS: {
-		closeDialog 0;
-		[] spawn life_fnc_phoneDialogAddContact;
-	};
-	case PHONE_CALLS: {
 		_list = _dialog displayCtrl 3005;
 		_index = lbCurSel _list;
 		_number = _list lbData _index;
+		_uid = getPlayerUID player;
+		[_uid, _number] remoteExec ["TON_fnc_contactDelete",RSERV];
 		closeDialog 0;
-		[_number] call life_fnc_phoneDialogAddContact;
-	};
-	case PHONE_MESSAGES: {
-		_list = _dialog displayCtrl 3005;
-		_index = lbCurSel _list;
-		_number = "";
-		{
-			if(life_phone_activeCard == _x select 0) then {
-				_array = _x select 1;
-				if (((_array select _index) select 0) != life_phone_activeNumber) then {
-					_number = ((_array select _index) select 0);
-				} else {
-					_number = ((_array select _index) select 1);
-				};
-			};
-		} forEach life_phone_sms;
-		closeDialog 0;
-		[_number] call life_fnc_phoneDialogAddContact;
 	};
 };
 life_phone_lastDiaglog = _display;

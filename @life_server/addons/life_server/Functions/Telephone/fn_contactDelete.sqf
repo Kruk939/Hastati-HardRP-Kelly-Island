@@ -15,7 +15,6 @@
 
 _player = _this select 0;
 _number = _this select 1;
-_name = _this select 2;
 _ret = false;
 if(isNil "_player" || isNil "_number") exitWith {_ret;};
 //if(isNull _player) exitWith {_ret;};
