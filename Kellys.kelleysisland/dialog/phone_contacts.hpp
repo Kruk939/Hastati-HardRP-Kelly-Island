@@ -133,6 +133,7 @@ class life_phone_contacts {
 			x = PHONE_GRID_X + 4 * (PHONE_MAX_WIDTH / 5);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
+			w = (PHONE_MAX_WIDTH / 5);
 		};
 	};
 };
