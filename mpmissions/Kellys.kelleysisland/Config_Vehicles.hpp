@@ -83,11 +83,8 @@ class CarShops {
     class cop_car {
         side = "cop";
         vehicles[] = {
-            { "C_Offroad_01_F", 5000, { "" }, { "", "", -1 } },
-            { "C_SUV_01_F", 20000, { "" }, { "", "", -1 } },
-            { "C_Hatchback_01_sport_F", 30000, { "" }, { "life_coplevel", "SCALAR", 1 } },
-            { "B_MRAP_01_F", 30000, { "" }, { "life_coplevel", "SCALAR", 2 } },
-            { "B_MRAP_01_hmg_F", 750000, { "" }, { "life_coplevel", "SCALAR", 3 } }
+            { "DRPG_06VICTORIA_P_P", 5, { "" }, { "", "", -1 } },
+            { "DAR_EXPLORERPOLICE", 2, { "" }, { "", "", -1 } }
         };
     };
 

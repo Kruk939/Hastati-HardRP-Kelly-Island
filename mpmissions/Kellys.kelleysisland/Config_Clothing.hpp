@@ -471,7 +471,8 @@ class Clothing {
 			{ "AVERS_Carryall_03", "", 500, { "", "", -1} },
 			{ "AVERS_Kitbag_03", "", 500, { "", "", -1} }
         };
-    };
+
+	};
 
     class cop {
         title = "STR_Shops_C_Police";
@@ -479,16 +480,29 @@ class Clothing {
         side = "cop";
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, { "", "", -1 } },
-            { "U_Rangemaster", "Cop Uniform", 25, { "", "", -1 } },
-            { "U_B_CombatUniform_mcam_tshirt", "", 350, { "life_coplevel", "SCALAR", 1 } },
-            { "U_B_survival_uniform", "", 1250, { "life_coplevel", "SCALAR", 1 } },
-            { "U_B_CombatUniform_mcam_worn", "", 550, { "life_coplevel", "SCALAR", 2 } }
+            { "LVPD_rang1", "Mundur POI", 25, { "10", "", -1 } },
+            { "LVPD_rang2", "Mundur POII", 25, { "life_coplevel", "SCALAR", 1 } },
+            { "LVPD_rang3", "Mundur POIII", 25, { "life_coplevel", "SCALAR", 1 } },
+            { "LVPD_rang4", "Mundur SGT", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "LVPD_rang5", "Mundur SSGT", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "LVPD_rang6", "Mundur LT", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "LVPD_rang7", "Mundur CPT", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "LVPD_rang9", "Mundur CMD", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "LVPD_rang11", "Mundur DPTChiefOFPolice", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "LVPD_rang12", "Mundur ChiefOfPolice", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "RF_ASU_2", "Kombinezon Pilota", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "RF_WING_3", "Kombinezon Dowódcy Pilotów", 25, { "life_coplevel", "SCALAR", 1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
-            { "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
+            { "H_Cap_police", "Czapka", 75, { "life_coplevel", "SCALAR", 1 } },
             { "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
-            { "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } }
+            { "ALE_H_Calot", "Calot", 100, { "life_coplevel", "SCALAR", 1 } },
+			{ "casco_cnp_protec", "Riot Helmet", 100, { "life_coplevel", "SCALAR", 1 } },
+			{ "AM_PatrolHat", "Czapka Patrolowa", 100, { "life_coplevel", "SCALAR", 1 } },
+			{ "policia_pilot_helmet", "hełm Pilota", 100, { "life_coplevel", "SCALAR", 1 } },
+			{ "ACE_helmet", "hełm Ace Pilota", 100, { "life_coplevel", "SCALAR", 1 } }
+			
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, { "", "", -1 } },
@@ -504,16 +518,17 @@ class Clothing {
             { "G_Lady_Dark", "", 150, { "", "", -1 } },
             { "G_Lady_Blue", "", 150, { "", "", -1 } },
             { "G_Lowprofile", "", 30, { "", "", -1 } },
-            { "G_Combat", "", 55, { "", "", -1 } }
+            { "G_Combat", "", 55, { "", "", -1 } },
+			{ "KA_MCU", "Maska Przeciwgazowa", 55, { "", "", -1 } }
         };
         vests[] = {
             { "NONE", "Remove Vest", 0, { "", "", -1 } },
-            { "V_Rangemaster_belt", "", 800, { "", "", -1 } },
-            { "V_PlateCarrier2_rgr", "", 1500, { "life_coplevel", "SCALAR", 1 } }
+            { "TRYK_V_tacv1_P_BK", "Kamizelka Police", 10, { "", "", -1 } },
+            { "TRYK_V_tacv1LC_P_BK", "Cieżka Kamizelka Pol", 1500, { "life_coplevel", "SCALAR", 1 } }
         };
         backpacks[] = {
             { "NONE", "Remove Backpack", 0, { "", "", -1 } },
-            { "B_Kitbag_cbr", "", 800, { "", "", -1 } },
+            { "AM_PoliceBelt", "", 10, { "", "", -1 } },
             { "B_FieldPack_cbr", "", 500, { "", "", -1 } },
             { "B_AssaultPack_cbr", "", 700, { "", "", -1 } },
             { "B_Bergen_sgg", "", 2500, { "", "", -1 } },
