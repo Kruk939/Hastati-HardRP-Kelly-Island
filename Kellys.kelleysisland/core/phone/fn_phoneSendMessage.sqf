@@ -23,7 +23,8 @@ if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
 _obj = (_targetArray select 2);
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
-
+if((life_phone_activeCardSaldo - life_phone_activeCardSMS) < 0) exitWith {mss("Nie masz wystarczajaco srodkow na koncie.")};
+life_phone_activeCardSaldo = life_phone_activeCardSaldo - life_phone_activeCardSMS;
 
 [_obj, life_phone_activeNumber, _targetNumber, (getPos player), _message] remoteExec ["TON_fnc_smsInsert", RSERV];
 {

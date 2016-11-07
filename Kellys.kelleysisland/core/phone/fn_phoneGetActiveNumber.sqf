@@ -14,6 +14,6 @@
 	BOOL - true if function was executed successfully
 */
 {
-	if(_x select 6 == 1) exitWith {life_phone_active_number = _x select 1;};
+	if(_x select 0 == life_phone_activeCard) exitWith {life_phone_active_number = _x select 1;};
 } forEach life_phone_cards;
 life_phone_active_number;

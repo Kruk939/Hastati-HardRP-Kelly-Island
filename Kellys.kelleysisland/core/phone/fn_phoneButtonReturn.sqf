@@ -54,6 +54,26 @@ switch(_display) do {
 			};
 		};
 	};
+	case PHONE_CHANGE: {
+		switch(life_phone_lastDialog) do {
+			case PHONE_CONTACTS: {
+				closeDialog 0;
+				[] spawn life_fnc_phoneDialogContacts;
+			};
+			case PHONE_MESSAGES: {
+				closeDialog 0;
+				[] spawn life_fnc_phoneDialogMessages;
+			};
+			case PHONE_CALLS: {
+				closeDialog 0;
+				[] spawn life_fnc_phoneDialogCalls;
+			};
+			case default {
+				closeDialog 0;
+				[] spawn life_fnc_phoneOpen;
+			};
+		};
+	};
 	case default {
 		closeDialog 0;
 		[] spawn life_fnc_phoneOpen;
