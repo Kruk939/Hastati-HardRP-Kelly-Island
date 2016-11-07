@@ -24,18 +24,19 @@ if(_radio == "") exitWith {hint "Nie masz telefonu";};
 _targetNumber = _this select 0;
 if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {}; //check if calling or being called
 
-life_phone_answered = 0;
-life_phone_beingCalled = false;
-life_phone_calling = true;
-life_phone_inCall = false;
 
 
 if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
+IF(_targetNumber == life_phone_activeNumber == "") exitWith {msg("Nie mozesz zadzwonic do siebie.");};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
 _obj = _targetArray select 2;
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
 if(life_phone_activeCardSaldo < 0) exitWith {msg("Nie masz srodkow na koncie.  ");};
+life_phone_answered = 0;
+life_phone_beingCalled = false;
+life_phone_calling = true;
+life_phone_inCall = false;
 _freq = life_phone_activeNumber + ".5";
 life_phone_activeFrequency = _freq;
 
@@ -48,7 +49,7 @@ _channel = _channel + 1;
 	while {_k < 10} do {
 		uiSleep 0.1;
 		_k = _k + 0.1;
-	if((floor _k) % 2 == 0 || _k == 0) then {
+	if((floor _k) % 4 == 0 || _k == 0) then {
 		playSound "phoneDial";
 	};
 		if(life_phone_answered != 0) exitWith {

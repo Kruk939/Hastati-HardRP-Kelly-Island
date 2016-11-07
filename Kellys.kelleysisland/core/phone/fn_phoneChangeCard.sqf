@@ -32,6 +32,14 @@ if(_card == 0) exitWith {
 	};
 	publicVariable "life_phone_numbers";
 };
+if(life_phone_activeNumber != "") {
+	{
+		if(_x select 0 == life_phone_activeCard) exitWith {
+			_x set [3, life_phone_activeCardSaldo];
+			[0,life_phone_activeCard] spawn life_fnc_phoneCardUpdate;
+		};
+	} forEach life_phone_cards;
+};
 {
 	if(_x select 0 == _card) exitWith {
 		life_phone_activeCard = _card;
@@ -39,25 +47,23 @@ if(_card == 0) exitWith {
 		life_phone_activeCardSaldo = _x select 3;
 		life_phone_activeCardSMS = _x select 4;
 		life_phone_activeCardCall = _x select 5;
+		[1,_card] spawn life_fnc_phoneCardUpdate;
 	};
 } forEach life_phone_cards;
-if(!isNil "life_phone_activeNumber") then {
-	if(isNil "life_phone_numbers") then {
-		life_phone_numbers = [];
-		life_phone_numbers pushBack [getPlayerUID player, life_phone_activeNumber, player];
-		publicVariable "life_phone_numbers";
-	} else {
-		_active = false;
-		{
-			if((_x select 0) == (getPlayerUID player)) exitWith {
-				_x set [1, life_phone_activeNumber];
-				_x set [2, player];
-				_active = true;
-			};
-		} forEach life_phone_numbers;
-		if(!_active) then {life_phone_numbers pushBack [getPlayerUID player, life_phone_activeNumber, player];};
-		publicVariable "life_phone_numbers";
-	};
+
+if(isNil "life_phone_numbers") then {
+	life_phone_numbers = [];
+	life_phone_numbers pushBack [getPlayerUID player, life_phone_activeNumber, player];
+	publicVariable "life_phone_numbers";
 } else {
-	life_phone_activeNumber = "";
+	_active = false;
+	{
+		if((_x select 0) == (getPlayerUID player)) exitWith {
+			_x set [1, life_phone_activeNumber];
+			_x set [2, player];
+			_active = true;
+		};
+	} forEach life_phone_numbers;
+	if(!_active) then {life_phone_numbers pushBack [getPlayerUID player, life_phone_activeNumber, player];};
+	publicVariable "life_phone_numbers";
 };

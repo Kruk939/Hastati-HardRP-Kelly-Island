@@ -1,3 +1,4 @@
+#include "..\..\script_macros.hpp"
 /*
 	Author: Kajetan "Kruk" Mruk
 	
@@ -12,11 +13,7 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-
-
-
-_query = format["SELECT id, number, idCompany, saldo, SMSPrice, minutePrice, permanent FROM TelSimCards WHERE alive='1' AND ownerUID='0' LIMIT 50"];
-_queryResult = [_query,2,true] call DB_fnc_asyncCall;
-
-if(count _queryResult != 0) then {_ret = _queryResult;} else {_ret = [];};
-[_ret] remoteExec ["life_phoneServerInit", 2];
+_cards = _this select 0;
+if(isNil "_cards") exitWith {diag_log "Nie wczytano kart"};
+life_phone_cardsToSell = _cards;
+publicVariable "life_phone_cardsToSell";

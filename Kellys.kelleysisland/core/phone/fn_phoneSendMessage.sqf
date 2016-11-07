@@ -20,6 +20,7 @@ _message = _this select 1;
 if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
 if(_message == "") exitWith {msg("Nie podano wiadomosci.")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
+IF(_targetNumber == life_phone_activeNumber == "") exitWith {msg("Nie mozesz wyslas wiadomosci do siebie.");};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
 _obj = (_targetArray select 2);
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
