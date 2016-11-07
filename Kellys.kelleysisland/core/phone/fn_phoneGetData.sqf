@@ -40,29 +40,5 @@ if((count _data) != 0) then {
 	life_phone_cards = _data select 1;
 	life_phone_sms = _data select 2;
 	life_phone_call = _data select 3;
-	{
-		if(_x select 0 == life_phone_activeCard) exitWith {
-			life_phone_activeNumber = _x select 1;
-		};
-	} forEach life_phone_cards;
-	if(!isNil "life_phone_activeNumber") then {
-		if(isNil "life_phone_numbers") then {
-			life_phone_numbers = [];
-			life_phone_numbers pushBack [getPlayerUID player, life_phone_activeNumber, player];
-			publicVariable "life_phone_numbers";
-		} else {
-			_active = false;
-			{
-				if((_x select 0) == (getPlayerUID player)) exitWith {
-					_x set [1, life_phone_activeNumber];
-					_x set [2, player];
-					_active = true;
-				};
-			} forEach life_phone_numbers;
-			if(!_active) then {life_phone_numbers pushBack [getPlayerUID player, life_phone_activeNumber, player];};
-			publicVariable "life_phone_numbers";
-		};
-	} else {
-		life_phone_activeNumber = "";
-	};
+	[life_phone_activeCard] spawn life_fnc_phoneChangeCard;
 };

@@ -33,11 +33,15 @@ _dialog = findDisplay _display;
 
 switch(_display) do {
 	case PHONE_CHANGE: {
-		_list = displayCtrl 3003;
+		_list = _dialog displayCtrl 3003;
 		_index = lbCurSel _list;
 		_id = parseNumber(_list lbData _index);
 		[_id] call life_fnc_phoneChangeCard;
 		[_display] call life_fnc_phoneButtonReturn;
+	};
+	default {
+	
+	
 	};
 };
 life_phone_lastDiaglog = _display;

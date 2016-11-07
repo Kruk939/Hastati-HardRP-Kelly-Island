@@ -73,10 +73,10 @@ class life_phone_calls {
 		class phoneSettings : Life_RscButtonInv {
 			idc = 3010;
 			type = 1;
-			action = "[] call life_fnc_phoneDialogSettings";
+			text = "";
+			action = "closeDialog 0; [] spawn life_fnc_phoneDialogSettings";
 			colorBackground[] = {0,0,0,0.3};
 			x = PHONE_GRID_X - 0.005;
-			idc = -1;
 			y = PHONE_GRID_Y - 0.005;
 			w = PHONE_MAX_WIDTH + 0.035;
 			h = 0.045;

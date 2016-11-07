@@ -26,12 +26,16 @@ if((count _cards) != 0) then {
 	_sms = [];
 	_calls = [];
 	{
+		_tmp = [];
 		_phoneNumber = _x select 1;
 		_query = [_phoneNumber] call TON_fnc_smsGet;
-		_tmp = [_x select 0, _query];
+		_tmp pushBack (_x select 0);
+		_tmp pushBack _query;
 		_sms pushBack _tmp;
+		_tmp2 = [];
 		_query = [_phoneNumber] call TON_fnc_callGet;
-		_tmp = [_x select 0, _query];
+		_tmp2 pushBack (_x select 0);
+		_tmp2 pushBack _query;
 		_calls pushBack _tmp;
 	} forEach _cards;
 	_ret pushBack _contacts;

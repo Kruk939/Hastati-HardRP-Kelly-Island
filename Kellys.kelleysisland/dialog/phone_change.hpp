@@ -7,21 +7,25 @@ class life_phone_change {
 	
 	class controlsBackground {
 		
-		class MainBackground : Life_RscText {
+		
+		class MainBackground : Life_RscPicture {
 			colorBackground[] = {0, 0, 0, 0.7};
+			text = "icons\phoneImage.paa";
 			idc = -1;
-			x = PHONE_GRID_X;
-			y = 0.08;
-			w = 0.2;
-			h = 0.44;
+			style = "2096";
+			x = 0.59;
+			y = -0.91;
+			w = 1;
+			h = 3;
 		};
-		class Life_RscTitleBackground : Life_RscText {
-			x = PHONE_GRID_X;
+		class Life_RscTitleBackground: Life_RscText {
+			colorBackground[] = {0,0,0,0.3};
+			x = PHONE_GRID_X - 0.005;
 			idc = -1;
-			y = 0.08;
-			w = 0.2;
-			h = 0.08;
-			text = "Zmien karte SIM";
+			y = PHONE_GRID_Y - 0.005;
+			w = PHONE_MAX_WIDTH + 0.035;
+			h = 0.045;
+			text = "Ustawienia";
 		};
 	};
 	
@@ -57,7 +61,7 @@ class life_phone_change {
 		class phoneButtonBackground1 : Life_RscPicture {
 			idc = -1;
 			style = "2096";
-			text = PHONE_ADD;
+			text = PHONE_APPLY;
 			x = PHONE_GRID_X + (PHONE_MAX_WIDTH / 4);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;

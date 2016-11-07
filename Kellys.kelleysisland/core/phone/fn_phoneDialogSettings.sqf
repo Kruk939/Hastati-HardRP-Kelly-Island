@@ -17,13 +17,12 @@
 #define BTN1 3001
 #define BTN2 3002
 #define SIM_CARDS 3003
-closeDialog 0;
 disableSerialization;
 
 private [];
 
 if(!alive player || dialog) exitWith {};
-if(!(createDialog "life_phone_calls")) exitWith {};
+if(!(createDialog "life_phone_change")) exitWith {};
 //if(HANDCUFFED(player) || ISSURRENDERED(player)) exitWith {}; //ace check if player has his hands free
 //if(ISUNCONSCIOUS(player)) exitWith {}; //ace check if player is unconscious
 _dialog = findDisplay 61207;
@@ -37,8 +36,7 @@ _simCards = _dialog displayCtrl SIM_CARDS;
 	_saldo = _x select 3;
 	_str = format ["%1. Numer: %2 | SALDO: $%3", _id, _number, _saldo];
 	_index = _simCards lbAdd _str;
-	_simCards lbSetData [_index, _id];
-
+	_simCards lbSetData [_index, str(_id)];
 
 } forEach life_phone_cards;
 _simCards lbSetCurSel 0;

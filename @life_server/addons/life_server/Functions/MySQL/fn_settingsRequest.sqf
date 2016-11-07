@@ -15,11 +15,11 @@ private["_uid","_side","_query","_return","_queryResult","_qResult","_handler","
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
 _ownerID = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
+_player = _ownerID;
 
 if(isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
 _ret = [];
 
 _settings = [_uid] call TON_fnc_settingsGet;
-_ret pushBack _settings;
-[_ret] remoteExecCall ["SOCK_fnc_settingsRecived",(owner _returnToSender)];
+[_settings] remoteExecCall ["SOCK_fnc_settingsRecived",_player];

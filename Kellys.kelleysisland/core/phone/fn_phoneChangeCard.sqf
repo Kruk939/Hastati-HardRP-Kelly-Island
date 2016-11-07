@@ -14,10 +14,28 @@
 	BOOL - true if function was executed successfully
 */
 _card = _this select 0;
+if(_card == 0) exitWith {
+	life_phone_activeCard = 0;
+	life_phone_activeNumber = "";
+	life_phone_activeCardSaldo = 0;
+	life_phone_activeCardSMS = 0;
+	life_phone_activeCardCall = 0;
+	if(isNil "life_phone_numbers") then {
+		life_phone_numbers = [];
+	} else {
+		{
+			if((_x select 0) == (getPlayerUID player)) then {
+				life_phone_numbers set [_forEachIndex, [-1]];
+				life_phone_numbers = life_phone_numbers - [-1];
+			};
+		} forEach life_phone_numbers;
+	};
+	publicVariable "life_phone_numbers";
+};
 {
 	if(_x select 0 == _card) exitWith {
 		life_phone_activeCard = _card;
-		life_phone_active_number = _x select 1;
+		life_phone_activeNumber = _x select 1;
 		life_phone_activeCardSaldo = _x select 3;
 		life_phone_activeCardSMS = _x select 4;
 		life_phone_activeCardCall = _x select 5;
