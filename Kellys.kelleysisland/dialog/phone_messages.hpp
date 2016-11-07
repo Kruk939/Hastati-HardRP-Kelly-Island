@@ -16,15 +16,6 @@ class life_phone_messages {
 			w = 1;
 			h = 3;
 		};
-		class Life_RscTitleBackground: Life_RscText {
-			colorBackground[] = {0,0,0,0.3};
-			x = PHONE_GRID_X - 0.005;
-			idc = -1;
-			y = PHONE_GRID_Y - 0.005;
-			w = PHONE_MAX_WIDTH + 0.035;
-			h = 0.045;
-			text = "Telefon";
-		};
 	};
 	
 	class controls {
@@ -83,7 +74,26 @@ class life_phone_messages {
 			h = 0.08;
 			w = (PHONE_MAX_WIDTH / 4);
 		};
-		
+		class phoneSettings : Life_RscButtonInv {
+			idc = 3010;
+			type = 1;
+			action = "[] call life_fnc_phoneDialogSettings";
+			colorBackground[] = {0,0,0,0.3};
+			x = PHONE_GRID_X - 0.005;
+			idc = -1;
+			y = PHONE_GRID_Y - 0.005;
+			w = PHONE_MAX_WIDTH + 0.035;
+			h = 0.045;
+		};
+		class Life_RscTitleBackground: Life_RscText {
+			colorBackground[] = {0,0,0,0.3};
+			x = PHONE_GRID_X - 0.005;
+			idc = -1;
+			y = PHONE_GRID_Y - 0.005;
+			w = PHONE_MAX_WIDTH + 0.035;
+			h = 0.045;
+			text = "Telefon";
+		};
 		class phoneMessages : Life_RscListBox
 		{
 			idc = 3005;
