@@ -48,7 +48,24 @@ class CfgSounds
 		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {};
 	};
-
+	class phoneBusy
+	{
+		name = "phoneBusy";
+		sound[] = {"\sounds\phoneBusy.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class phoneDial
+	{
+		name = "phoneDial";
+		sound[] = {"\sounds\phoneDial.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class phoneRingtone
+	{
+		name = "phoneRingtone";
+		sound[] = {"\sounds\phoneRingtone.ogg", 1.0, 1};
+		titles[] = {};
+	};
 	class medicSiren
 	{
 		name = "medicSiren";
