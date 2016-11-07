@@ -28,7 +28,7 @@ if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {
 
 if(life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
-IF(_targetNumber == life_phone_activeNumber == "") exitWith {msg("Nie mozesz zadzwonic do siebie.");};
+IF(_targetNumber == life_phone_activeNumber) exitWith {msg("Nie mozesz zadzwonic do siebie.");};
 _targetArray = [_targetNumber] call life_fnc_phoneCheckNumber;
 _obj = _targetArray select 2;
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
