@@ -13,3 +13,6 @@ _array = _this select 0;
 _settings = _array;
 player setVariable ["playerDBid", (_settings select 0)];
 life_phone_activeCard = _settings select 1;
+
+
+[life_phone_activeCard] spawn life_fnc_phoneChangeCard;

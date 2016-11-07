@@ -31,6 +31,9 @@ switch(_mode) do {
 	case 2: {
 		_query = format ["UPDATE TelSimCards SET alive='0' WHERE id='%1'", _cardID];
 	};
+	case 3: {
+		_query = format ["UPDATE TelSimCards SET ownerUID='%1' WHERE id='%2'", _playerUID, _cardID];
+	};
 };
 
 if(!isNil "_query") then {
