@@ -32,7 +32,7 @@ if(_card == 0) exitWith {
 	};
 	publicVariable "life_phone_numbers";
 };
-if(life_phone_activeNumber != "") {
+if(life_phone_activeNumber != "") then {
 	{
 		if(_x select 0 == life_phone_activeCard) exitWith {
 			_x set [3, life_phone_activeCardSaldo];
