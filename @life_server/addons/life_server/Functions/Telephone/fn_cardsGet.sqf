@@ -14,7 +14,7 @@
 */
 
 
-
+_ret = [];
 _query = format["SELECT id, number, idCompany, saldo, SMSPrice, minutePrice, permanent FROM TelSimCards WHERE alive='1' AND ownerUID='0' LIMIT 50"];
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 

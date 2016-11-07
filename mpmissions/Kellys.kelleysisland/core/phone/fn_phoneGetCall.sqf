@@ -20,7 +20,7 @@ _fromObj = _this select 2;
 _target = _this select 3;
 diag_log "----------------------- life_fnc_phoneGetCall";
 if(_target != player) exitWith {};
-if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, 3, _freq] remoteExec ["TON_fnc_callInsert", 2];};
+if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {msg("Debug");[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, 3, _freq] remoteExec ["TON_fnc_callInsert", 2];};
 
 life_phone_beingCalled = true;
 life_phone_calling = false;

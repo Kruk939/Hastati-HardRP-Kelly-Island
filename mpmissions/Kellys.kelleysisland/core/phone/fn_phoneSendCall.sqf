@@ -22,7 +22,7 @@ if(_radio == "") exitWith {hint "Nie masz telefonu";};
 
 
 _targetNumber = _this select 0;
-if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {}; //check if calling or being called
+if(life_phone_beingCalled || life_phone_calling || life_phone_inCall) exitWith {msg("Debug");}; //check if calling or being called
 
 
 
