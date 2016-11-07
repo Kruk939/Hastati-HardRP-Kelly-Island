@@ -377,6 +377,7 @@ class Life_Client_Core
 		class phoneAddContact {};
 		class phoneHandleCall {};
 		class phoneChangeCard {};
+		class phoneServerInit {};
 		
 		//buttons:
 		class phoneButtonCall {};
