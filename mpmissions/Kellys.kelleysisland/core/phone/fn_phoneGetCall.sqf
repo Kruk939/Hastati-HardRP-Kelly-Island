@@ -38,7 +38,8 @@ life_phone_caller = _from;
 	while {_k < 10} do {
 		uiSleep 0.1;
 		if((_k == 0 || _k == 4 || _k == 8) && true) then {
-			playSound3D ["\sounds\phoneRingtone.ogg", player];
+			playSound3D ["sounds\phoneRingtone.ogg", player];
+			playSound "phoneRingtone";
 		};
 		_k = _k + 0.1;
 	//playsound
@@ -50,11 +51,12 @@ life_phone_caller = _from;
 				life_phone_activeFrequency = _freq;
 				[(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
 				life_phone_inCall = true;
+				life_phone_beingCalled = false;
 				[] spawn life_fnc_phoneHandleCall;
 				//setFreq
 			};
-			if(life_phone_answered == 2) then {msg("Odrzuciles polaczenie");};
-			if(life_phone_answered == 3) then {msg("Wyslano sygnal - zajety");};
+			if(life_phone_answered == 2) then {msg("Odrzuciles polaczenie"); life_phone_beingCalled = false;};
+			if(life_phone_answered == 3) then {msg("Wyslano sygnal - zajety"); life_phone_beingCalled = false;};
 			[_from, life_phone_activeNumber, (getPos _fromObj), _fromObj, life_phone_answered, _freq] remoteExec ["TON_fnc_callInsert", 2];
 		};
 	};

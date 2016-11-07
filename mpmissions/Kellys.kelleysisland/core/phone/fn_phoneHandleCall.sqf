@@ -16,10 +16,16 @@
 #define msg(var) hint var
 diag_log "----------------------- life_fnc_phoneHandleCall";
 _radio = (call TFAR_fnc_ActiveSwRadio);
+_time = 0;
+life_phone_beingCalled = false;
+life_phone_calling = false;
 while {life_phone_inCall && _radio != ""} do {
 	uiSleep 0.5;
 	_radio = (call TFAR_fnc_ActiveSwRadio);
-	life_phone_activeCardSaldo = life_phone_activeCardSaldo - life_phone_activeCardCall;
+	if(_time == 0 || floor(_time) % 60 == 0) then {
+		life_phone_activeCardSaldo = life_phone_activeCardSaldo - life_phone_activeCardCall;
+	};
+	_time = _time + 0.5;
 };
 hint "Rozmowa zostala przerwana";
 life_phone_answered = 0;

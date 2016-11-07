@@ -46,19 +46,20 @@ _channel = _channel + 1;
 [(call TFAR_fnc_activeSwRadio), _channel, _freq] call TFAR_fnc_SetChannelFrequency;
 [] spawn {
 	_k = 0;
-	while {_k < 10} do {
+	while {_k < 10 && life_phone_answered == 0} do {
 		uiSleep 0.1;
 		_k = _k + 0.1;
-	if((floor _k) % 4 == 0 || _k == 0) then {
-		playSound "phoneDial";
-	};
-		if(life_phone_answered != 0) exitWith {
-			if(life_phone_answered == 1) then {
-				msg("Rozmawiasz teraz"); 
-			};
-			if(life_phone_answered == 2) then {msg("Kontakt odrzucil polaczenie"); playSound "phoneBusy";};
-			if(life_phone_answered == 3) then {msg("Kontakt jest zajety"); playSound "phoneBusy";};
+		if((floor _k) % 4 == 0 || _k == 0) then {
+			playSound "phoneDial";
 		};
+	};
+	if(life_phone_answered != 0) exitWith {
+		if(life_phone_answered == 1) then {
+			msg("Rozmawiasz teraz"); 
+			life_phone_calling = false;
+		};
+		if(life_phone_answered == 2) then {msg("Kontakt odrzucil polaczenie"); playSound "phoneBusy"; life_phone_calling = false;};
+		if(life_phone_answered == 3) then {msg("Kontakt jest zajety"); playSound "phoneBusy"; life_phone_calling = false;};
 	};
 	if(life_phone_answered == 0) then {hint "Kontakt nie odebral polaczenia."; life_phone_calling = false;};
 };
