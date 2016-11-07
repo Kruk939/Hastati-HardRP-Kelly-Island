@@ -145,6 +145,7 @@ class CfgFunctions {
 			class callInsert {};
 			class phoneQuery {};
 			class sendCall {};
+			class cardsGet {}:
 		};
 		class Kruk {
 			file = "\life_server\Functions\Kruk";
