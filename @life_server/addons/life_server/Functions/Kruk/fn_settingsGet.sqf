@@ -24,9 +24,8 @@ _ret pushBack (_queryResult select 0);
 _query = format ["SELECT uid, defaultSimCard FROM playerSettings WHERE uid='%1'",_uid];
 _queryResult = [_query,2,false] call DB_fnc_asyncCall;
 if(count _queryResult == 0) exitWith {_ret;};
-{
-	_ret pushBack _x;
-} forEach _queryResult;
-_queryResult;
+
+_ret set [1, _queryResult];
 diag_log "----------------------------- settingsGet.sqf";
 diag_log format ["%1", _ret];
+_ret;
