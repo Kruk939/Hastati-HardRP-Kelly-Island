@@ -19,6 +19,7 @@ _radio = (call TFAR_fnc_ActiveSwRadio);
 while {life_phone_inCall && _radio != ""} do {
 	uiSleep 0.5;
 	_radio = (call TFAR_fnc_ActiveSwRadio);
+	life_phone_activeCardSaldo = life_phone_activeCardSaldo - life_phone_activeCardCall;
 };
 hint "Rozmowa zostala przerwana";
 life_phone_answered = 0;

@@ -37,6 +37,9 @@ life_phone_caller = _from;
 	life_phone_answered = 0;
 	while {_k < 10} do {
 		uiSleep 0.1;
+		if((_k == 0 || _k == 4 || _k == 8) && true) then {
+			playSound3D ["\sounds\phoneRingtone.ogg", player];
+		};
 		_k = _k + 0.1;
 	//playsound
 		if(life_phone_answered != 0) exitWith {
