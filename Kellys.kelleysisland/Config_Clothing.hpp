@@ -154,6 +154,40 @@ class Clothing {
             { "B_Carryall_cbr", "", 3500, { "", "", -1 } }
         };
     };
+	
+	class cop {
+        title = "USNG Uniform Shop";
+        license = "";
+        side = "cop";
+        uniforms[] = {
+            { "NONE", "Remove Uniform", 0, { "", "", -1 } },
+            { "TRYK_U_B_wood_CombatUniform", "Woodland Combat Uniform", 250, { "", "", -1 } },
+			{ "TRYK_U_B_woodR_CombatUniformTshirt", "Woodland Combat Uniform Rolled", 250, { "", "", -1 } },
+			{ "TRYK_T_camo_Wood", "Woodland Pants + T-shirt", 250, { "", "", -1 } },
+			{ "TRYK_hoodie_Wood", "Woodland Pants + Hoodie", 250, { "", "", -1 } },
+			{ "TRYK_U_B_Wood_PCUs", "Woodland Pants + Jacket", 250, { "", "", -1 } },
+			{ "TRYK_U_B_Wood_PCUs_R", "Woodland Pants + Jacket Rolled", 250, { "", "", -1 } },
+        };
+        headgear[] = {
+            { "NONE", "Remove Hat", 0, { "", "", -1 } },
+            { "TRYK_H_Helmet_WOOD", "Helmet", 250, { "", "", -1 }  },
+            { "TRYK_H_Booniehat_WOOD", "Booniehat", 100, { "", "", -1 }  },
+            { "H_Bandanna_camo", "Bandana", 100, { "", "", -1 }  }
+        };
+        vests[] = {
+            { "NONE", "Remove Vest", 0, { "", "", -1 } },
+            { "TRYK_V_PlateCarrier_wood", "Plate Carrier", 500, { "", "", -1 } },
+			{ "TRYK_V_PlateCarrier_wood_L", "Plate Carrier Light", 500, { "", "", -1 } },
+			{ "TRYK_V_harnes_od_L", "Harness", 500, { "", "", -1 } },
+            { "V_PlateCarrier2_rgr", "Carrier Rig", 500, { "", "", -1 } },
+        };
+        backpacks[] = {
+            { "NONE", "Remove Backpack", 0, { "", "", -1 } },
+            { "TRYK_B_Carryall_wood", "Carryall backpack", 250, { "", "", -1 } },
+            { "TRYK_B_FieldPack_Wood", "Field Pack", 250, { "", "", -1 } },
+            { "TRYK_B_Medbag_OD", "Medic Bag", 250, { "", "", -1 } },
+        };
+    };
 
     class dive {
         title = "STR_Shops_C_Diving";
