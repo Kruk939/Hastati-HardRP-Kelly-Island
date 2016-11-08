@@ -35,3 +35,6 @@
 #include "phone_messages.hpp"
 #include "phone_smsSend.hpp"
 #include "jailSend.hpp"
+#include "tabletVisa.hpp"
+#include "tabletMarket.hpp"
+#include "tabletLicenses.hpp"

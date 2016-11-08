@@ -20,6 +20,12 @@
 #define PHONE_GRID_Y (0.07)
 #define PHONE_MAX_WIDTH (0.34)
 #define PHONE_MAX_HEIGHT (0.83)
+#define TABLET_GRID_X 0.08
+#define TABLET_GRID_Y 0.17
+#define TABLET_WIDTH 0.835
+#define TABLET_HEIGHT 0.70
+
+
 
 #define GUI_GRID_X	(0)
 #define GUI_GRID_Y	(0)

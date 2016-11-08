@@ -47,11 +47,11 @@ _channel = _channel + 1;
 [] spawn {
 	_k = 0;
 	while {_k < 10 && life_phone_answered == 0} do {
-		uiSleep 0.1;
-		_k = _k + 0.1;
-		if((floor _k) % 4 == 0 || _k == 0) then {
+		uiSleep 0.5;
+		if(_k % 4 == 0 || _k == 0) then {
 			playSound "phoneDial";
 		};
+		_k = _k + 0.5;
 	};
 	if(life_phone_answered != 0) exitWith {
 		if(life_phone_answered == 1) then {

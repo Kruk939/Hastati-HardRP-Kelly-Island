@@ -178,7 +178,7 @@ switch (_code) do {
 				};
 			};
 		};
-		if(!_alt && _ctrlKey) then { [] call life_fnc_phoneOpen; };
+		if(!_alt && _ctrlKey) then { createDialog "life_tablet_market"; };
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 
