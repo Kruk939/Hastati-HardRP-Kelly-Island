@@ -1,4 +1,4 @@
-class life_tablet_simcards {
+class life_phone_simcards {
 	idd = 61304;
 	name= "life_phone_simcards";
 	movingEnable = 0;
@@ -72,6 +72,7 @@ class life_tablet_simcards {
 			idc = 3006;
 			type = 1;
 			text = "Doladuj karte";
+			action = "[ctrlText 3005] spawn life_fnc_phoneSimCardCharge; closeDialog 0;";
 			x = TABLET_GRID_X + (TABLET_WIDTH / 2) + 0.24;
 			y = TABLET_GRID_Y + (TABLET_HEIGHT / 2) + 0.11;
 			w = (TABLET_WIDTH / 2) - 0.26;

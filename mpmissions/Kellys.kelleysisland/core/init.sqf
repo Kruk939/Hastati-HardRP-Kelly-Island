@@ -138,8 +138,5 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 if(EQUAL(LIFE_SETTINGS(getNumber,"Pump_service"),1)) then{
 	[] execVM "core\fn_Setup_Sation_Service.sqf";
 };
-[] spawn {
-	waitUntil{!isNil "life_phone_activeNumber";}
-	[] call life_fnc_phoneInit;
-};
+[] spawn life_fnc_phoneInit;
 [getPlayerUID player,player getVariable["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];

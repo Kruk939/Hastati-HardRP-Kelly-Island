@@ -380,7 +380,7 @@ class Life_Client_Core
 		class phoneCardUpdate {};
 		class phoneServerInit {};
 		class phoneSimCardBuy {};
-		class phoneSimCardsDialog {};
+		class phoneSimCardCharge {};
 		
 		//buttons:
 		class phoneButtonCall {};
@@ -400,6 +400,7 @@ class Life_Client_Core
 		class phoneDialogAddContact {};
 		class phoneDialogNewMessage {};
 		class phoneDialogSettings {};
+		class phoneDialogSimCards {};
 	};
 	class Dialog_Controls
 	{

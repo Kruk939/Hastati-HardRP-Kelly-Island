@@ -64,7 +64,7 @@ class life_tablet_market {
 			text = "Reset wszystkich";
 			x = TABLET_GRID_X + (TABLET_WIDTH / 2) + 0.03;
 			y = TABLET_GRID_Y + (TABLET_HEIGHT / 2) + 0.11;
-			w = 0.2
+			w = 0.2;
 			h = 0.05;
 		};
 		class resetButton: Life_RscButton {

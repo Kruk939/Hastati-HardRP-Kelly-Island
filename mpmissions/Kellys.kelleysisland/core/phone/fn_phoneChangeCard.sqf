@@ -14,6 +14,7 @@
 	BOOL - true if function was executed successfully
 */
 _card = _this select 0;
+if(isNil "life_phone_activeNumber") then {life_phone_activeNumber = "";};
 if(_card == 0) exitWith {
 	life_phone_activeCard = 0;
 	life_phone_activeNumber = "";
@@ -25,7 +26,7 @@ if(_card == 0) exitWith {
 	} else {
 		{
 			if((_x select 0) == (getPlayerUID player)) then {
-				life_phone_numbers set [_forEachIndex, [-1]];
+				life_phone_numbers set [_forEachIndex, -1];
 				life_phone_numbers = life_phone_numbers - [-1];
 			};
 		} forEach life_phone_numbers;

@@ -34,7 +34,7 @@ class life_phone_contacts {
 			x = PHONE_GRID_X;
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
-			w = (PHONE_MAX_WIDTH / 4);
+			w = (PHONE_MAX_WIDTH / 5);
 			action = "[61203] call life_fnc_phoneButtonCall";
 		};
 		
@@ -52,7 +52,7 @@ class life_phone_contacts {
 		class phoneMessages : Life_RscButtonInv {
 			idc = 3003;
 			text = "";
-			action = "[61203] call life_fnc_phoneButtonMessages";
+			action = "[61203] call life_fnc_phoneButtonMessage";
 			type = 1;
 			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 5);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);

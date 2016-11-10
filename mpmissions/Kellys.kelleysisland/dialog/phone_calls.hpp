@@ -43,7 +43,7 @@ class life_phone_calls {
 			text = "";
 			action = "[61205] call life_fnc_phoneButtonAdd";
 			type = 1;
-			x = PHONE_GRID_X + 1 * (PHONE_MAX_WIDTH / 4);
+			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 4);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
 			w = (PHONE_MAX_WIDTH / 4);
@@ -54,7 +54,7 @@ class life_phone_calls {
 			text = "";
 			action = "[61205] call life_fnc_phoneButtonMessage";
 			type = 1;
-			x = PHONE_GRID_X + 2 * (PHONE_MAX_WIDTH / 4);
+			x = PHONE_GRID_X + 1 * (PHONE_MAX_WIDTH / 4);
 			y = (PHONE_GRID_Y + PHONE_MAX_HEIGHT - 0.08);
 			h = 0.08;
 			w = (PHONE_MAX_WIDTH / 4);

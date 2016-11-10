@@ -26,7 +26,6 @@
 #include "federalReserve.hpp"
 #include "compensate.hpp"
 #include "FuelStat.hpp"
-#include "market.hpp"
 #include "phone_addContact.hpp"
 #include "phone_calls.hpp"
 #include "phone_change.hpp"
@@ -38,3 +37,4 @@
 #include "tabletVisa.hpp"
 #include "tabletMarket.hpp"
 #include "tabletLicenses.hpp"
+#include "tabletSimCards.hpp"

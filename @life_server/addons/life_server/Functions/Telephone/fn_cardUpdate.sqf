@@ -18,9 +18,11 @@ _cardID = _this select 1;
 _player = _this select 2;
 _saldo = _this select 3;
 _playerUID = getPlayerUID _player;
+diag_log "------------- TON_fnc_cardUpdate";
+diag_log format ["%1", _this];
 if(isNil "_cardID") exitWith {};
 if(isNil "_player") exitWith {};
-
+_query = "";
 switch(_mode) do {
 	case 0: {
 		_query = format ["UPDATE TelSimCards SET saldo='%1' WHERE id='%2'", _saldo, _cardID];
@@ -36,6 +38,6 @@ switch(_mode) do {
 	};
 };
 
-if(!isNil "_query") then {
+if(_query != "") then {
 	[_query, 1] call DB_fnc_asyncCall;
 };
