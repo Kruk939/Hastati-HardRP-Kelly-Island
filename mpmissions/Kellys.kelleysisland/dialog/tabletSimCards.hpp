@@ -1,6 +1,6 @@
-class life_tablet_market {
-	idd = 61302;
-	name= "life_tablet_market";
+class life_tablet_simcards {
+	idd = 61304;
+	name= "life_phone_simcards";
 	movingEnable = 0;
 	enableSimulation = 1;
 	onLoad = "";
@@ -25,14 +25,14 @@ class life_tablet_market {
 		};
 	};
 	class controls {
-		class marketItemList: Life_RscListBox {
+		class simcardsList: Life_RscListBox {
 			idc = 3001;
 			x = TABLET_GRID_X + 0.03;
 			y = TABLET_GRID_Y + 0.03;
 			w = (TABLET_WIDTH - 0.06) / 2;
 			h = TABLET_HEIGHT - 0.06;
 		};
-		class itemInfo: Life_RscText {
+		class cardInfo: Life_RscText {
 			idc = 3002;
 			text = "TEST TEST TEST";
 			style = 16;
@@ -41,36 +41,37 @@ class life_tablet_market {
 			w = (TABLET_WIDTH - 0.06) / 2;
 			h = (TABLET_HEIGHT / 2) - 0.06;
 		};
-		class changeInput: Life_RscEdit {
+		class buyButton: Life_RscButton {
 			idc = 3003;
-			text = "";
+			type = 1;
+			text = "Kup";
+			action = "[(lbData [3001, (lbCurSel 3001)])] spawn life_fnc_phoneSimCardBuy; closeDialog 0;";
 			x = TABLET_GRID_X + (TABLET_WIDTH / 2) + 0.03;
 			y = TABLET_GRID_Y + (TABLET_HEIGHT / 2) + 0.03;
 			w = 0.2;
 			h = 0.05;
 		};
-		class changeButton: Life_RscButton {
+		class removeButton: Life_RscButton {
 			idc = 3004;
 			type = 1;
-			text = "Zmien popyt";
+			text = "Usun";
 			x = TABLET_GRID_X + (TABLET_WIDTH / 2) + 0.24;
 			y = TABLET_GRID_Y + (TABLET_HEIGHT / 2) + 0.03;
 			w = (TABLET_WIDTH / 2) - 0.26;
 			h = 0.05;
 		};
-		class resetAllButton: Life_RscButton {
+		class fillInput: Life_RscEdit {
 			idc = 3005;
-			type = 1;
-			text = "Reset wszystkich";
+			text = "";
 			x = TABLET_GRID_X + (TABLET_WIDTH / 2) + 0.03;
 			y = TABLET_GRID_Y + (TABLET_HEIGHT / 2) + 0.11;
-			w = 0.2
+			w = 0.2;
 			h = 0.05;
 		};
-		class resetButton: Life_RscButton {
+		class fillButton: Life_RscButton {
 			idc = 3006;
 			type = 1;
-			text = "Reset";
+			text = "Doladuj karte";
 			x = TABLET_GRID_X + (TABLET_WIDTH / 2) + 0.24;
 			y = TABLET_GRID_Y + (TABLET_HEIGHT / 2) + 0.11;
 			w = (TABLET_WIDTH / 2) - 0.26;
@@ -86,5 +87,6 @@ class life_tablet_market {
 			w = 0.10;
 			h = 0.05;
 		};
+		
 	};
 };

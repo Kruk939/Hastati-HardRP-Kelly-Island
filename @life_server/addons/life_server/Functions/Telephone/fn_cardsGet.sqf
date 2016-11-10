@@ -19,4 +19,6 @@ _query = format["SELECT id, number, idCompany, saldo, SMSPrice, minutePrice, per
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 if(count _queryResult != 0) then {_ret = _queryResult;} else {_ret = [];};
-[_ret] remoteExec ["life_phoneServerInit", 2];
+diag_log "--------------------------- TON_fnc_cardsGet";
+diag_log format ["%1",_ret];
+[_ret] remoteExec ["life_fnc_phoneServerInit", 2];

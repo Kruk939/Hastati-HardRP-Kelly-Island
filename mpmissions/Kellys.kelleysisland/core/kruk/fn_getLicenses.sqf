@@ -13,10 +13,6 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-_cards = _this select 0;
-if(isNil "_cards") exitWith {diag_log "Nie wczytano kart"};
-diag_log "Wczytywanie kart";
-life_phone_cardsToSell = _cards;
-publicVariable "life_phone_cardsToSell";
-diag_log "Wczytano karty:";
-diag_log format ["%1", life_phone_cardsToSell];
+
+diag_log "-------------- Fetching phone information -----------";
+[player] remoteExec ["TEL_fnc_phoneQuery", RSERV];

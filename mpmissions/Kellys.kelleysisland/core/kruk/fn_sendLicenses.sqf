@@ -13,10 +13,13 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-_cards = _this select 0;
-if(isNil "_cards") exitWith {diag_log "Nie wczytano kart"};
-diag_log "Wczytywanie kart";
-life_phone_cardsToSell = _cards;
-publicVariable "life_phone_cardsToSell";
-diag_log "Wczytano karty:";
-diag_log format ["%1", life_phone_cardsToSell];
+_target = _this select 0;
+if(isNil "_target") exitWith {};
+if(isNull _target) exitWith {};
+_ret = [];
+_licensesConfigs = "getText(_x >> 'side') isEqualTo 'civ'" configClasses (missionConfigFile >> "Licenses");
+
+{
+	_ret pushBack [configName _x,LICENSE_VALUE(configName _x,"civ")];
+} foreach _licensesConfigs;
+[player,_ret] remoteExecCall ["life_fnc_getLicenses",_target];

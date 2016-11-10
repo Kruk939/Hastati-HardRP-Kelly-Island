@@ -379,6 +379,8 @@ class Life_Client_Core
 		class phoneChangeCard {};
 		class phoneCardUpdate {};
 		class phoneServerInit {};
+		class phoneSimCardBuy {};
+		class phoneSimCardsDialog {};
 		
 		//buttons:
 		class phoneButtonCall {};
