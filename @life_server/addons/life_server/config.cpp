@@ -150,6 +150,9 @@ class CfgFunctions {
 		class Kruk {
 			file = "\life_server\Functions\Kruk";
 			class settingsGet {};
+			class visaGet {};
+			class visaInsert {};
+			class visaUpdate {};
 		};
 	};
 };
