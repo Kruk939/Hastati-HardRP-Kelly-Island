@@ -30,6 +30,7 @@ disableSerialization;
 
 private [];
 //if(!alive player || dialog) exitWith {};
+if(call TFAR_fnc_haveSWRadio) exitWith {hint "Nie masz telefonu"};
 if(!(createDialog "hst_life_phone_messages")) exitWith {};
 //if(HANDCUFFED(player) || ISSURRENDERED(player)) exitWith {}; //ace check if player has his hands free
 //if(ISUNCONSCIOUS(player)) exitWith {}; //ace check if player is unconscious

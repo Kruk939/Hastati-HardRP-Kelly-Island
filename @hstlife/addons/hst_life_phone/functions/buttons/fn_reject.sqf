@@ -36,7 +36,7 @@ _dialog = findDisplay _display;
 if(hst_life_phone_beingCalled) exitWith {
 	hst_life_phone_answered = 2;
 	closeDialog 0;
-	hint "Answering";
+	hint "Odrzucam";
 };
 
 switch(_display) do {

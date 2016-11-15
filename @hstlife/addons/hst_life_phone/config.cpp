@@ -2,7 +2,7 @@
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 #include "cfgPatches.hpp"
 #include "dialogs\MasterHandler.hpp"
-
+#include "\task_force_radio_items\radio_ids.hpp"
 
 class cfgFunctions {
 	class hst_life_phone_ace {
@@ -72,14 +72,14 @@ class cfgFunctions {
 	};
 };
 class cfgWeapons {
-	class ItemWatch;
-	class hst_life_phone_phone: ItemWatch {
+	class ItemRadio;
+	class hst_life_phone_phone: ItemRadio {
 		displayName = "Telefon";
 		count = 1;
-		picture = "data\phone.paa";
+		picture = "\hst_life_phone\data\phone.paa";
 		Author = "Mattaust";
 		descriptionShort = "Najnowszy telefon najnowszej generacji, Kappa";
-		model = "data\phone.p3d";
+		model = "\hst_life_phone\data\phone.p3d";
 		class itemInfo {
 			mass = 1;
 		};
@@ -88,29 +88,31 @@ class cfgWeapons {
 		tf_dialog = "";
 		tf_encryptionCode = "tf_west_radio_code";
 		tf_dialogUpdate = "call TFAR_fnc_updateSWDialogToChannel;";
-		tf_subtype = "digital";
+		tf_subtype = "phone";
 		tf_parent = "hst_life_phone_phone";
 		tf_additional_channel = 0;
 	};
+	TF_RADIO_IDS(hst_life_phone_phone,Telefon)
 };
 class CfgSounds {
 	class phoneBusy
 	{
 		name = "phoneBusy";
-		sound[] = {"data\sounds\phoneBusy.ogg", 1.0, 1};
+		sound[] = {"\hst_life_phone\data\sounds\phoneBusy.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	class phoneDial
 	{
 		name = "phoneDial";
-		sound[] = {"data\sounds\phoneDial.ogg", 1.0, 1};
+		sound[] = {"\hst_life_phone\data\sounds\phoneDial.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	class phoneRingtone
 	{
 		name = "phoneRingtone";
-		sound[] = {"data\sounds\phoneRingtone.ogg", 1.0, 1};
+		sound[] = {"\hst_life_phone\data\sounds\phoneRingtone.ogg", 1.0, 1};
 		titles[] = {};
 	};
 };
 #include "aceConfig.cpp"
+

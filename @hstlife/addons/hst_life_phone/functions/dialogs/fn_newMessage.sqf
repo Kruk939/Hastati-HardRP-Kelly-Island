@@ -28,6 +28,7 @@
 disableSerialization;
 
 private [];
+if(call TFAR_fnc_haveSWRadio) exitWith {hint "Nie masz telefonu"};
 if(!(createDialog "hst_life_phone_sms_send")) exitWith {};
 _dialog = findDisplay 61206;
 _btn1 = _dialog displayCtrl BTN1;

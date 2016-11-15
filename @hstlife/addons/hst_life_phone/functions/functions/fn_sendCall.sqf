@@ -16,9 +16,8 @@
 #define msg(var) hint var
 diag_log "----------------------- hst_life_phone_functions_fnc_sendCall";
 
-_radio = (call TFAR_fnc_ActiveSwRadio);
-if(isNil "_radio") exitWith {hint "Nie masz telefonu";};
 if(_radio == "") exitWith {hint "Nie masz telefonu";};
+if(call TFAR_fnc_haveSWRadio) exitWith {hint "Nie masz telefonu"};
 
 
 _targetNumber = _this select 0;

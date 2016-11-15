@@ -21,6 +21,7 @@ if(hst_life_phone_activeNumber == "") exitWith {msg("Nie masz karty SIM")};
 if(_message == "") exitWith {msg("Nie podano wiadomosci.")};
 if(_targetNumber == "") exitWith {msg("Nie wpisano numeru.")};
 IF(_targetNumber == hst_life_phone_activeNumber == "") exitWith {msg("Nie mozesz wyslas wiadomosci do siebie.");};
+if(call TFAR_fnc_haveSWRadio) exitWith {hint "Nie masz telefonu"};
 _targetArray = [_targetNumber] call hst_life_phone_functions_fnc_checkNumber;
 _obj = (_targetArray select 2);
 if(count _targetArray == 0) exitWith {msg("Numer nie jest aktywny.")};
