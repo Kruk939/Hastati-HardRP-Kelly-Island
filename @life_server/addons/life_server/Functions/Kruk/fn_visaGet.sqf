@@ -16,8 +16,8 @@
 _player = _this select 0;
 _uid = getPlayerUID _player;
 
-_query = format ["SELECT id, name, surname, gender, birthDate, fatherName, motherName, motherSurname, pesel, drivingPoints, idType, FROM playerIDs WHERE uid ='%1'", _uid];
+_query = format ["SELECT id, name, surname, gender, birthDate, fatherName, motherName, motherSurname, pesel, drivingPoints, idType FROM playerIDs WHERE uid ='%1'", _uid];
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
-
-
-[_queryResult] remoteExec ["hst_life_core_playerInit", _player];
+diag_log "--------------- TON_fnc_visaGet";
+diag_log str _queryResult;
+[_queryResult] remoteExec ["hst_life_core_fnc_playerInit", _player];
