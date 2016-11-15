@@ -21,7 +21,7 @@
 #define MOTHER_SURNAME_INPUT 3005
 #define PESEL_INPUT 3006
 #define BIRTH_INPUT 3007
-
+disableSerialization;
 
 
 
@@ -48,7 +48,7 @@ _birth = ctrlText _birthInput;
 
 _day = parseNumber(_birth select [0,2]);
 _month = parseNumber(_birth select [3,2]);
-_year = parseNumber(_birth select [5,2]);
+_year = parseNumber(_birth select [6,2]);
 
 if(_day == 0 || _month == 0 || _year == 0) exitWith {hint "Podales zla date";};
 if(_day > 31 || _month > 12) exitWith {hint "Do you even date, Kappa?";};
@@ -60,3 +60,4 @@ if(FETCH_CONST(life_adminlevel) != 0) then {
 	if(_pesel == "-1") exitWith {hint "Are you fucking kiddin' me?"};
 	[_name, _surname, _father, _mother, _motherSurname, [_day, _month, _year], _pesel, 0, 0, player] remoteExec ["TON_fnc_visaInsert" , 2];
 };
+closeDialog 0;

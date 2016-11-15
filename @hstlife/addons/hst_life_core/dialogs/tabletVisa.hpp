@@ -6,7 +6,7 @@ class hst_life_core_tabletVisa {
 	onLoad = "";
 	class controlsBackground {
 		class MainBackground : Life_RscPicture {
-			text = "images\tablet.paa";
+			text = "\hst_life_core\images\tablet.paa";
 			idc = -1;
 			style = "2096";
 			x = TABLET_GRID_X - 0.08;
@@ -137,7 +137,7 @@ class hst_life_core_tabletVisa {
 		};
 		class birthTitle: Life_RscText {
 			idc = -1;
-			text = "Data urodzenia (dd.mm.rrrr):";
+			text = "Data urodzenia (dd.mm.rr):";
 			style = 1;
 			x = TABLET_GRID_X + 0.025;
 			y = TABLET_GRID_Y + 0.42;
@@ -148,6 +148,7 @@ class hst_life_core_tabletVisa {
 			idc = 3008;
 			type = 1;
 			text = "Dodaj";
+			action = "[] spawn hst_life_core_fnc_visaCreate;";
 			x = (TABLET_GRID_X + TABLET_WIDTH) - 0.30;
 			y = (TABLET_GRID_Y + TABLET_HEIGHT) - 0.08;
 			w = 0.15;
@@ -157,6 +158,7 @@ class hst_life_core_tabletVisa {
 			idc = 3009;
 			type = 1;
 			text = "Anuluj";
+			action = "closeDialog 0;";
 			x = (TABLET_GRID_X + TABLET_WIDTH) - 0.13;
 			y = (TABLET_GRID_Y + TABLET_HEIGHT) - 0.08;
 			w = 0.10;

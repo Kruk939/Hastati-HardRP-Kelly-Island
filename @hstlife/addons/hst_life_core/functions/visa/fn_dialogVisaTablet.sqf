@@ -18,6 +18,7 @@
 #define VISA_INFO 3002
 #define PREVIEW_BUTTON 3003
 #define GIVE_BUTTON 3004
+disableSerialization;
 
 
 
@@ -33,7 +34,7 @@ _giveButton = _display displayCtrl GIVE_BUTTON;
 if(_mode == 1) then {
 	if(isNil "_target") exitWith {};
 } else {
-	_giveButton ctrlEnable false;
+	_giveButton ctrlShow false;
 };
 {
 	_index = _list lbAdd format ["%1 %2 - %3", (_x select 2), (_x select 1), (_x select 8)];
@@ -67,5 +68,5 @@ hst_life_core_dialogVisaTablet_onLBChange = {
 	} foreach hst_life_core_idCards;
 };
 //[] spawn life_fnc_phoneGetActiveNumber;
-_market ctrlSetEventHandler ["LBSelChanged", "[] spawn hst_life_core_dialogVisaTablet_onLBChange"];
-_market lbSetCurSel 0;
+_list ctrlSetEventHandler ["LBSelChanged", "[] spawn hst_life_core_dialogVisaTablet_onLBChange"];
+_list lbSetCurSel 0;

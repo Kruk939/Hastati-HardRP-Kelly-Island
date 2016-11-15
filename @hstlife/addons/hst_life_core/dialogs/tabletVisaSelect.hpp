@@ -6,7 +6,7 @@ class hst_life_core_tabletVisaSelect {
 	onLoad = "";
 	class controlsBackground {
 		class MainBackground : Life_RscPicture {
-			text = "images\tablet.paa";
+			text = "\hst_life_core\images\tablet.paa";
 			idc = -1;
 			style = "2096";
 			x = TABLET_GRID_X - 0.08;
