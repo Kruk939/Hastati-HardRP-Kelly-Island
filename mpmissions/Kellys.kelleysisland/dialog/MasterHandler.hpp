@@ -27,6 +27,4 @@
 #include "compensate.hpp"
 #include "FuelStat.hpp"
 #include "jailSend.hpp"
-#include "tabletVisa.hpp"
 #include "tabletMarket.hpp"
-#include "tabletLicenses.hpp"
