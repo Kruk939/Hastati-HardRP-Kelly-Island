@@ -7,19 +7,6 @@
 #define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
-#define PHONE_CALL "\hst_life_phone\images\icons\icon_Call.paa"
-#define PHONE_CONTACTS "\hst_life_phone\images\icons\icon_Contacts.paa"
-#define PHONE_MESSAGE "\hst_life_phone\images\icons\icon_Messages.paa"
-#define PHONE_REJECT "\hst_life_phone\images\icons\icon_Reject.paa"
-#define PHONE_SEND "\hst_life_phone\images\icons\icon_Send.paa"
-#define PHONE_RETURN "\hst_life_phone\images\icons\icon_Return.paa"
-#define PHONE_ADD "\hst_life_phone\images\icons\icon_Add.paa"
-#define PHONE_APPLY "\hst_life_phone\images\icons\icon_Apply.paa"
-#define PHONE_REMOVE "\hst_life_phone\images\icons\icon_Remove.paa"
-#define PHONE_GRID_X (0.63)
-#define PHONE_GRID_Y (0.07)
-#define PHONE_MAX_WIDTH (0.34)
-#define PHONE_MAX_HEIGHT (0.83)
 #define TABLET_GRID_X 0.08
 #define TABLET_GRID_Y 0.17
 #define TABLET_WIDTH 0.835

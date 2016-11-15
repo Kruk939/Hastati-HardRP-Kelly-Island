@@ -1,3 +1,4 @@
+#include "\hst_life_core\script_macros.hpp"
 /*
 	Author: Kajetan "Kruk" Mruk
 	
@@ -12,8 +13,10 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-if(isServer or isDedicated) then {
-};
-if(hasInterface) then {
-	[player] remoteExec ["TON_fnc_visaGet", 2];
-};
+_player = _this select 0;
+_array = _this select 1;
+if(isNil "_player" || isNil "_array") exitWith {};
+if(isNull _player || _player != player) exitWith {};
+if(count _array == 0) exitWith {};
+
+hst_life_core_idCards pushBack _array;

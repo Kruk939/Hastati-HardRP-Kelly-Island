@@ -1,3 +1,4 @@
+#include "\hst_life_core\script_macros.hpp"
 /*
 	Author: Kajetan "Kruk" Mruk
 	
@@ -12,8 +13,3 @@
 	Returns:
 	BOOL - true if function was executed successfully
 */
-if(isServer or isDedicated) then {
-};
-if(hasInterface) then {
-	[player] remoteExec ["TON_fnc_visaGet", 2];
-};
