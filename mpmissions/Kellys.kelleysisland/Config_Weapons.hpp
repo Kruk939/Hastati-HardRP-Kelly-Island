@@ -101,7 +101,7 @@ class WeaponShops {
             { "ACE_MapTools", "", 1, 45 },
 			
 			
-            { "tf_rf7800str", "", 200, 980 },
+            { "hst_life_phone_phone", "", 200, 980 },
             { "Mattaust_Phone", "", 1000, 980 },
             { "Chemlight_red", "", 300, -1 },
             { "Chemlight_yellow", "", 300, 50 },
