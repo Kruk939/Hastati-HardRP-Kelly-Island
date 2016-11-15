@@ -11,5 +11,5 @@
 private["_array"];
 _array = _this select 0;
 _settings = _array select 1;
-player setVariable ["playerDBid", (_array select 0)];
+player SVAR ["playerDBid", (_array select 0), true];
 hst_life_phone_activeCard = _settings select 1;
