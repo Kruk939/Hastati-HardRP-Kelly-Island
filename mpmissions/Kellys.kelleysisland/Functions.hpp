@@ -360,48 +360,6 @@ class Life_Client_Core
 		class marketStart {};
 		class marketView {};
 	};
-	class Phone
-	{
-		file = "core\phone";
-		//functions:
-		class phoneGetData {};
-		class phoneInit {};
-		class phoneCallAnswered {};
-		class phoneCheckNumber {};
-		class phoneGetActiveNumber {};
-		class phoneGetCall {};
-		class phoneGetContact {};
-		class phoneGetMessage {};
-		class phoneSendCall {};
-		class phoneSendMessage {};
-		class phoneAddContact {};
-		class phoneHandleCall {};
-		class phoneChangeCard {};
-		class phoneCardUpdate {};
-		class phoneServerInit {};
-		class phoneSimCardBuy {};
-		class phoneSimCardCharge {};
-		
-		//buttons:
-		class phoneButtonCall {};
-		class phoneButtonReject {};
-		class phoneButtonReturn {};
-		class phoneButtonSend {};
-		class phoneButtonAdd {};
-		class phoneButtonMessage {};
-		class phoneButtonDelete {};
-		class phoneButtonApply {};
-		
-		//dialogs:
-		class phoneOpen {};
-		class phoneDialogCalls {};
-		class phoneDialogContacts {};
-		class phoneDialogMessages {};
-		class phoneDialogAddContact {};
-		class phoneDialogNewMessage {};
-		class phoneDialogSettings {};
-		class phoneDialogSimCards {};
-	};
 	class Dialog_Controls
 	{
 		file = "dialog\function";

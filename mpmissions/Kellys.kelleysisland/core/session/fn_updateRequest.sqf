@@ -30,11 +30,4 @@ switch (playerSide) do {
 };
 
 _packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
-if(life_phone_activeNumber != "") then {
-	{
-		if(_x select 0 == life_phone_activeCard) exitWith {
-			_x set [3, life_phone_activeCardSaldo];
-			[0,life_phone_activeCard] spawn life_fnc_phoneCardUpdate;
-		};
-	} forEach life_phone_cards;
-};
+[] spwan hst_life_phone_functions_fnc_updateRequest;

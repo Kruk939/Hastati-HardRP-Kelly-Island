@@ -12,4 +12,4 @@ private["_array"];
 _array = _this select 0;
 _settings = _array select 1;
 player setVariable ["playerDBid", (_array select 0)];
-life_phone_activeCard = _settings select 1;
+hst_life_phone_activeCard = _settings select 1;

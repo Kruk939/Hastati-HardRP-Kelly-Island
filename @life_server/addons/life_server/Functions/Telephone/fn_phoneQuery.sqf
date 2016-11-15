@@ -53,4 +53,4 @@ diag_log format ["%1", _ret];
 diag_log "-----------------------------------------------------------";
 
 
-_ret remoteExec ["life_fnc_phoneGetData", _playerObj];
+_ret remoteExec ["hst_life_phone_session_fnc_playerGetData", _playerObj];

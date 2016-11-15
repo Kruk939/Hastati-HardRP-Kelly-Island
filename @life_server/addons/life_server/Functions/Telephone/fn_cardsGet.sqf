@@ -21,4 +21,4 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 if(count _queryResult != 0) then {_ret = _queryResult;} else {_ret = [];};
 diag_log "--------------------------- TON_fnc_cardsGet";
 diag_log format ["%1",_ret];
-[_ret] remoteExec ["life_fnc_phoneServerInit", 2];
+[_ret] remoteExec ["hst_life_phone_session_fnc_serverGetData", 2];
