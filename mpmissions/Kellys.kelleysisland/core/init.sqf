@@ -142,3 +142,4 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"Pump_service"),1)) then{
 [getPlayerUID player,player getVariable["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];
 
 execVM "\hst_life_phone\init.sqf";
+execVM "\hst_life_core\init.sqf";

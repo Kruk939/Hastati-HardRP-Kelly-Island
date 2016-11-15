@@ -30,4 +30,4 @@ switch (playerSide) do {
 };
 
 _packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
-[] spwan hst_life_phone_functions_fnc_updateRequest;
+[] spawn hst_life_phone_functions_fnc_updateRequest;

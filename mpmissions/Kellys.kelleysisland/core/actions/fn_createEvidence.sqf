@@ -24,6 +24,8 @@ _vehicle setPos [getPos _vehicle select 0, getPos _vehicle select 1, (getPos _ve
 
 _obj = "Land_ClutterCutter_small_F" createVehicle (getPos _vehicle);
 _obj setPos (getPos _vehicle);
+_obj addAction ["Zniszcz dowody", { [] call life_fnc_destroyEvidence; }, "", 1.5, true, true, "", "playerSide != west", 1 ];
+_obj addAction ["Zbierz dowody", { [] call life_fnc_gatherEvidence; }, "", 1.5, true, true, "", "playerSide == west", 1 ];
 _vehicle attachTo [_obj,[0,0,0]];
 
 
